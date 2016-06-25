@@ -13,13 +13,29 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'omed2016' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'omed2016' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'omed2016' ), 'omed2016', '<a href="http://github.com/pjsinco" rel="designer">PJS</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+
+  <footer class="footer">
+    <div class="footer__block container-fluid">
+      <div class="branding__block--footer wrap">
+        <a class="svg" href="http://www.osteopathic.org">
+          <div class="icon-aoa-logo alt" style="width: 420px; height: 117px;" data-grunticon-embed></div>
+        </a>
+      </div> <!-- .branding__block-footer -->
+      <div class="branding__body--footer">
+        <p>Serving as the professional family for more than 123,000 osteopathic physicians (DOs) and osteopathic medical students, the American Osteopathic Association (AOA) promotes public health and encourages scientific research.</p>
+        <a href="http://www.osteopathic.org">Learn more</a>
+      </div> <!-- .branding__body-footer -->
+    </div> <!-- .footer__block -->
+  
+    <div class="footer__links container-fluid">
+      <ul class="footer__block--row wrap">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Copyright Notice</a></li>
+      </ul>
+    </div>
+  </footer>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
