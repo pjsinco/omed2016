@@ -24,8 +24,8 @@
 
 grunticon([
   "<?php echo get_template_directory_uri() . '/dist/grunticon/icons.data.svg.css'; ?>", 
-  "<?php echo get_template_directory_uri() . 'dist/grunticon/icons.data.png.css'; ?>", 
-  "<?php echo get_template_directory_uri() . 'dist/grunticon/icons.fallback.css'; ?>"], 
+  "<?php echo get_template_directory_uri() . '/dist/grunticon/icons.data.png.css'; ?>", 
+  "<?php echo get_template_directory_uri() . '/dist/grunticon/icons.fallback.css'; ?>"], 
   grunticon.svgLoadedCallback
 );
 </script>
