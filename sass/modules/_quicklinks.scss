@@ -1,0 +1,31 @@
+.quicklinks {
+
+  &__block {
+
+  }
+
+  &__item {
+
+  }
+
+  &__icon {
+    width: 5em;
+    margin-bottom: 1rem;
+  }
+
+}
+
+#ticket div {
+  background-image: url(../img/icon-ticket.png);
+  background-size: 5em;
+}
+
+#airliner div {
+  background-image: url(../img/icon-airliner.png);
+  background-size: 5em;
+}
+
+#telephone div {
+  background-image: url(../img/icon-telephone.png);
+  background-size: 5em;
+}

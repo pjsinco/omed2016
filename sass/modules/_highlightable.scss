@@ -1,0 +1,135 @@
+$highlightablebreak: $large-start;
+%highlightable-base {
+  border-top: 7px solid $yellow;
+  margin-top: 3rem;
+
+  @include breakpoint($screen $highlightablebreak) {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+    height: 250px;
+  }
+}
+
+.highlightable {
+  @extend %highlightable-base;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /*text-align: center;*/
+  background: $teal;
+  border-bottom: 7px solid $yellow;
+  color: $yellow;
+
+  &--pinned {
+    @extend %highlightable-base;
+    margin-bottom: 0;
+    box-sizing: content-box;
+    background: rgba($yellow, .05);
+    color: $teal;
+  }
+
+
+    /* Giant O in background */
+//    &:after {
+//      content: "O";
+//      font-family: $font-bold;
+//      color: rgba(255, 255, 255, 0.12);
+//      font-size: 382px;
+//      position: absolute;
+//      right: -66px;
+//      bottom: -130px;
+//      font-weight: bolder;
+//    }
+  
+
+  &__block {
+
+  }
+
+  &__kicker {
+    margin-bottom: .25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba($white, .9);
+
+    .highlightable--pinned & {
+      color: rgba($teal, .7);
+    }
+  }
+
+  &__header {
+    font-weight: normal;
+
+    @include breakpoint($screen $large-minor-start) {
+      margin-bottom: 1rem;
+      font-size: 1.75em;
+      font-family: $font-light;
+      line-height: 1.35;
+      color: inherit;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($screen $highlightablebreak) {
+      position: relative;
+      flex-direction: row;
+      height: 210px;
+
+      .highlightable--pinned & {
+        top: 20px;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: inherit;
+
+    @include breakpoint($screen $highlightablebreak) {
+      margin-left: 3rem;
+      align-self: center;
+
+      .highlightable--flipped & {
+        order: -1;
+        margin-left: 0;
+        margin-right: 3rem;
+      }
+    }
+
+  }
+
+  &__imagecontainer {
+    /*flex-basis: 100%;*/
+    /*position: relative;*/
+    /*bottom: -3em;*/
+    /*max-width: 435px;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+
+    @include breakpoint($screen $highlightablebreak) {
+      /*top: -3em;*/
+      /*bottom: auto;*/
+      /*max-width: none;*/
+      position: relative;
+      bottom: 80px;
+      /*margin-right: 4rem;*/
+      min-width: 250px;
+    
+      .highlightable--pinned & {
+        bottom: 70px;
+      }
+    }
+  }
+
+  &__image {
+    /*box-shadow: 5px 5px 13px rgba($verydark,.3);*/
+    @include breakpoint($screen $highlightablebreak) {
+      width: 250px;
+      height: 300px;
+    }
+  }
+
+}

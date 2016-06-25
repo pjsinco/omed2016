@@ -1,0 +1,43 @@
+$intro-logo-max-width: 15.375em;
+
+.intro {
+
+
+  &__block {
+    padding-top: 2em;
+
+    @include breakpoint($screen $large-start) {
+      padding-top: 4em;
+    }
+
+    @include breakpoint($screen $large-minor-start) {
+      padding-top: 0;
+    }
+
+    @include breakpoint($screen $xlarge-start) {
+      padding-top: 1.8em;
+    }
+  }
+
+  &__logo {
+    max-width: $intro-logo-max-width;
+    margin-bottom: 1em;
+  }
+
+  &__text {
+
+    @include breakpoint($screen $large-minor-start) {
+      font-size: 1.25em;
+    }
+
+    @include breakpoint($screen $xlarge-start) {
+      font-size: 1.5em;
+    }
+  }
+
+}
+
+#introOmedLogo div {
+  background-image: url(../img/omed-logo-date.png);
+  background-size: $intro-logo-max-width;
+}

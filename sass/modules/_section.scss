@@ -1,0 +1,35 @@
+.section {
+
+  &__header {
+    position: relative;
+    margin-bottom: 3em;
+    font-family: $font-light;
+    font-size: 1.125em;
+    text-align: center;
+    color: $font-color;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 32%;
+      border-bottom: 1px solid $teal;
+    
+      @include breakpoint($screen $medium-start) {
+        width: 20%;
+      }
+
+      @include breakpoint($screen $large-start) {
+        width: 12%;
+      }
+
+      @include breakpoint($screen $large-start) {
+        width: 8%;
+      }
+    }
+  }
+
+}

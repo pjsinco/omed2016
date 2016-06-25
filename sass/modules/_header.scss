@@ -1,0 +1,95 @@
+%header-fixed-base {
+  @include breakpoint($screen $navflip) {
+    position: fixed;  
+    top: 0;
+    z-index: 100;
+    background-color: $white;
+    box-shadow: 0 0px 18px rgba($verydark,.1);
+    border-bottom: 1px solid #e9f0f3;
+  }
+}
+
+%header-base {
+  height: $navbarheight;
+  background: $teal;
+
+  @include breakpoint($screen $navflip) {
+    background: none;
+    
+    animation-name: fadein;
+    animation-duration: 1s;
+    transition-property: fill;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+
+  }
+}
+
+
+@keyframes mainnavreveal {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.header {
+
+  @extend %header-base;
+
+  .sticky & {
+    @extend %header-fixed-base;
+    
+    @include breakpoint($screen $navflip) {
+      animation: mainnavreveal .3s ease-out;
+    }
+  }
+
+  @include breakpoint($screen $navflip) {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    right: 0;
+
+  }
+
+  &--fixed {
+    @extend %header-fixed-base;
+  }
+
+  &__block {
+    /*@extend %container-fluid-base;*/
+
+    @include breakpoint($screen $navflip) {
+      /*width: 50%;*/
+    }
+
+    &:last-child {
+
+      @include breakpoint($screen $navflip) {
+        /*float: right;*/
+      }
+    }
+  }
+
+
+}
+
+@keyframes fadein {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}

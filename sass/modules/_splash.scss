@@ -1,0 +1,202 @@
+%splash-base {
+  position: relative;
+  z-index: -1;
+  height: 325px;
+  width: 100%;
+  font-size: 1em;
+  font-family: $primaryfont;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: rgba($teal, .07);
+  color: $white;
+
+  @include breakpoint($screen $medium-start) {
+    background-size: cover;
+  }
+  
+  @include breakpoint($screen $navflip) {
+    height: 650px;
+    top: -$navbarheight;
+  }
+  
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes first {
+
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+.fade-in {
+
+  &--left {
+      opacity: 0;
+      animation-name: first;
+      animation-timing-function: ease-in;
+      animation-iteration-count: once;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+  }
+
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.splash {
+
+  &-inside {
+    @include breakpoint($screen $navflip) {
+      top: $navbarheight;
+      margin-bottom: 8rem;
+    }
+  }
+  
+  &--home {
+    @extend %splash-base;
+    background-image: url(../img/omed-splash-audience.jpg);
+  }
+  
+  &--connection {
+    @extend %splash-base;
+    background-image: url(https://placekitten.com/1766/725);
+    /*background-image: url(../img/omed-splash-poster.jpg);*/
+    
+  }
+
+  &--education {
+    @extend %splash-base;
+    background-image: url(../img/omed-splash-poster.jpg);
+    /* background-image: url(../img/omed-splash-central.jpg); */
+  }
+
+  &--inspiration {
+    @extend %splash-base;
+    background-image: url(../img/omed-splash-audience.jpg);
+  }
+
+
+
+  &-enhanced {
+	background-image: url(../img/omed-super-audience.jpg);
+  }
+
+
+  &__emph {
+    font-family: $font-medium;
+    color: $teal;
+
+    @include breakpoint($screen $medium-start) {
+      text-shadow: 3px 3px 3px rgba($verydark, .5);
+      letter-spacing: -1px;
+      color: $yellow;
+      
+    }
+
+    @include breakpoint($navflip) {
+      /*font-size: 3.5em;*/
+      /*font-size: 1.6em;*/
+      /*letter-spacing: -6px;*/
+    }
+
+  }
+
+  &__block {
+    position: absolute;
+    bottom: -1vw;
+    padding-bottom: 1rem;
+    position: absolute;
+    color: $font-color;
+
+    @include breakpoint($screen $medium-start) {
+      bottom: 5%;
+      border: none;
+      color: $white;
+    }
+  }
+
+  &__header {
+    /*animation-delay: .7s;*/
+    font-size: 2rem;
+    margin-bottom: .5rem;
+
+    @include breakpoint($screen $medium-start) {
+      font-size: 3rem;
+    }
+
+    @include breakpoint($screen $navflip) {
+      margin-bottom: 1rem;
+      font-size: 4.375em;
+      letter-spacing: -3px;
+    }
+  }
+  
+  &__body {
+    animation-delay: 1.4s;
+    line-height: 1.4;
+    opacity: .8;
+    
+    @include breakpoint($screen $navflip) {
+      max-width: 31.3rem;
+      font-size: 1.3125em;
+      line-height: 1.4;
+    }
+  }
+
+
+}
+
+#aoaLogo div {
+  background-image: url(../img/aoa-logo-horiz-white.png);
+  background-size: 12.25em;
+}
+
+@supports (background-image: filter(url('i.jpg'), blur(1px))) {
+
+  .splash {
+    transform: translateZ(0);
+  }
+
+  .splash-enhanced {
+    animation: sharpen 1.5s both;
+  }
+
+  @keyframes sharpen {
+    from {
+      background-image: filter(url(../img/omed-super-audience.jpg)), blur(20px);
+    }
+
+    to {
+      background-image: filter(url(../img/omed-super-audience.jpg)), blur(0px);
+    }
+  }
+	
+
+}

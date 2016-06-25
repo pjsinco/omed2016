@@ -1,0 +1,50 @@
+.content {
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  @include breakpoint($screen $navflip) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 7rem;
+  }
+  
+
+  &__left {
+    display: none;
+
+    @include breakpoint($screen $navflip) {
+      display: block;
+      flex-basis: 16.66666667%; // 2 of 12
+    }
+  }
+
+  &__center {
+    /*flex-basis: 58.33333333%; // 7 of 12*/
+    position: relative;
+
+    @include breakpoint($screen $navflip) {
+      flex-basis: 50%; // 7 of 12
+      &:before {
+        content: "";
+        position: absolute;
+        left: -2.6875rem;
+        top: 0;
+        bottom: 0;
+        border-right: 1px solid $yellow;
+      }
+    }
+  }
+
+  &__right {
+
+
+    @include breakpoint($screen $navflip) {
+      flex-basis: 25%; // 3 of 12
+      
+    }
+  }
+
+}
