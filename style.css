@@ -749,7 +749,7 @@ object {
     top: 3.75rem;
     margin-bottom: 8rem; } }
 .splash--home {
-  background-image: url(../img/omed-splash-audience.jpg); }
+  background-image: url(images/omed-splash-audience.jpg); }
 .splash--connection {
   background-image: url(https://placekitten.com/1766/725);
   /*background-image: url(../img/omed-splash-poster.jpg);*/ }
