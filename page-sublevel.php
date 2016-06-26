@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Top Level
+ * Template Name: Sub Level
  *
  * The template for displaying an inside top-level page.
  *
@@ -10,12 +10,7 @@
 
 <?php get_header(); ?>
 
-
-  <?php get_template_part( 'template-parts/content', 'splash' ); ?>
-
   <?php get_template_part( 'template-parts/content', 'page' ) ?>
-  
-
 
 <?php
 //get_sidebar();

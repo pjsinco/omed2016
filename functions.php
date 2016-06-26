@@ -36,9 +36,12 @@ function omed2016_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'omed2016' ),
-	) );
+	register_nav_menus( 
+    array( 
+      'header-menu-major' => 'Header Major Menu', 
+      'header-menu-minor' => 'Header Minor Menu', 
+    ) 
+  );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
