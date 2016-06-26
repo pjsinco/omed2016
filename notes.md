@@ -5,3 +5,8 @@
 
 * Smashing: [How To Harness The Machines: Being Productive With Task Runners](https://www.smashingmagazine.com/2016/06/harness-machines-productive-task-runners/)
     * For grunticon setup
+
+#####Sun Jun 26 06:08:18 2016 CDT
+* Sitepoint: [Getting Sticky Headers and the WordPress Admin Bar to Behave](https://www.sitepoint.com/getting-sticky-headers-wordpress-admin-bar-behave/)
+
+* Blog: [How to add Critical CSS to a WordPress site](https://aarontgrogg.com/blog/2016/01/13/how-to-add-critical-css-to-a-wordpress-site/)

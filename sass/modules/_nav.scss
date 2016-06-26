@@ -56,8 +56,12 @@
     margin-bottom: .5rem;
     
     @include breakpoint($screen $navflip) {
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: .25rem;
-      max-width: 1.5rem;
+      width: 25px;
+      height: 28px;
+      /*max-width: 1.5rem;*/
     }
   }
 

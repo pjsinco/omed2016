@@ -5,15 +5,34 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-notify");
   grunt.loadNpmTasks("grunt-grunticon");
+  grunt.loadNpmTasks("grunt-svgmin");
 
   grunt.initConfig({
+
+    svgmin: {
+      dist: {
+        options: {
+          plugins: [
+            { removeXMLProcInst: true },
+            { removeViewBox: false },
+            { removeUselessStrokeAndFill: false },
+          ],
+        },
+        files: [{
+          expand: true,
+          cwd: 'images/svg',
+          src: ['*.svg'],
+          dest: 'images/svg/minified',
+        }]
+      }
+    },
 
     grunticon: {
       icons: {
         files: [
           {
             expand: true,
-            cwd: 'images/svg',
+            cwd: 'images/svg/minified',
             src: ["*.svg", '*.png'],
             dest: 'dist/grunticon',
           },
@@ -22,18 +41,11 @@ module.exports = function(grunt) {
           enhanceSVG: true,
           pngpath: 'images/png',
           colors: {
-            yellow: '#fcef06',
-            warmgray: '#babbb1',
-            red: '#cb333b',
-            purple: '#9063cd',
             teal: '#00b0b9',
-            white: '#fff',
-            gray: '#808080',
-            mediumgray: '#b3b3b3',
-            lightgray: '#ddd',
-            extralightgray: '#f5f5f5',
-            verydark: '#666666',
-          }
+            white: '#ffffff',
+            warmgray: '#babbb1',
+          },
+          dynamicColorOnly: true,
         },
       },
     },
@@ -89,7 +101,6 @@ module.exports = function(grunt) {
 
   }); // initConfig
   
-  //grunt.registerTask('grunticon', ['grunticon']);
   grunt.registerTask('default', ['watch']);
 
 }; // exports
