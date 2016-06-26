@@ -6,6 +6,7 @@
     background-color: $white;
     box-shadow: 0 0px 18px rgba($verydark,.1);
     border-bottom: 1px solid #e9f0f3;
+
   }
 }
 
@@ -49,6 +50,12 @@
     
     @include breakpoint($screen $navflip) {
       animation: mainnavreveal .3s ease-out;
+    }
+  }
+
+  .admin-bar.sticky & {
+    @include breakpoint($screen $navflip) {
+      top: 32px;
     }
   }
 
