@@ -31,7 +31,7 @@ grunticon([
     <?php wp_head(); ?>
   </head>
 
-  <body <?php body_class('js'); ?>>
+  <body <?php if (!is_front_page()): body_class('js sticky'); else: body_class('js'); endif; ?>>
     <header class="header">
       <div class="wrap relative">
         <div class="menu__block">

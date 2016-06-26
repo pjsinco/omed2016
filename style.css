@@ -751,13 +751,14 @@ object {
 .splash--home {
   background-image: url(images/omed-splash-audience.jpg); }
 .splash--connection {
-  background-image: url(https://placekitten.com/1766/725);
+  background-image: url(http://placehold.it/1766x725);
   /*background-image: url(../img/omed-splash-poster.jpg);*/ }
 .splash--education {
-  background-image: url(../img/omed-splash-poster.jpg);
+  background-image: url(images/omed-splash-poster.jpg);
   /* background-image: url(../img/omed-splash-central.jpg); */ }
 .splash--inspiration {
-  background-image: url(../img/omed-splash-audience.jpg); }
+  /*background-image: url(https://placekitten.com/1766/725);*/
+  background-image: url(http://placehold.it/1766x725); }
 .splash-enhanced {
   background-image: url(../img/omed-super-audience.jpg); }
 .splash__emph {
@@ -807,30 +808,6 @@ object {
       font-size: 1.3125em;
       line-height: 1.4; } }
 
-#aoaLogo div {
-  background-image: url(../img/aoa-logo-horiz-white.png);
-  background-size: 12.25em; }
-
-@supports (background-image: filter(url("i.jpg"), blur(1px))) {
-  .splash {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0); }
-
-  .splash-enhanced {
-    -webkit-animation: sharpen 1.5s both;
-            animation: sharpen 1.5s both; }
-
-  @-webkit-keyframes sharpen {
-    from {
-      background-image: filter(url(../img/omed-super-audience.jpg)), blur(20px); }
-    to {
-      background-image: filter(url(../img/omed-super-audience.jpg)), blur(0px); } }
-
-  @keyframes sharpen {
-    from {
-      background-image: filter(url(../img/omed-super-audience.jpg)), blur(20px); }
-    to {
-      background-image: filter(url(../img/omed-super-audience.jpg)), blur(0px); } } }
 @media screen and (min-width: 56rem) {
   .aoa-logo {
     opacity: .8;

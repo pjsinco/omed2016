@@ -86,20 +86,21 @@
   
   &--connection {
     @extend %splash-base;
-    background-image: url(https://placekitten.com/1766/725);
+    background-image: url(http://placehold.it/1766x725);
     /*background-image: url(../img/omed-splash-poster.jpg);*/
     
   }
 
   &--education {
     @extend %splash-base;
-    background-image: url(../img/omed-splash-poster.jpg);
+    background-image: url(images/omed-splash-poster.jpg);
     /* background-image: url(../img/omed-splash-central.jpg); */
   }
 
   &--inspiration {
     @extend %splash-base;
-    background-image: url(../img/omed-splash-audience.jpg);
+    /*background-image: url(https://placekitten.com/1766/725);*/
+    background-image: url(http://placehold.it/1766x725);
   }
 
 
@@ -170,33 +171,5 @@
     }
   }
 
-
-}
-
-#aoaLogo div {
-  background-image: url(../img/aoa-logo-horiz-white.png);
-  background-size: 12.25em;
-}
-
-@supports (background-image: filter(url('i.jpg'), blur(1px))) {
-
-  .splash {
-    transform: translateZ(0);
-  }
-
-  .splash-enhanced {
-    animation: sharpen 1.5s both;
-  }
-
-  @keyframes sharpen {
-    from {
-      background-image: filter(url(../img/omed-super-audience.jpg)), blur(20px);
-    }
-
-    to {
-      background-image: filter(url(../img/omed-super-audience.jpg)), blur(0px);
-    }
-  }
-	
 
 }

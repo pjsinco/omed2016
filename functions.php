@@ -132,3 +132,21 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+function omed2016_add_page_slug_to_body_class( $classes ) {
+
+  if ( !is_page() ) {
+    return $classes;
+  }
+
+  global $post;
+
+  if ( isset( $post ) ) {
+    array_push( $classes, $post->post_type . '-' . $post->post_name );
+  }
+  
+  return $classes;
+
+}
+add_filter( 'body_class', 'omed2016_add_page_slug_to_body_class' );
+
