@@ -28,6 +28,7 @@
 
 
   $(document).on('scroll', function(evt) {
+
     // Check for scrolltop only on home page
     if (!($body).hasClass('home')) {
       return;
