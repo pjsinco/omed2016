@@ -40,7 +40,6 @@ function omed2016_setup() {
     array( 
       'header-menu-major' => 'Header Major Menu', 
       'header-menu-minor' => 'Header Minor Menu', 
-      'foo-menu' => 'Foo Menu', 
     ) 
   );
 
