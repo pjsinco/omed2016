@@ -1,7 +1,7 @@
 #####Sat Jun 25 07:41:03 2016 CDT
 * [WP Theme Handbook](https://developer.wordpress.org/themes/)
 
-* Blog: [Getting Started with Grunt and Sass](https://www.taniarascia.com/getting-started-with-grunt-and-sass/)
+* Blog: [Getting Started with Grunt and Sass – Tania Rascia](https://www.taniarascia.com/getting-started-with-grunt-and-sass/)
 
 * Smashing: [How To Harness The Machines: Being Productive With Task Runners](https://www.smashingmagazine.com/2016/06/harness-machines-productive-task-runners/)
     * For grunticon setup
@@ -64,3 +64,24 @@
       </li>
     </ul>
     ```
+
+* [WordPress › Support » Add Class to Link in Custom Menu](https://wordpress.org/support/topic/add-class-to-link-in-custom-menu)
+
+    ```php
+    function add_menuclass($ulclass) {
+      return preg_replace('/<a rel="fancybox"/', '<a rel="fancybox" class="fancybox"', $ulclass, 1);
+    }
+    add_filter('wp_nav_menu','add_menuclass');
+    ```
+
+* StackEx: [Add class to menu items of one specific menu (nav_menu_css_class) - WordPress Development Stack Exchange](http://wordpress.stackexchange.com/questions/90649/add-class-to-menu-items-of-one-specific-menu-nav-menu-css-class)
+
+
+* Blog: [Passing variables to get_template_part() in WordPress - k.dev](http://keithdevon.com/passing-variables-to-get_template_part-in-wordpress/)
+
+    ```
+    include(locate_template('your-template-name.php'));
+    ```
+    > You can use the WordPress locate_template function within PHP’s include(). 
+
+    > All of the variables available in your current script will be available in that template file now too.
