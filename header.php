@@ -49,38 +49,26 @@ grunticon([
                 <?php 
                   $major_menu_args = array(
                     'menu' => 'header-menu-major',
+                    'theme_location' => 'header-menu-major',
                     'menu_class' => 'level-1 menu__list--major',
                     'container' => false,
+                    'depth' => 0,
+                    'walker' => new Omed2016_Major_Nav_Walker_Class(),
                   );
                   wp_nav_menu( $major_menu_args );
                 ?>
 
+                <!-- .menu__list-minor  goes here -->
                 <?php 
                   $minor_menu_args = array(
-
+                    'menu' => 'header-menu-minor',
+                    'theme_location' => 'header-menu-minor',
+                    'menu_class' => 'foo level-1 menu__list--minor',
+                    'container' => false,
+                    'depth' => 0,
                   );
+                  wp_nav_menu( $minor_menu_args );
                 ?>
-                <ul class="level-1 menu__list--minor">
-                  <li class="menu__item--minor">
-                    <a class="nav__link svg" href="/registration">
-                      <div class="nav__icon icon-ticket-warmgray" style="width: 32px;"></div>
-                      <span class="nav__label">Registration</span>
-                    </a>
-                  </li>
-                  <li class="menu__item--minor">
-                    <a class="nav__link svg" href="#0">
-                      <div class="nav__icon icon-hotel-warmgray"></div>
-                      <span class="nav__label">Lorem</span>
-                    </a>
-                  </li>
-                  <li class="menu__item--minor">
-                    <a class="nav__link svg" href="/for-exhibitors">
-                      <div class="nav__icon icon-exhibits-warmgray"></div>
-                      <span class="nav__label">For Exhibitors</span>
-                    </a>
-                  </li>
-                </ul>
-                <!-- .menu__list-minor  goes here -->
               </nav>
             </div> <!-- .navmenu -->
           </div>

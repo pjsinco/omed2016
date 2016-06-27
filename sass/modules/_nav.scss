@@ -28,6 +28,7 @@
       border-bottom: 1px solid $white;
 
       @include breakpoint($screen $navflip) {
+        display: inline-block;
         border-bottom: none;
       }
     }

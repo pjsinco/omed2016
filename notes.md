@@ -19,3 +19,48 @@
 * Tutsplus: [Understanding the Walker Class](http://code.tutsplus.com/tutorials/understanding-the-walker-class--wp-25401)
 
 * Blog: [How to Add a Custom Class to a WordPress Menu Item - SevenSpark](http://sevenspark.com/how-to/how-to-add-a-custom-class-to-a-wordpress-menu-item)
+
+* Menu markup:
+    ```html
+    <ul id="menu-header-major" class="level-1 menu__list--major">
+        <li id="menu-item-16" class="hiya menu__item menu-item-16">
+            <a href="http://omed2016.dev/inspiration/">Inspiration</a>
+            <i class="icon-ctrl-down"></i>
+        </li>
+        <li id="menu-item-17" class="hiya menu__item--active menu-item-17">
+            <a href="http://omed2016.dev/education/">Education</a>
+            <ul class="level-2 menu__list--major">
+                <li id="menu-item-32" class="hiya menu__item menu-item-32">
+                    <a href="http://omed2016.dev/education/exhibits/">Exhibits</a>
+                    <i class="icon-ctrl-down"></i>
+                </li>
+            </ul>
+            <i class="icon-ctrl-down"></i>
+        </li>
+        <li id="menu-item-18" class="hiya menu__item menu-item-18">
+            <a href="http://omed2016.dev/connection/">Connection</a>
+            <i class="icon-ctrl-down"></i>
+        </li>
+    </ul>
+    
+    <ul class="level-1 menu__list--minor">
+      <li class="menu__item--minor">
+        <a class="nav__link svg" href="/registration">
+          <div class="nav__icon icon-ticket-warmgray" style="width: 32px;"></div>
+          <span class="nav__label">Registration</span>
+        </a>
+      </li>
+      <li class="menu__item--minor">
+        <a class="nav__link svg" href="#0">
+          <div class="nav__icon icon-hotel-warmgray"></div>
+          <span class="nav__label">Lorem</span>
+        </a>
+      </li>
+      <li class="menu__item--minor">
+        <a class="nav__link svg" href="/for-exhibitors">
+          <div class="nav__icon icon-exhibits-warmgray"></div>
+          <span class="nav__label">For Exhibitors</span>
+        </a>
+      </li>
+    </ul>
+    ```

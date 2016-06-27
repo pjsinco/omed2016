@@ -40,6 +40,7 @@ function omed2016_setup() {
     array( 
       'header-menu-major' => 'Header Major Menu', 
       'header-menu-minor' => 'Header Minor Menu', 
+      'foo-menu' => 'Foo Menu', 
     ) 
   );
 
@@ -153,3 +154,51 @@ function omed2016_add_page_slug_to_body_class( $classes ) {
 }
 add_filter( 'body_class', 'omed2016_add_page_slug_to_body_class' );
 
+
+class Omed2016_Major_Nav_Walker_Class extends Walker_Nav_Menu {
+
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
+    $indent = str_repeat( "\t", $depth );
+    $output .= "\n$indent<ul class=\"level-2 menu__list--major\">\n";
+  }
+
+//  function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
+//    $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+//    $classes = empty( $item->classes ) ? array() : ( array ) $item->classes;
+//    echo '<pre>'; var_dump($item); echo '</pre>'; die();
+//  }
+
+
+  function end_el( &$output, $item, $depth = 0, $args = array() ) {
+
+    if ( $item->menu_item_parent == "0" ) {
+      $output .= "<i class=\"icon-ctrl-down\"></i>";
+    }
+
+    parent::end_el( $output, $item, $depth, $args );
+  }
+
+  function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
+
+    $element->classes = array( 'hiya' );
+
+    $element->classes[] = ( $element->current || $element->current_item_ancestor ) ? 'menu__item--active' : 'menu__item';
+
+    parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+  }
+  
+}
+
+function omed2016_add_class_to_anchor( $nav_menu, $args ) {
+    return preg_replace(
+      "/<a (.*)>/",
+      "<a class=\"nav__link\" $1>",
+      $nav_menu
+    );
+//  return preg_replace(
+//    "/<a (.*)>(.*)<\/a>/", 
+//    "<a class=\"nav__link\" $1>$2 <i class=\"icon-ctrl-down\"></i></a>", 
+//    $nav_menu
+//  );
+}
+add_filter( 'wp_nav_menu', 'omed2016_add_class_to_anchor', 10, 2 );
