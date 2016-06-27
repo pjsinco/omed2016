@@ -12,3 +12,10 @@
 * Blog: [How to add Critical CSS to a WordPress site](https://aarontgrogg.com/blog/2016/01/13/how-to-add-critical-css-to-a-wordpress-site/)
 
 * Smashing: [Customizing Tree-Like Data Structures With Walker Class](https://www.smashingmagazine.com/2015/10/customize-tree-like-data-structures-wordpress-walker-class/)
+
+* CSS-Tricks: [The WordPress Nav Walker Class: A Guided var_dump() | CSS-Tricks](https://css-tricks.com/the-wordpress-nav-walker-class-a-guided-var_dump/)
+
+#####Mon Jun 27 06:41:40 2016 CDT
+* Tutsplus: [Understanding the Walker Class](http://code.tutsplus.com/tutorials/understanding-the-walker-class--wp-25401)
+
+* Blog: [How to Add a Custom Class to a WordPress Menu Item - SevenSpark](http://sevenspark.com/how-to/how-to-add-a-custom-class-to-a-wordpress-menu-item)

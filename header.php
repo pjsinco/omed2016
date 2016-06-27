@@ -46,26 +46,20 @@ grunticon([
             <a href="#menu" class="menu__link"></a>
             <div class="menu__items">
               <nav id="menu" class="menu wrap">
-                <ul class="level-1 menu__list--major">
-                  <li class="menu__item"><a class="nav__link" href="/inspiration">Inspiration</a></li>
-                  <li class="menu__item"><a class="nav__link" href="/education">Education <i class="icon-ctrl-down"></i></a>
-                    <ul class="level-2">
-                      <li><a href="/education">Tracks</a></li>
-                      <li><a href="/education">Dual CME</a></li>
-                      <li><a href="/education/exhibits/">Exhibits</a></li>
-                      <li><a href="/education">Lorem Ipsum</a></li>
-                      <li><a href="/education">Dolor Commodo</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu__item"><a class="nav__link" href="/connection">Connection <i class="icon-ctrl-down"></i></a>
-                    <ul class="level-2">
-                      <li><a href="/connection">Receptions</a></li>
-                      <li><a href="/connection">Bibendum</a></li>
-                      <li><a href="/connection">Aenean Bibendum Elit</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                <?php 
+                  $major_menu_args = array(
+                    'menu' => 'header-menu-major',
+                    'menu_class' => 'level-1 menu__list--major',
+                    'container' => false,
+                  );
+                  wp_nav_menu( $major_menu_args );
+                ?>
 
+                <?php 
+                  $minor_menu_args = array(
+
+                  );
+                ?>
                 <ul class="level-1 menu__list--minor">
                   <li class="menu__item--minor">
                     <a class="nav__link svg" href="/registration">
