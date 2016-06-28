@@ -42,7 +42,7 @@ grunticon([
           <div class="menu__nav">
             <a href="#menu" class="menu-link"></a>
             <div class="menu__items">
-              <nav id="menu" class="menu wrap">
+              <nav id="menu" class="menu wrap container-fluid">
                 <?php 
                   $major_menu_args = array(
                     'menu' => 'header-menu-major',

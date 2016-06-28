@@ -1,3 +1,36 @@
+.menu {
+  &, & > ul ul {
+    clear: both;
+    transition: all $transitionduration ease-out;
+    overflow: hidden;
+    max-height: 0;
+    background: $teal;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $navbarheight;
+  }
+
+  &__nav {
+  }
+
+  &__items {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: $navbarheight;
+    color: $white;
+  }
+
+  &__logo {
+    /*position: absolute;*/
+    /*z-index: 2;*/
+  }
+}
+
 a.menu-link {
   display: block;
   text-align: right;
@@ -23,10 +56,11 @@ a.menu-link {
   }
 }
 
-.level-1 {
+/*.level-1 {*/
+.sub-menu {
 
   & > li > a {
-    font-family: $font-medium;
+    /*font-family: $font-book;*/
 
     @include breakpoint($screen $navflip) {
       font-family: $font-book;
@@ -39,6 +73,7 @@ a.menu-link {
   .menu-major & a {
     opacity: .8;
     font-size: .875em;
+    font-family: $font-book;
 
     @include breakpoint($screen $navflip) {
       opacity: 1;
@@ -55,43 +90,6 @@ a.menu-link {
   }
 }
 
-.menu {
-  &, & > ul ul {
-    clear: both;
-    transition: all $transitionduration ease-out;
-    overflow: hidden;
-    max-height: 0;
-    background: $teal;
-  }
-
-  &__block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: $navbarheight;
-  }
-
-  &__nav {
-    /*text-align: right;*/
-    position: relative;
-    z-index: 3;
-    /*right: 0;*/
-    /*top: 25%;*/
-    width: 100%;
-  }
-
-  &__items {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: $navbarheight;
-  }
-
-  &__logo {
-    /*position: absolute;*/
-    /*z-index: 2;*/
-  }
-}
 
 
 .menu, .menu > ul ul {
@@ -103,10 +101,6 @@ a.menu-link {
   z-index: 1;
 }
 
-.menu > ul {
-  border-top: 1px solid #808080;
-}
-
 .menu li a {
   position: relative;
   text-transform: uppercase;
@@ -114,10 +108,19 @@ a.menu-link {
   letter-spacing: 1px;
   transition-property: color, opacity;
   transition-duration: $transitionduration;
+  font-family: $font-medium;
   color: #000;
   display: block;
-  padding: 0.8em;
-  border-bottom: 1px solid #808080;
+  padding: 1.5rem 0;
+  color: inherit;
+
+  .menu-major & {
+    border-bottom: 1px solid rgba($white, .17);
+
+    @include breakpoint($screen $navflip) {
+      border-bottom: none;
+    }
+  }
 
   @include breakpoint($screen $navflip) {
     text-align: center;
@@ -127,10 +130,22 @@ a.menu-link {
 //    @include expand-target();
 //  }
 
-  &:hover {
+  &:link {
     text-decoration: none;
-    color: $teal;
   }
+  &:visited {
+    color: inherit;
+  }
+
+//  &:hover {
+//    text-decoration: none;
+//    color: $teal;
+//  }
+
+  &.active {
+    color: inherit;
+  }
+
 
   & > i {
     display: none;
@@ -151,8 +166,12 @@ a.menu-link {
 }
 
 .current-menu-item {
-  font-family: $font-bold;
-  color: $teal;
+  color: $white;
+
+  @include breakpoint($screen $navflip) {
+    font-family: $font-bold;
+    color: $teal;
+  }
 }
 
 
