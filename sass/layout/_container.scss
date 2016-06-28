@@ -1,0 +1,8 @@
+.container-fluid,
+.container {
+  @extend %container-base;
+}
+
+.container-fluid {
+  @extend %container-fluid-base;
+}

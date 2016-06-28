@@ -85,3 +85,15 @@
     > You can use the WordPress locate_template function within PHP’s include(). 
 
     > All of the variables available in your current script will be available in that template file now too.
+
+######Tue Jun 28 09:42:31 2016 CDT
+
+* Blog: [Cache Busting WordPress Style.css - Gilbert Pellegrom](https://gilbert.pellegrom.me/cache-busting-wordpress-style-css/)
+    ```php
+    wp_register_style( 
+      'screen', 
+      get_template_directory_uri().'/style.css', 
+      array(), 
+      filemtime( get_template_directory().'/style.css' ) 
+    );
+    ```

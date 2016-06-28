@@ -18,7 +18,7 @@
       <div class="footer__block container-fluid">
         <div class="branding__block--footer wrap">
           <a class="svg" href="http://www.osteopathic.org">
-            <div class="icon-aoa-logo-white" style="width: 420px; height: 117px; fill: #ffffff;" data-grunticon-embed></div>
+            <div class="icon-aoa-logo" data-grunticon-embed></div>
           </a>
         </div> <!-- .branding__block-footer -->
         <div class="branding__body--footer">

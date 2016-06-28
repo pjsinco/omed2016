@@ -54,40 +54,59 @@
     }
   }
 
-  &--menu {
-    @include breakpoint($screen $navflip) {
-      width: 24.375em;
-      /*opacity: .7;*/
-    }
+//  &--menu {
+//    @include breakpoint($screen $navflip) {
+//      width: 24.375em;
+//      /*opacity: .7;*/
+//    }
+//
+//    .sticky & {
+//      /*opacity: 1;*/
+//    }
+//  }
 
-    .sticky & {
-      /*opacity: 1;*/
-    }
-  }
 
-
-  &__logo {
-
-    &--small {
-
-      max-width: 187px; 
-      height: auto;
-
-      @include breakpoint($screen $navflip) {
-        display: none;          
-      }
-
-    }
+  &__omed {
     
-    &--large {
-      display: none;
+    header &.icon-omed-logo-alone {
+      position: absolute;
+      top: 29%;
+      width: 170px;
+      height: 100%;
 
-      @include breakpoint($screen $navflip) {
-        display: block;
+      & .omedLogo {
+        fill: $white;
+      }
+
+      & .tagline {
+        display: none
+      }
+
+      & .rule {
+        display: none
       }
     }
-
   }
+//    &--small {
+//
+//      max-width: 187px; 
+//      height: auto;
+//
+//      @include breakpoint($screen $navflip) {
+//        display: none;          
+//      }
+//
+//    }
+//    
+//    &--large {
+//      display: none;
+//
+//      @include breakpoint($screen $navflip) {
+//        display: block;
+//      }
+//    }
+//
+//  }
 }
 
 

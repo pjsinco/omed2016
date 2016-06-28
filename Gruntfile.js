@@ -32,7 +32,8 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'images/svg/minified',
+            //cwd: 'images/svg/minified',
+            cwd: 'images/svg',
             src: ["*.svg", '*.png'],
             dest: 'dist/grunticon',
           },
@@ -40,12 +41,12 @@ module.exports = function(grunt) {
         options: {
           enhanceSVG: true,
           pngpath: 'images/png',
-          colors: {
-            teal: '#00b0b9',
-            white: '#ffffff',
-            warmgray: '#babbb1',
-          },
-          dynamicColorOnly: true,
+//          colors: {
+//            teal: '#00b0b9',
+//            white: '#ffffff',
+//            warmgray: '#babbb1',
+//          },
+          //dynamicColorOnly: true,
         },
       },
     },
