@@ -179,7 +179,7 @@ a.menu-link {
 /************************************************/
 
 
-@media screen and (min-width: 48.25em) {
+@include breakpoint($screen $navflip) {
   .pattern {
     overflow: visible;
   }

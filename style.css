@@ -1157,7 +1157,7 @@ a.menu-link {
 /************************************************/
 /*                 MEDIA QUERIES                */
 /************************************************/
-@media screen and (min-width: 48.25em) {
+@media screen and (min-width: 56rem) {
   .pattern {
     overflow: visible; }
 
