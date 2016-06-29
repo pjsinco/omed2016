@@ -97,3 +97,6 @@
       filemtime( get_template_directory().'/style.css' ) 
     );
     ```
+
+#####Wed Jun 29 06:55:00 2016 CDT
+* Blog: [Understanding get_template_part – Konstantin Kovshenin](https://kovshenin.com/2013/get_template_part/)

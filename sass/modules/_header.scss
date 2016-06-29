@@ -16,6 +16,8 @@
 
   @include breakpoint($screen $navflip) {
     background: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
     
     animation-name: fadein;
     animation-duration: 1s;

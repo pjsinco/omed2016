@@ -67,25 +67,44 @@
 
 
   &__omed {
-    
-    header &.icon-omed-logo-alone {
-      position: absolute;
-      top: 29%;
-      width: 170px;
-      height: 100%;
 
-      & .omedLogo {
+    &--small {
+      header &.icon-omed-logo-alone {
+        position: absolute;
+        top: 29%;
+        width: 170px;
+        height: 100%;
         fill: $white;
+
+
       }
 
-      & .tagline {
-        display: none
-      }
-
-      & .rule {
-        display: none
+      @include breakpoint($screen $navflip) {
+        display: none;
       }
     }
+
+    &--large {
+
+      display: none;
+
+      header &.icon-omed-logo {
+        top: 29%;
+        width: 350px;
+        height: 100%;
+
+
+        & .omedLogo {
+          fill: $teal;
+        }
+      }
+
+      @include breakpoint($screen $navflip) {
+        display: block;
+      }
+    }
+
+    
   }
 //    &--small {
 //
@@ -111,20 +130,20 @@
 
 
 
-#omedLogoWhite div {
-  background-image: url(../img/omed-logo-white-alone.png);
-  background-size: 15.25em;
-}
-
-#omedLogoWhiteWithTagline div {
-  background-image: url(../img/omed-logo-white-white-tagline.png);
-  background-size: 15.25em;
-}
-
-#omedLogoTeal div {
-  background-image: url(../img/omed-logo-teal.png);
-  /*background-size: 15.25em;*/
-
-}
+//#omedLogoWhite div {
+//  background-image: url(../img/omed-logo-white-alone.png);
+//  background-size: 15.25em;
+//}
+//
+//#omedLogoWhiteWithTagline div {
+//  background-image: url(../img/omed-logo-white-white-tagline.png);
+//  background-size: 15.25em;
+//}
+//
+//#omedLogoTeal div {
+//  background-image: url(../img/omed-logo-teal.png);
+//  /*background-size: 15.25em;*/
+//
+//}
 
 /*.big-words{fill:#FF0033;}*/

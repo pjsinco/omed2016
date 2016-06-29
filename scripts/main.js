@@ -13,7 +13,7 @@
   // its containing block
   var difference = 96;
 
-  var $html = $('html');
+  //var $html = $('html');
 
   var windowWidth = $(window).width();
   var $highlightableImage = $('#highlightableImage');
@@ -21,9 +21,9 @@
   //adjustHighlightableHeight();
 
   $(document).on('scroll', function(evt) {
-    if (!($html).hasClass('revealable')) {
-      return;
-    }
+    //if (!($html).hasClass('revealable')) {
+      //return;
+    //}
     var y = $(this).scrollTop();
     if (y > actionableScrollTop) {
       $('html').addClass('sticky');

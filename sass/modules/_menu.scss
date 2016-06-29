@@ -1,10 +1,158 @@
 .menu {
+
+  @include breakpoint($screen $navflip) {
+    display: flex;    
+  }
+
+  & li a {
+    position: relative;
+    text-transform: uppercase;
+    font-size: .8125em;
+    transition-property: color, opacity;
+    transition-duration: $transitionduration;
+    font-family: inherit;
+    color: #000;
+    display: block;
+    padding: 1.5rem 0;
+    color: inherit;
+  
+  
+    @include breakpoint($screen $navflip) {
+      text-align: center;
+      font-family: $font-book;
+      border: 0;
+    }
+  
+  
+    &:link {
+      text-decoration: none;
+    }
+    &:visited {
+      color: inherit;
+    }
+  
+  
+    &.active {
+      color: inherit;
+    }
+  
+  
+    & > i {
+      display: none;
+  
+      @include breakpoint($screen $navflip) {
+        display: initial;
+      }
+    }
+  
+    .menu-major & {
+      border-bottom: 1px solid $white;
+  
+      @include breakpoint($screen $navflip) {
+        border-bottom: none;
+      }
+    }
+  } /* End .menu li a */
+
+  & li.menu-item-has-children > a {
+    @include breakpoint($screen $navflip) {
+      padding-right: 2em;
+    }
+  }
+
+  &.active, & > ul ul.active {
+    max-height: 55em;
+    padding-bottom: 1rem;
+    z-index: 1;
+  }
+
+
+  & li.menu-item-has-children > a:after {
+    content: '+';
+    position: absolute;
+    top: 26%;
+    right: 0;
+    display: block;
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+
+    @include breakpoint($screen $navflip) {
+      content: ">";
+      font-size: 1em;
+      padding: 0.8em 0.5em;
+    }
+  }
+  
+  & li.menu-item-has-children > a.active:after {
+    content: "-";
+  }
+
+
   &, & > ul ul {
     clear: both;
     transition: all $transitionduration ease-out;
     overflow: hidden;
     max-height: 0;
     background: $teal;
+
+    @include breakpoint($screen $navflip) {
+      max-height: none;
+      overflow: visible;
+      background: none;
+    }
+  }
+
+  & > ul ul {
+    @include breakpoint($screen $navflip) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 12em;
+      width: 12em;
+      background: $white;
+    }
+  }
+
+  & > ul ul li {
+    @include breakpoint($screen $navflip) {
+      position: relative;
+    }
+  }
+
+  & > ul li:hover > ul {
+
+    @include breakpoint($screen $navflip) {
+      display: block;
+     }
+  }
+
+  & > ul ul.sub-menu {
+    @include breakpoint($screen $navflip) {
+      top: 3em;
+      left: 0;
+    }
+  }
+
+  & ul {
+
+    @include breakpoint($screen $navflip) {
+      display: flex;
+      margin: 0 0 0 -0.25em;
+      border: 0;
+    }
+  }
+
+  & > ul li {
+    @include breakpoint($screen $navflip) {
+      margin: 0 0.25em;
+    }
+  }
+
+  & > ul > li {
+    @include breakpoint($screen $navflip) {
+      display: inline-block;
+      position: relative;
+    }
   }
 
   &__block {
@@ -19,19 +167,26 @@
 
   &__items {
     position: absolute;
+    z-index: 10;
     left: 0;
     right: 0;
     top: $navbarheight;
     color: $white;
+
+    @include breakpoint($screen $navflip) {
+      position: initial;
+      color: $teal;
+    }
   }
 
   &__logo {
     /*position: absolute;*/
     /*z-index: 2;*/
+    
   }
-}
+} /* End .menu */
 
-a.menu-link {
+.menu-link {
   display: block;
   text-align: right;
   color: $white;
@@ -46,6 +201,10 @@ a.menu-link {
     }
   }
 
+  @include breakpoint($screen $navflip) {
+    display: none;
+  }
+
   &:after {
     content: "Menu";
     text-decoration: none;
@@ -56,20 +215,14 @@ a.menu-link {
   }
 }
 
-/*.level-1 {*/
 .sub-menu {
-
   & > li > a {
-    /*font-family: $font-book;*/
 
     @include breakpoint($screen $navflip) {
       font-family: $font-book;
     }
-
   }
-}
 
-.sub-menu {
   .menu-major & a {
     opacity: .8;
     font-size: .875em;
@@ -90,81 +243,6 @@ a.menu-link {
   }
 }
 
-
-
-.menu, .menu > ul ul {
-}
-
-.menu.active, .menu > ul ul.active {
-  max-height: 55em;
-  padding-bottom: 1rem;
-  z-index: 1;
-}
-
-.menu li a {
-  position: relative;
-  text-transform: uppercase;
-  font-size: .8125em;
-  letter-spacing: 1px;
-  transition-property: color, opacity;
-  transition-duration: $transitionduration;
-  font-family: $font-medium;
-  color: #000;
-  display: block;
-  padding: 1.5rem 0;
-  color: inherit;
-
-  .menu-major & {
-    border-bottom: 1px solid rgba($white, .17);
-
-    @include breakpoint($screen $navflip) {
-      border-bottom: none;
-    }
-  }
-
-  @include breakpoint($screen $navflip) {
-    text-align: center;
-  }
-
-//  &:after {
-//    @include expand-target();
-//  }
-
-  &:link {
-    text-decoration: none;
-  }
-  &:visited {
-    color: inherit;
-  }
-
-//  &:hover {
-//    text-decoration: none;
-//    color: $teal;
-//  }
-
-  &.active {
-    color: inherit;
-  }
-
-
-  & > i {
-    display: none;
-
-    @include breakpoint($screen $navflip) {
-      display: initial;
-    }
-  }
-
-  .menu-major & {
-    border-bottom: 1px solid $white;
-
-    @include breakpoint($screen $navflip) {
-      border-bottom: none;
-    }
-  }
-
-}
-
 .current-menu-item {
   color: $white;
 
@@ -174,99 +252,42 @@ a.menu-link {
   }
 }
 
+.menu-major {
+  font-family: $font-medium;
 
-.menu li.menu-item-has-children > a:after {
-  content: '+';
-  position: absolute;
-  top: 26%;
-  right: 0;
-  display: block;
-  font-size: 1.5em;
-  padding: 0.25em 0.5em;
+  & li a {
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba($white, .17);
+  
+    @include breakpoint($screen $navflip) {
+      border-bottom: none;
+    }
+  }
+
 }
 
-.menu li.menu-item-has-children > a.active:after {
-  content: "-";
-}
+.menu-minor {
 
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: $font-book;
+  text-align: center;
 
-
-/************************************************/
-
-/*                 MEDIA QUERIES                */
-
-/************************************************/
-
-
-@include breakpoint($screen $navflip) {
-  .pattern {
-    overflow: visible;
+  & li {
+    flex-basis: 85px;
+    line-height: 1.4;
   }
 
-  a.menu-link {
-    display: none;
-  }
-
-  .menu, .menu > ul ul {
-    max-height: none;
-    overflow: visible;
-    background: none;
-  }
-
-  .menu > ul ul {
-    background: #808080;
-    display: none;
-  }
-
-  .menu > ul li:hover > ul {
+  & li a {
     display: block;
-  }
-
-  .menu ul {
-    margin: 0 0 0 -0.25em;
-    border: 0;
-  }
-
-  .menu li a {
-    border: 0;
-  }
-
-  .menu li.menu-item-has-children > a {
-    padding-right: 2em;
-  }
-
-  .menu li.menu-item-has-children > a:after {
-    content: ">";
-    font-size: 1em;
-    padding: 0.8em 0.5em;
-  }
-
-  .menu .sub-menu > li.menu-item-has-children > a:after {
-    content: "▼";
-  }
-
-  .menu > ul li {
-    margin: 0 0.25em;
-  }
-
-  .menu > ul > li {
-    display: inline-block;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* border-bottom: 1px solid #808080; */
     position: relative;
+    cursor: pointer;
+    text-transform: none;
+    color: inherit;
   }
 
-  .menu > ul ul {
-    position: absolute;
-    top: 0;
-    left: 12em;
-    width: 12em;
-  }
-
-  .menu > ul ul li {
-    position: relative;
-  }
-
-  .menu > ul ul.sub-menu {
-    top: 3em;
-    left: 0;
-  }
 }
