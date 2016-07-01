@@ -276,7 +276,13 @@
 
   & li {
     flex-basis: 85px;
+    height: 100%;
     line-height: 1.4;
+
+    &.icon-ticket {
+      background-position: 20px 20px;
+      background-size: 50px;
+    }
   }
 
   & li a {
@@ -288,6 +294,12 @@
     cursor: pointer;
     text-transform: none;
     color: inherit;
+
+    &:link {
+      position: relative;
+      bottom: -39px;
+      text-decoration: none;
+    }
   }
 
 }

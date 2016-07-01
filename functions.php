@@ -145,6 +145,15 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+/**
+ * Pull the last item out of a url path.
+ * Ex.: Returns 'registration' from "http://omed2016.dev/registration/"
+ */
+function get_last_url_component( $url ) {
+  $filtered = array_filter(explode('/', $url)); 
+  return array_pop($filtered);
+}
+
 function omed2016_add_page_slug_to_body_class( $classes ) {
 
   if ( !is_page() ) {
@@ -186,16 +195,61 @@ class Omed2016_Major_Nav_Walker_Class extends Walker_Nav_Menu {
     parent::end_el( $output, $item, $depth, $args );
   }
 
-  function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
-
-    $element->classes = array( 'hiya' );
-
-    $element->classes[] = ( $element->current || $element->current_item_ancestor ) ? 'menu__item--active' : 'menu__item';
-
-    parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-  }
+//  function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
+//    $element->classes = array( 'hiya' );
+//    $element->classes[] = ( $element->current || $element->current_item_ancestor ) ? 'menu__item--active' : 'menu__item';
+//    parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+//  }
   
 }
+
+class Omed2016_Minor_Nav_Walker_Class extends Walker_Nav_Menu {
+
+  function start_el( &$output, $item, $depth = 0, $args = array() ) {
+
+    // Get an array of URL components
+    $filtered = array_filter( explode('/', $item->url) );
+    
+    // The last item is the title
+    $title = array_pop( $filtered );
+
+//echo '<pre>'; var_dump($item); echo '</pre>'; die();
+
+//<div class="icon-ticket"></div>
+    //$output .= 
+    parent::start_el( $output, $item, $depth, $args );
+    
+    
+  }
+}
+
+function omed2016_change_minor_nav_menu_item_title( 
+  $title, $item, $args, $depth 
+) {
+  $item->title .= '-hiya';
+  return $item;
+}
+//add_filter( 'nav_menu_item_title', 'omed2016_change_minor_nav_menu_item_title', 10, 4 );
+
+function omed2016_add_class_to_menu_minor_item( 
+    $classes, $item, $args, $depth 
+  ) {
+
+  if ( $args-> menu != 'header-menu-minor') {
+    return $classes;
+  }
+
+  $slug = mb_strtolower( get_last_url_component( $item->url ) );
+  $classes[] = 'icon-' . $slug;
+
+  return $classes;;
+
+}
+add_filter( 
+  'nav_menu_css_class', 
+  'omed2016_add_class_to_menu_minor_item', 
+  10, 
+  4 );
 
 function omed2016_add_class_to_anchor( $nav_menu, $args ) {
     return preg_replace(

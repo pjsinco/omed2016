@@ -32,8 +32,7 @@
   <body <?php if (!is_front_page()): body_class('sticky'); endif; ?>>
     <header class="header">
 <!--       <div class="wrap relative"> -->
-      <div class="menu__block container-fluid relative">
-        <div class="menu__logo">
+      <div class="menu__block container-fluid relative"> <div class="menu__logo">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="svg" title="OMED 2016">
             <div class="branding__omed--small icon-omed-logo-alone" data-grunticon-embed></div>
           </a>
@@ -65,6 +64,7 @@
                   'menu_class' => 'level-1 menu-minor',
                   'container' => false,
                   'depth' => 0,
+                  'walker' => new Omed2016_Minor_Nav_Walker_Class(),
                 );
                 wp_nav_menu( $minor_menu_args );
               ?>

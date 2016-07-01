@@ -1,10 +1,12 @@
 .icon-aoa-logo { background-image: url('images/png/aoa-logo.png'); background-repeat: no-repeat; }
 
-.icon-exhibits { background-image: url('images/png/exhibits.png'); background-repeat: no-repeat; }
+.icon-contact { background-image: url('images/png/contact.png'); background-repeat: no-repeat; }
+
+.icon-faq { background-image: url('images/png/faq.png'); background-repeat: no-repeat; }
+
+.icon-for-exhibitors { background-image: url('images/png/for-exhibitors.png'); background-repeat: no-repeat; }
 
 .icon-hotel { background-image: url('images/png/hotel.png'); background-repeat: no-repeat; }
-
-.icon-info { background-image: url('images/png/info.png'); background-repeat: no-repeat; }
 
 .icon-o { background-image: url('images/png/o.png'); background-repeat: no-repeat; }
 
@@ -12,7 +14,5 @@
 
 .icon-omed-logo { background-image: url('images/png/omed-logo.png'); background-repeat: no-repeat; }
 
-.icon-telephone { background-image: url('images/png/telephone.png'); background-repeat: no-repeat; }
-
-.icon-ticket { background-image: url('images/png/ticket.png'); background-repeat: no-repeat; }
+.icon-registration { background-image: url('images/png/registration.png'); background-repeat: no-repeat; }
 

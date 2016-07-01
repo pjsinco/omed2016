@@ -1235,7 +1235,11 @@ object {
   .menu-minor li {
     -ms-flex-preferred-size: 85px;
         flex-basis: 85px;
+    height: 100%;
     line-height: 1.4; }
+    .menu-minor li.icon-ticket {
+      background-position: 20px 20px;
+      background-size: 50px; }
   .menu-minor li a {
     display: block;
     padding-top: 1.5rem;
@@ -1245,6 +1249,10 @@ object {
     cursor: pointer;
     text-transform: none;
     color: inherit; }
+    .menu-minor li a:link {
+      position: relative;
+      bottom: -39px;
+      text-decoration: none; }
 
 .branding {
   display: none; }
