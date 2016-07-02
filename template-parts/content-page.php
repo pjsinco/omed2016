@@ -29,12 +29,21 @@
       ?>
     </section> <!-- .col -->
   
-    <!--   Callouts -->
+    <!--   Asides -->
     <section class="content__right">
+    <?php 
+
+    global $post;
+    $asides = get_field( 'omed_aside', $post->id );
+    if ( !empty( $asides ) ):
+      foreach ($asides as $aside):
+    ?>
       <aside class="breakout">
-        <h3>hiya</h3>
-        hello there
+        <h3><?php echo $aside->post_title ?></h3>
+        <?php echo $aside->post_content; ?>
       </aside>
+      
+    <?php endforeach; endif; ?>
     </section>
   
   </div> <!-- .content -->
