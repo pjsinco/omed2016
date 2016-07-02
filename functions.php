@@ -7,6 +7,7 @@
  * @package omed2016
  */
 
+
 if ( ! function_exists( 'omed2016_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -17,8 +18,6 @@ if ( ! function_exists( 'omed2016_setup' ) ) :
  */
 function omed2016_setup() {
 
-	// Add default posts and comments RSS feed links to head.
-	//add_theme_support( 'automatic-feed-links' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -31,7 +30,8 @@ function omed2016_setup() {
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * @link https://developer.wordpress.org/themes/functionality/
+   *     featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
 
@@ -144,6 +144,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Set up Custom post types
+ */
+require_once get_template_directory() . '/inc/omed2016_custom_posts_types.php';
 
 /**
  * Pull the last item out of a url path.
