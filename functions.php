@@ -148,7 +148,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Set up Custom post types
  */
-require_once get_template_directory() . '/inc/omed2016_custom_posts_types.php';
+require_once get_template_directory() . '/inc/omed2016-custom-post-types.php';
 
 /**
  * Set up widgets
