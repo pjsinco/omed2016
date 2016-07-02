@@ -1,6 +1,6 @@
 <?php
 
-class Omed2016_Featured_Sessions_Widget extends WP_Widget {
+class Omed2016_Featured_Sessions_Block extends WP_Widget {
 
   public function __construct() {
 
@@ -20,20 +20,20 @@ class Omed2016_Featured_Sessions_Widget extends WP_Widget {
 
     echo $args['before_widget'];
 
-    if ( !empty( $instance['title'] ) ) {
+    if ( !empty( $instance['title'] ) ):
     ?>
       <div class="container-fluid pageblock wrap">
         <h3 class="section__header">
-<?php
+        <?php
           echo $args['before_title'] . 
           apply_filters( 'widget_title', $instance['title'] ) . 
           $args['after_title'];
-?>
+        ?>
         </h3>
       </div>
 
       <div class="card__block container-fluid pageblock wrap">
-<?php 
+      <?php 
         $post_args = array(
           'posts_per_page' => 3,
           'post_type' => 'omed_session',
@@ -41,10 +41,10 @@ class Omed2016_Featured_Sessions_Widget extends WP_Widget {
 
         $sessions = get_posts( $post_args );
 
-        foreach ($sessions as $session) {
+        foreach ( $sessions as $session ):
           setup_postdata( $session );
           
-?>        
+      ?>        
         <div class="card">
           <div class="card__body">
             <div class="card__imagecontainer">
@@ -56,18 +56,18 @@ class Omed2016_Featured_Sessions_Widget extends WP_Widget {
             <div class="card__header--minor"><?php echo get_field( 'date_and_time', $session->ID ); ?></div>
             <a href="<?php echo get_field( 'session_more_info_link', $session->ID ); ?>" class="btn btn--primary">Read more</a>
           </div>
-        </div>
-<?php
-        }
+          </div>
+      <?php
+        endforeach;
 
       echo $args['after_widget'];
-?>
+      ?>
       </div>
-<?php
+      <?php
       
-    }
+    endif;
 
-  }
+        }
 
   public function form( $instance ) {
 
@@ -96,7 +96,7 @@ class Omed2016_Featured_Sessions_Widget extends WP_Widget {
 
 function omed2016_register_widgets( ) {
 
-  register_widget( 'Omed2016_Featured_Sessions_Widget' );
+  register_widget( 'Omed2016_Featured_Sessions_Block' );
   
 }
 add_action( 'widgets_init' , 'omed2016_register_widgets' );

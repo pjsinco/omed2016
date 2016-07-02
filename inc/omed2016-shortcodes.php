@@ -1,6 +1,6 @@
 <?php
 
-function omed2016_widget_shortcode( $atts ) {
+function omed2016_block_shortcode( $atts ) {
 
   extract( 
     shortcode_atts(
@@ -25,4 +25,4 @@ function omed2016_widget_shortcode( $atts ) {
   return $output;
 }
 
-add_shortcode( 'widget', 'omed2016_widget_shortcode' );
+add_shortcode( 'block', 'omed2016_block_shortcode' );
