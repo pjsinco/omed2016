@@ -151,6 +151,12 @@ require get_template_directory() . '/inc/extras.php';
 require_once get_template_directory() . '/inc/omed2016_custom_posts_types.php';
 
 /**
+ * Set up widgets
+ *
+ */
+require_once get_template_directory() . '/inc/omed2016-widgets.php';
+
+/**
  * Pull the last item out of a url path.
  * Ex.: Returns 'registration' from "http://omed2016.dev/registration/"
  */
