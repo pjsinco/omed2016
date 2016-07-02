@@ -157,6 +157,12 @@ require_once get_template_directory() . '/inc/omed2016_custom_posts_types.php';
 require_once get_template_directory() . '/inc/omed2016-widgets.php';
 
 /**
+ * Set up shortcodes
+ *
+ */
+require_once get_template_directory() . '/inc/omed2016-shortcodes.php';
+
+/**
  * Pull the last item out of a url path.
  * Ex.: Returns 'registration' from "http://omed2016.dev/registration/"
  */

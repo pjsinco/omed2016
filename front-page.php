@@ -12,6 +12,13 @@
 
 <?php get_template_part( 'template-parts/content', 'splash' ); ?>
 
+<?php 
+  while ( have_posts() ): 
+    the_post(); 
+    the_content();
+  endwhile; 
+?>
+
 <!-- Dummy text -->
 <div class="pageblock container-fluid">
   <div class="wrap">
