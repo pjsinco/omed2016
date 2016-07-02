@@ -103,3 +103,5 @@
 
 #####Sat Jul  2 04:57:14 2016 CDT
 * Codepen: [Page Load Animations](http://codepen.io/brendeng/pen/sDjIC)
+
+* Smashing: [Inserting Widgets With Shortcodes](https://www.smashingmagazine.com/2012/12/inserting-widgets-with-shortcodes/)
