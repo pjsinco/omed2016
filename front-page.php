@@ -19,6 +19,8 @@
   endwhile; 
 ?>
 
+<?php // get_sidebar(); ?>
+
 <!-- Dummy text -->
 <div class="pageblock container-fluid">
   <div class="wrap">

@@ -69,23 +69,23 @@ function omed2016_custom_post_types() {
     'supports'            => array( 'title', 'editor', 'revision' ),
   );
 
-  $intro_item_labels = array(
-    'name'               => 'Intro Items',
-    'singular_name'      => 'Intro Item',
-    'menu_name'          => 'Intro Items',
-    'name_admin_bar'     => 'Intro Item',
+  $quicklink_labels = array(
+    'name'               => 'Quicklinks',
+    'singular_name'      => 'Quicklink',
+    'menu_name'          => 'Quicklinks',
+    'name_admin_bar'     => 'Quicklink',
     'add_new'            => 'Add new',
-    'add_new_item'       => 'Add new intro item',
-    'edit_item'          => 'Edit intro item',
-    'view_item'          => 'View intro item',
-    'all_items'          => 'All intro items',
-    'search_items'       => 'Search intro items',
-    'not_found'          => 'No intro items found',
-    'not_found_in_trash' => 'No intro items found in trash.',
+    'add_new_item'       => 'Add new quicklink',
+    'edit_item'          => 'Edit quicklink',
+    'view_item'          => 'View quicklink',
+    'all_items'          => 'All quicklinks',
+    'search_items'       => 'Search quicklinks',
+    'not_found'          => 'No quicklinks found',
+    'not_found_in_trash' => 'No quicklinks found in trash.',
   );
 
-  $intro_item_args = array(
-    'labels'              => $intro_item_labels,
+  $quicklink_args = array(
+    'labels'              => $quicklink_labels,
     'public'              => false,
     'publicly_queryable'  => false,
     'exclude_from_search' => true,
@@ -95,13 +95,13 @@ function omed2016_custom_post_types() {
     'menu_position'       => 7,
     'capability_type'     => 'post',
     'hierarchical'        => false,
-    'rewrite'             => array( 'slug' => 'intro-item' ),
+    'rewrite'             => array( 'slug' => 'quicklink' ),
     'supports'            => array( 'title', 'revision' ),
   );
 
   register_post_type( 'omed_session', $featured_session_args );
   register_post_type( 'omed_aside', $aside_args );
-  register_post_type( 'omed_intro_item', $intro_item_args );
+  register_post_type( 'omed_quicklink', $quicklink_args );
 }
 
 

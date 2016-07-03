@@ -22,6 +22,7 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
 
     if ( !empty( $instance['title'] ) ):
     ?>
+
       <div class="container-fluid pageblock wrap">
         <h3 class="section__header">
         <?php
@@ -32,7 +33,7 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
         </h3>
       </div>
 
-      <div class="card__block container-fluid pageblock wrap">
+      <section class="card__block container-fluid pageblock wrap">
       <?php 
         $post_args = array(
           'posts_per_page' => 3,
@@ -62,23 +63,23 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
 
       echo $args['after_widget'];
       ?>
-      </div>
+      </section>
       <?php
       
     endif;
 
-        }
+  }
 
   public function form( $instance ) {
 
     $title = !empty( $instance['title'] ) ? $instance['title'] : 'New title';
 
-  ?>
+    ?>
     <p>
       <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">Title: </label>
       <input class="widefat" type="text" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'title') ); ?>" value="<?php echo esc_attr( $title ); ?>" />
     </p>
-  <?php
+    <?php
 
   }
 
@@ -93,10 +94,150 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
 
 }
 
+class Omed2016_Intro_Block extends WP_Widget {
+
+  public function __construct() {
+    $base_id = 'intro-block';
+    $name = 'Introduction';
+
+    $widget_ops = array( 
+      'classname' => 'intro',
+      'description' => 'Introductory text for display on the home page',
+    );
+
+    parent::__construct( $base_id, $name, $widget_ops );
+
+  }
+
+  public function widget( $args, $instance ) {
+
+    echo $args['before_widget'];
+
+    ?>
+    <section class="intro__block container-fluid pageblock">
+      <div class="row center-xs">
+        <div class="col-xs-12 icon-omed-logo">
+        </div> <!-- .col -->
+      </div><!-- .row -->
+      <div class="row center-xs">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
+          <p class="intro__text"><?php echo $instance['body']; ?></p>
+        </div> <!-- .col -->
+      </div><!-- .row -->
+    </section>
+    <?php
+
+    echo $args['after_widget'];
+
+  }
+
+  public function form( $instance ) {
+    $body = !empty( $instance['body'] ) ? $instance['body'] : '';
+    ?>
+
+    <p>
+      <label for="<?php echo esc_attr( $this->get_field_id( 'body' ) ); ?>">Introductory body text: </label>
+      <textarea class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'body' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'body') ); ?>"><?php echo esc_attr( $body ); ?></textarea>
+    </p>
+
+    <?php
+
+  }
+
+  public function update( $new_instance, $old_instance ) {
+		$instance = array();
+    $instance['body'] = ( !empty( $new_instance['body'] ) ? $new_instance['body'] : '' );
+
+    return $instance;
+  }
+
+}
+
+class Omed2016_Quicklinks_Block extends WP_Widget {
+
+  public function __construct() {
+
+    $base_id = 'quicklinks';
+    $name = 'Quicklinks';
+
+    $widget_ops = array(
+      'classname' => 'quicklinks__block',
+      'description' => 'Quicklinks',
+    );
+
+    parent::__construct( $base_id, $name, $widget_ops );
+  }
+
+  public function widget( $args, $instance ) {
+
+    echo $args['before_widget'];
+
+    ?>
+
+    <section class="quicklinks__block container-fluid pageblock wrap">
+      <ul "quicklinks__list">
+
+    <?php
+    $args = array(
+      'posts_per_page' => 3,
+      'post_type' => 'omed_quicklink',
+    );
+
+    if ( !empty( $instance['ids'] ) ):
+      $args['post__in'] = array_map( 'trim', explode( ',', $instance['ids']) );
+      $args['posts_per_page'] = -1;
+    endif;
+
+    $quicklinks = get_posts( $args );
+    foreach ($quicklinks as $quicklink):
+      setup_postdata( $quicklink );
+    ?>
+        <li class="quicklinks__item <?php echo get_field( 'omed_quicklink_icon_class_name', $quicklink->ID ); ?>">
+          <div class="quicklinks__body">
+            <h4 class="quicklinks__header"><?php echo $quicklink->post_title ?></h4>
+            <p class="quicklinks__body"><?php echo get_field( 'omed_quicklink_body_text', $quicklink->ID ); ?></p>
+            <a href="<?php echo get_field( 'omed_quicklink_link', $quicklink->ID ); ?>" class="btn btn--primary">Go</a>
+          </div> <!-- .quicklinks__body -->
+        </li> <!-- .col -->
+
+    <?php
+    endforeach;
+    ?>
+      </ul>
+    </section>
+    <?php
+    echo $args['after_widget'];
+  }
+
+  public function form( $instance ) {
+    
+    $ids = !empty( $instance['ids'] ) ? $instance['ids'] : '';
+    ?>
+
+    <p>
+      <label for="<?php echo esc_attr( $this->get_field_id( 'ids' ) ); ?>">Quicklink IDs to display (comma-separated list): </label>
+      <input class="widefat" type="text" name="<?php echo esc_attr( $this->get_field_name( 'ids' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'ids') ); ?>" value="<?php echo esc_attr( $ids ); ?>" />
+    </p>
+
+     <?php
+  }
+
+  public function update( $new_instance, $old_instance ) {
+
+		$instance = array();
+    $instance['ids'] = ( !empty( $new_instance['ids'] ) ? $new_instance['ids'] : '' );
+
+		return $instance;
+
+  }
+}
 
 function omed2016_register_widgets( ) {
 
   register_widget( 'Omed2016_Featured_Sessions_Block' );
+  register_widget( 'Omed2016_Quicklinks_Block' );
+  register_widget( 'Omed2016_Intro_Block' );
+
   
 }
 add_action( 'widgets_init' , 'omed2016_register_widgets' );
