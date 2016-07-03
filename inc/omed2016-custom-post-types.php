@@ -32,7 +32,7 @@ function omed2016_custom_post_types() {
     'show_ui'             => true,
     'show_in_menu'        => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 5,
+    'menu_position'       => 24,
     'capability_type'     => 'post',
     'hierarchical'        => false,
     'rewrite'             => array( 'slug' => 'featured-session' ),
@@ -62,7 +62,7 @@ function omed2016_custom_post_types() {
     'show_ui'             => true,
     'show_in_menu'        => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 6,
+    'menu_position'       => 20,
     'capability_type'     => 'post',
     'hierarchical'        => false,
     'rewrite'             => array( 'slug' => 'aside' ),
@@ -92,16 +92,47 @@ function omed2016_custom_post_types() {
     'show_ui'             => true,
     'show_in_menu'        => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 7,
+    'menu_position'       => 20,
     'capability_type'     => 'post',
     'hierarchical'        => false,
     'rewrite'             => array( 'slug' => 'quicklink' ),
     'supports'            => array( 'title', 'revision' ),
   );
 
+  $highlightable_labels = array(
+    'name'               => 'Highlightables',
+    'singular_name'      => 'Highlightable',
+    'menu_name'          => 'Highlightables',
+    'name_admin_bar'     => 'Highlightable',
+    'add_new'            => 'Add new',
+    'add_new_item'       => 'Add new highlightable',
+    'edit_item'          => 'Edit highlightable',
+    'view_item'          => 'View highlightable',
+    'all_items'          => 'All highlightables',
+    'search_items'       => 'Search highlightables',
+    'not_found'          => 'No highlightables found',
+    'not_found_in_trash' => 'No highlightables found in trash.',
+  );
+
+  $highlightable_args = array(
+    'labels'              => $highlightable_labels,
+    'public'              => false,
+    'publicly_queryable'  => false,
+    'exclude_from_search' => true,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'show_in_admin_bar'   => true,
+    'menu_position'       => 20,
+    'capability_type'     => 'post',
+    'hierarchical'        => false,
+    'rewrite'             => array( 'slug' => 'highlightable' ),
+    'supports'            => array( 'title', 'revision' ),
+  );
+
   register_post_type( 'omed_session', $featured_session_args );
   register_post_type( 'omed_aside', $aside_args );
   register_post_type( 'omed_quicklink', $quicklink_args );
+  register_post_type( 'omed_highlightable', $highlightable_args );
 }
 
 
