@@ -58,7 +58,6 @@ function omed2016_setup() {
 add_action( 'after_setup_theme', 'omed2016_setup' );
 
 function omed2016_remove_widgets() {
-  // Remove unneeded widgets
   unregister_widget( 'WP_Widget_Pages' );
   unregister_widget( 'WP_Widget_Calendar' );
   unregister_widget( 'WP_Widget_Archives' );
@@ -74,6 +73,18 @@ function omed2016_remove_widgets() {
   //unregister_widget( 'WP_Nav_Menu_Widget' );
 }
 add_action( 'widgets_init' , 'omed2016_remove_widgets' );
+
+/**
+ * Remove default WordPress post type from admin menu
+ *
+ */
+function omed2016_remove_default_posts_from_admin_menu() {
+
+  remove_menu_page( 'edit.php' );
+
+}
+add_action('admin_menu' , 'omed2016_remove_default_posts_from_admin_menu');
+
 
 
 /**
