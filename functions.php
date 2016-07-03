@@ -8,16 +8,14 @@
  */
 
 
-if ( ! function_exists( 'omed2016_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
+  /**
+   * Sets up theme defaults and registers support for various WordPress features.
+   *
+   * Note that this function is hooked into the after_setup_theme hook, which
+   * runs before the init hook. The init hook is too late for some features, such
+   * as indicating support for post thumbnails.
+   */
 function omed2016_setup() {
-
 
 	/*
 	 * Let WordPress manage the document title.
@@ -43,6 +41,7 @@ function omed2016_setup() {
     ) 
   );
 
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -56,8 +55,26 @@ function omed2016_setup() {
 	) );
 
 }
-endif;
 add_action( 'after_setup_theme', 'omed2016_setup' );
+
+function omed2016_remove_widgets() {
+  // Remove unneeded widgets
+  unregister_widget( 'WP_Widget_Pages' );
+  unregister_widget( 'WP_Widget_Calendar' );
+  unregister_widget( 'WP_Widget_Archives' );
+  unregister_widget( 'WP_Widget_Links' );
+  unregister_widget( 'WP_Widget_Meta' );
+  unregister_widget( 'WP_Widget_Search' );
+  unregister_widget( 'WP_Widget_Text' );
+  unregister_widget( 'WP_Widget_Categories' );
+  unregister_widget( 'WP_Widget_Recent_Posts' );
+  unregister_widget( 'WP_Widget_Recent_Comments' );
+  unregister_widget( 'WP_Widget_RSS' );
+  unregister_widget( 'WP_Widget_Tag_Cloud' );
+  //unregister_widget( 'WP_Nav_Menu_Widget' );
+}
+add_action( 'widgets_init' , 'omed2016_remove_widgets' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
