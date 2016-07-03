@@ -105,3 +105,6 @@
 * Codepen: [Page Load Animations](http://codepen.io/brendeng/pen/sDjIC)
 
 * Smashing: [Inserting Widgets With Shortcodes](https://www.smashingmagazine.com/2012/12/inserting-widgets-with-shortcodes/)
+
+#####Sun Jul  3 07:43:59 2016 CDT
+* Blog: [» Remove Default Post Type From Admin Menu WordPress](http://www.techjunkie.com/remove-default-post-type-from-admin-menu-wordpress/)
