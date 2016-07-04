@@ -44,7 +44,6 @@
   });
   
   $menuTrigger.click(function(e) {
-  	e.preventDefault();
   	var $this = $(this);
   	$this.toggleClass('active').next('ul').toggleClass('active');
   });
