@@ -1,6 +1,6 @@
 .aoa-logo {
   @include breakpoint($screen $navflip) {
-    opacity: .8;
+    /*opacity: .8;*/
     transition-property: opacity;
     transition-duration: $transitionduration;
     transition-timing-function: ease-in;

@@ -811,7 +811,7 @@ object {
 
 @media screen and (min-width: 56rem) {
   .aoa-logo {
-    opacity: .8;
+    /*opacity: .8;*/
     -webkit-transition-property: opacity;
             transition-property: opacity;
     -webkit-transition-duration: 0.3s;
@@ -1412,7 +1412,7 @@ object {
         height: 210px; }
         .highlightable--pinned .highlightable__body {
           /*top: 20px;*/
-          top: -10px; } }
+          /*top: -10px;*/ } }
   .highlightable__text {
     text-align: center;
     color: inherit; }
@@ -1442,9 +1442,7 @@ object {
         position: relative;
         bottom: 80px;
         /*margin-right: 4rem;*/
-        min-width: 250px; }
-        .highlightable--pinned .highlightable__imagecontainer {
-          bottom: 70px; } }
+        min-width: 250px; } }
   .highlightable__image {
     /*box-shadow: 5px 5px 13px rgba($verydark,.3);*/ }
     @media screen and (min-width: 48rem) {
@@ -1635,6 +1633,7 @@ object {
 
 .footer .icon-aoa-logo {
   width: 320px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  fill: #fff; }
 
 /*@import 'icons/index';*/

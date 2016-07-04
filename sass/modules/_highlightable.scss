@@ -80,7 +80,7 @@ $highlightablebreak: $large-start;
 
       .highlightable--pinned & {
         /*top: 20px;*/
-        top: -10px;
+        /*top: -10px;*/
       }
     }
   }
@@ -119,9 +119,6 @@ $highlightablebreak: $large-start;
       /*margin-right: 4rem;*/
       min-width: 250px;
     
-      .highlightable--pinned & {
-        bottom: 70px;
-      }
     }
   }
 

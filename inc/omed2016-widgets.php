@@ -296,9 +296,10 @@ class Omed2016_Highlightable extends WP_Widget {
     else:
       return;
     endif;
-echo '<pre>'; var_dump($instance); echo '</pre>'; die();
     ?>
-    <section class="highlightable <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'highlightable--flipped' : '' ); ?> container-fluid pageblock relative">
+
+    <section 
+      class="highlightable <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'highlightable--flipped' : '' ); ?> <?php echo ( isset( $instance['pinned'] ) ? 'highlightable--pinned' : '' ); ?> container-fluid pageblock relative"  >
       <div class="highlightable__block wrap">
         <div class="highlightable__body">
           <div class="highlightable__imagecontainer">
@@ -307,7 +308,7 @@ echo '<pre>'; var_dump($instance); echo '</pre>'; die();
           <div class="highlightable__text">
             <h5 class="highlightable__kicker"><?php echo $highlightable['omed_highlightable_kicker'] ?></h5>
             <h4 class="highlightable__header"><?php echo $highlightable['omed_highlightable_body'] ?></h4>
-            <button class="btn btn--sm btn--reverse">Lorem ipsum</button>
+            <button class="btn btn--sm <?php echo ( isset( $instance['pinned'] ) ? 'btn--primary' : 'btn--reverse' ); ?>">Lorem ipsum</button>
           </div> <!-- .highlightable__text -->
         </div> <!-- .highlightable__body -->
       </div> <!-- .highlightable__block -->

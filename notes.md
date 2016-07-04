@@ -108,3 +108,6 @@
 
 #####Sun Jul  3 07:43:59 2016 CDT
 * Blog: [» Remove Default Post Type From Admin Menu WordPress](http://www.techjunkie.com/remove-default-post-type-from-admin-menu-wordpress/)
+
+#####Mon Jul  4 10:51:34 2016 CDT
+* CSS-Tricks: [Shortcode in a Template | CSS-Tricks](https://css-tricks.com/snippets/wordpress/shortcode-in-a-template/)
