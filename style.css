@@ -1375,7 +1375,7 @@ object {
   /* Giant O in background */ }
   .highlightable--pinned {
     margin-bottom: 0;
-    box-sizing: content-box;
+    /*box-sizing: content-box;*/
     background: rgba(252, 239, 6, 0.05);
     color: #00b0b9; }
   .highlightable__kicker {
@@ -1411,7 +1411,8 @@ object {
                 flex-direction: row;
         height: 210px; }
         .highlightable--pinned .highlightable__body {
-          top: 20px; } }
+          /*top: 20px;*/
+          top: -10px; } }
   .highlightable__text {
     text-align: center;
     color: inherit; }

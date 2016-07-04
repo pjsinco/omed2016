@@ -23,7 +23,7 @@ $highlightablebreak: $large-start;
   &--pinned {
     @extend %highlightable-base;
     margin-bottom: 0;
-    box-sizing: content-box;
+    /*box-sizing: content-box;*/
     background: rgba($yellow, .05);
     color: $teal;
   }
@@ -79,7 +79,8 @@ $highlightablebreak: $large-start;
       height: 210px;
 
       .highlightable--pinned & {
-        top: 20px;
+        /*top: 20px;*/
+        top: -10px;
       }
     }
   }

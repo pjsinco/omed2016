@@ -13,6 +13,16 @@
 
     </div><!-- #content -->
     
+<?php 
+  global $post; 
+  $fields = get_fields( $post->ID );
+  if ( !empty( $fields['highlightables'] ) ):
+    $highlightable = $fields['highlightables'][0];
+
+
+    echo do_shortcode( "[block type='Omed2016_Highlightable' id='145' pinned='checked']" );
+  endif;
+?>
     
     <footer class="footer">
       <div class="footer__block container-fluid">

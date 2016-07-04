@@ -12,10 +12,10 @@ function omed2016_block_shortcode( $atts ) {
   );
 
   $args = array(
-    'before_widget' => '<div class="box widget">',
-    'after_widget' => '</div>',
-    'before_title' => '<div class="widget-title">',
-    'after_title' => '</div>',
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
   );
 
   ob_start();
