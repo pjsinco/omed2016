@@ -1251,6 +1251,9 @@ object {
   @media screen and (min-width: 67.75rem) {
     .menu-major > li {
       padding-right: 1rem; } }
+  @media screen and (min-width: 73rem) {
+    .menu-major > li {
+      padding-right: 2rem; } }
   .menu-major li a {
     letter-spacing: 1px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.17); }

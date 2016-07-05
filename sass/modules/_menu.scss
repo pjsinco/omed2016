@@ -279,6 +279,10 @@
     @include breakpoint($screen $xlarge-start) {
       padding-right: 1rem;
     }
+
+    @include breakpoint($screen $xlarge-minor-start) {
+      padding-right: 2rem;
+    }
   }
   
   & li a {
