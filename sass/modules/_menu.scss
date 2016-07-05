@@ -14,11 +14,12 @@
     font-family: inherit;
     color: #000;
     display: block;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     color: inherit;
   
   
     @include breakpoint($screen $navflip) {
+      padding: 1.5rem 0;
       text-align: center;
       font-family: $font-book;
       border: 0;
@@ -68,26 +69,26 @@
   }
 
 
-  & li.menu-item-has-children > a:after {
-    content: '+';
-    position: absolute;
-    top: 26%;
-    right: 0;
-    display: block;
-    font-size: 1.5em;
-    padding: 0.25em 0.5em;
-
-    @include breakpoint($screen $navflip) {
-      /*content: ">";*/
-      content: none;
-      font-size: 1em;
-      padding: 0.8em 0.5em;
-    }
-  }
+//  & li.menu-item-has-children > a:after {
+//    content: '+';
+//    position: absolute;
+//    top: 26%;
+//    right: 0;
+//    display: block;
+//    font-size: 1.5em;
+//    padding: 0.25em 0.5em;
+//
+//    @include breakpoint($screen $navflip) {
+//      /*content: ">";*/
+//      content: none;
+//      font-size: 1em;
+//      padding: 0.8em 0.5em;
+//    }
+//  }
   
-  & li.menu-item-has-children > a.active:after {
-    content: "-";
-  }
+//  & li.menu-item-has-children > a.active:after {
+//    content: "-";
+//  }
 
 
   &, & > ul ul {
@@ -189,6 +190,13 @@
     /*position: absolute;*/
     /*z-index: 2;*/
     
+  }
+
+  & .level-2 > li > a {
+    text-transform: initial;
+    letter-spacing: .5px;
+    font-family: gotham-book;
+    opacity: .8;
   }
 } /* End .menu */
 

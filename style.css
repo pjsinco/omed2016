@@ -1073,10 +1073,11 @@ object {
     font-family: inherit;
     color: #000;
     display: block;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     color: inherit; }
     @media screen and (min-width: 56rem) {
       .menu li a {
+        padding: 1.5rem 0;
         text-align: center;
         font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
         border: 0; } }
@@ -1103,22 +1104,6 @@ object {
     max-height: 55em;
     padding-bottom: 1rem;
     z-index: 1; }
-  .menu li.menu-item-has-children > a:after {
-    content: '+';
-    position: absolute;
-    top: 26%;
-    right: 0;
-    display: block;
-    font-size: 1.5em;
-    padding: 0.25em 0.5em; }
-    @media screen and (min-width: 56rem) {
-      .menu li.menu-item-has-children > a:after {
-        /*content: ">";*/
-        content: none;
-        font-size: 1em;
-        padding: 0.8em 0.5em; } }
-  .menu li.menu-item-has-children > a.active:after {
-    content: "-"; }
   .menu, .menu > ul ul {
     clear: both;
     -webkit-transition: all 0.3s ease-out;
@@ -1191,6 +1176,11 @@ object {
   .menu__logo {
     /*position: absolute;*/
     /*z-index: 2;*/ }
+  .menu .level-2 > li > a {
+    text-transform: initial;
+    letter-spacing: .5px;
+    font-family: gotham-book;
+    opacity: .8; }
 
 /* End .menu */
 .menu-link {

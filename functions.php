@@ -221,7 +221,7 @@ class Omed2016_Major_Nav_Walker_Class extends Walker_Nav_Menu {
 
   function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat( "\t", $depth );
-    $output .= "\n$indent<ul class=\"level-2 menu__list--major\">\n";
+    $output .= "\n$indent<ul class=\"level-2 menu__list--major active\">\n";
   }
 
 //  function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
