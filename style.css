@@ -670,6 +670,25 @@ a {
 object {
   width: 100%; }
 
+.container-fluid--alt, .menu-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media screen and (min-width: 30rem) {
+    .container-fluid--alt, .menu-container {
+      padding-right: 2rem;
+      padding-left: 2rem; } }
+  @media screen and (min-width: 56rem) {
+    .container-fluid--alt, .menu-container {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+
+@media screen and (min-width: 56rem) {
+  .menu-container {
+    padding-left: 0;
+    padding-right: 0; } }
+
 .splash--home, .splash--connection, .splash--education, .splash--inspiration {
   position: relative;
   z-index: -1;
@@ -1224,7 +1243,13 @@ object {
       color: #808080; } }
   @media screen and (min-width: 56rem) {
     .menu-major > li {
-      padding-left: 1rem;
+      /*padding-left: 1rem;*/
+      padding-right: 2rem; } }
+  @media screen and (min-width: 56rem) {
+    .menu-major > li {
+      padding-right: .75rem; } }
+  @media screen and (min-width: 67.75rem) {
+    .menu-major > li {
       padding-right: 1rem; } }
   .menu-major li a {
     letter-spacing: 1px;

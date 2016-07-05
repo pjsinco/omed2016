@@ -32,7 +32,7 @@
   <body <?php //if (!is_front_page()): body_class('sticky'); endif; ?><?php body_class('omedsticky') ?>>
     <header class="header">
 <!--       <div class="wrap relative"> -->
-      <div class="menu__block container-fluid relative"> <div class="menu__logo">
+      <div class="menu__block container-fluid--alt relative"> <div class="menu__logo">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="svg" title="OMED 2016">
             <div class="branding__omed--small icon-omed-logo-alone" data-grunticon-embed></div>
           </a>
@@ -43,7 +43,7 @@
         <div class="menu__nav">
           <a href="#menu" class="menu-link"></a>
           <div class="menu__items">
-            <nav id="menu" class="menu wrap container-fluid">
+            <nav id="menu" class="menu wrap menu-container">
               <?php 
                 $major_menu_args = array(
                   'menu' => 'header-menu-major',
