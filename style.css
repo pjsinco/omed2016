@@ -1135,7 +1135,7 @@ object {
       border: 0; } }
   @media screen and (min-width: 56rem) {
     .menu > ul li {
-      margin: 0 0.25em; } }
+      margin: 0; } }
   @media screen and (min-width: 56rem) {
     .menu > ul > li {
       display: inline-block;
@@ -1232,6 +1232,12 @@ object {
           flex-direction: row;
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center; }
+  @media screen and (min-width: 56rem) {
+    .menu-minor {
+      padding-top: .5rem;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
   .menu-minor li {
     position: relative;
     -ms-flex-preferred-size: 85px;
@@ -1239,22 +1245,31 @@ object {
     height: 100%;
     margin-top: 1rem;
     line-height: 1.4; }
+    @media screen and (min-width: 56rem) {
+      .menu-minor li {
+        height: initial;
+        -ms-flex-preferred-size: initial;
+            flex-basis: initial;
+        width: 85px; } }
     .menu-minor li.icon-ticket {
       background-position: 20px 20px;
       background-size: 50px; }
   .menu-minor li a {
     display: block;
     padding-top: 2rem;
-    /*padding-bottom: 1.5rem;*/
-    /* border-bottom: 1px solid #808080; */
     position: relative;
     cursor: pointer;
     text-transform: none;
     color: inherit; }
+    @media screen and (min-width: 56rem) {
+      .menu-minor li a {
+        padding-top: 1.75rem;
+        padding-bottom: 0;
+        font-size: .6875em; } }
     .menu-minor li a:link {
       /*position: relative;*/
       /*bottom: -39px;*/
-      text-decoration: none; }
+      /*text-decoration: none;*/ }
   .menu-minor .menu-item > div {
     position: absolute;
     width: 25px;
@@ -1262,6 +1277,9 @@ object {
     left: 35%; }
   .menu-minor .menu-item svg {
     fill: #fff; }
+    @media screen and (min-width: 56rem) {
+      .menu-minor .menu-item svg {
+        fill: #00b0b9; } }
 
 .branding {
   display: none; }

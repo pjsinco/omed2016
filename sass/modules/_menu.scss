@@ -144,7 +144,7 @@
 
   & > ul li {
     @include breakpoint($screen $navflip) {
-      margin: 0 0.25em;
+      margin: 0;
     }
   }
 
@@ -274,12 +274,23 @@
   font-family: $font-book;
   text-align: center;
 
+  @include breakpoint($screen $navflip) {
+    padding-top: .5rem;
+    align-items: flex-start;
+  }
+
   & li {
     position: relative;
     flex-basis: 85px;
     height: 100%;
     margin-top: 1rem;
     line-height: 1.4;
+
+    @include breakpoint($screen $navflip) {
+      height: initial;
+      flex-basis: initial;
+      width: 85px;
+    }
 
     &.icon-ticket {
       background-position: 20px 20px;
@@ -291,17 +302,21 @@
     display: block;
     
     padding-top: 2rem;
-    /*padding-bottom: 1.5rem;*/
-    /* border-bottom: 1px solid #808080; */
     position: relative;
     cursor: pointer;
     text-transform: none;
     color: inherit;
 
+    @include breakpoint($screen $navflip) {
+      padding-top: 1.75rem;
+      padding-bottom: 0;
+      font-size: .6875em;
+    }
+
     &:link {
       /*position: relative;*/
       /*bottom: -39px;*/
-      text-decoration: none;
+      /*text-decoration: none;*/
     }
   }
 
@@ -314,6 +329,10 @@
 
   & .menu-item svg {
     fill: $white;
+
+    @include breakpoint($screen $navflip) {
+      fill: $teal;
+    }
   }
 
 }
