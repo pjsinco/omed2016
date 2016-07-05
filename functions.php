@@ -233,18 +233,9 @@ class Omed2016_Major_Nav_Walker_Class extends Walker_Nav_Menu {
 
   function end_el( &$output, $item, $depth = 0, $args = array() ) {
 
-    if ( $item->menu_item_parent == "0" ) {
-      $output .= "<i class=\"icon-ctrl-down\"></i>";
-    }
-
     parent::end_el( $output, $item, $depth, $args );
-  }
 
-//  function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
-//    $element->classes = array( 'hiya' );
-//    $element->classes[] = ( $element->current || $element->current_item_ancestor ) ? 'menu__item--active' : 'menu__item';
-//    parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-//  }
+  }
   
 }
 
@@ -285,18 +276,25 @@ function omed2016_add_class_to_menu_minor_item(
 
 function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $depth, $args ) {
 
-  if ( $args->menu != 'header-menu-minor') {
-    return $item_output;
+  if ( $args->menu == 'header-menu-minor') {
+
+    $slug = mb_strtolower( get_last_url_component( $item->url ) );
+    $class = 'icon-' . $slug;
+
+    return preg_replace( 
+      '/(<a.*?>[^>]*?)</',
+      "<div class=\"$class\" data-grunticon-embed></div>" . "$1" . "<",
+      $item_output 
+    );
+
+  } else if ( $args->menu == 'header-menu-major' ) {
+
+    return preg_replace(
+      "/(<a.+?>)(\\w*)/u", 
+      "$1$2 <i class=\"icon-ctrl-down\"></i>", 
+      $item_output
+    );
   }
-
-  $slug = mb_strtolower( get_last_url_component( $item->url ) );
-  $class = 'icon-' . $slug;
-
-  return preg_replace( 
-    '/(<a.*?>[^>]*?)</',
-    "<div class=\"$class\" data-grunticon-embed></div>" . "$1" . "<",
-    $item_output 
-  );
 }
 add_filter( 
   'walker_nav_menu_start_el',

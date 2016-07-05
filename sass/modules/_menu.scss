@@ -2,6 +2,7 @@
 
   @include breakpoint($screen $navflip) {
     display: flex;    
+    justify-content: space-between;
   }
 
   & li a {
@@ -56,7 +57,7 @@
 
   & li.menu-item-has-children > a {
     @include breakpoint($screen $navflip) {
-      padding-right: 2em;
+      /*padding-right: 2em;*/
     }
   }
 
@@ -77,7 +78,8 @@
     padding: 0.25em 0.5em;
 
     @include breakpoint($screen $navflip) {
-      content: ">";
+      /*content: ">";*/
+      content: none;
       font-size: 1em;
       padding: 0.8em 0.5em;
     }
@@ -106,8 +108,8 @@
     @include breakpoint($screen $navflip) {
       display: none;
       position: absolute;
-      top: 0;
-      left: 12em;
+      top: 59px;
+      /*left: 12em;*/
       width: 12em;
       background: $white;
     }
@@ -137,7 +139,7 @@
 
     @include breakpoint($screen $navflip) {
       display: flex;
-      margin: 0 0 0 -0.25em;
+      /*margin: 0 0 0 -0.25em;*/
       border: 0;
     }
   }
@@ -163,6 +165,10 @@
   }
 
   &__nav {
+    @include breakpoint($screen $navflip) {
+      /*flex-basis: 1000px;*/
+      
+    }
   }
 
   &__items {
@@ -255,6 +261,18 @@
 .menu-major {
   font-family: $font-medium;
 
+  @include breakpoint($screen $navflip) {
+    color: $font-color-lighter;
+  }
+
+  & > li {
+
+    @include breakpoint($screen $navflip) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
   & li a {
     letter-spacing: 1px;
     border-bottom: 1px solid rgba($white, .17);
