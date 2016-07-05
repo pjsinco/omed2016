@@ -75,7 +75,7 @@
     
         <div class="branding">
           <a  href="http://www.osteopathic.org" title="American Osteopathic Association">
-            <div class="icon-aoa-logo" style="width: 114px; height: 32px;"></div>
+            <div class="icon-aoa-logo" style="width: 114px; height: 32px;" data-grunticon-embed></div>
           </a>
         </div> <!-- .branding -->
     </header>
