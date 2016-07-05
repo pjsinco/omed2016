@@ -64,7 +64,7 @@
                   'menu_class' => 'level-1 menu-minor',
                   'container' => false,
                   'depth' => 0,
-                  'walker' => new Omed2016_Minor_Nav_Walker_Class(),
+                  //'walker' => new Omed2016_Minor_Nav_Walker_Class(),
                 );
                 wp_nav_menu( $minor_menu_args );
               ?>

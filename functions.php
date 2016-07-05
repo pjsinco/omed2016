@@ -250,6 +250,7 @@ class Omed2016_Major_Nav_Walker_Class extends Walker_Nav_Menu {
 
 class Omed2016_Minor_Nav_Walker_Class extends Walker_Nav_Menu {
 
+  // TODO For now, nothing is happening here
   function start_el( &$output, $item, $depth = 0, $args = array() ) {
 
     // Get an array of URL components
@@ -258,23 +259,9 @@ class Omed2016_Minor_Nav_Walker_Class extends Walker_Nav_Menu {
     // The last item is the title
     $title = array_pop( $filtered );
 
-//echo '<pre>'; var_dump($item); echo '</pre>'; die();
-
-//<div class="icon-ticket"></div>
-    //$output .= 
     parent::start_el( $output, $item, $depth, $args );
-    
-    
   }
 }
-
-function omed2016_change_minor_nav_menu_item_title( 
-  $title, $item, $args, $depth 
-) {
-  $item->title .= '-hiya';
-  return $item;
-}
-//add_filter( 'nav_menu_item_title', 'omed2016_change_minor_nav_menu_item_title', 10, 4 );
 
 function omed2016_add_class_to_menu_minor_item( 
     $classes, $item, $args, $depth 
@@ -290,11 +277,33 @@ function omed2016_add_class_to_menu_minor_item(
   return $classes;;
 
 }
+//add_filter( 
+//  'nav_menu_css_class', 
+//  'omed2016_add_class_to_menu_minor_item', 
+//  10, 
+//  4 );
+
+function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $depth, $args ) {
+
+  if ( $args->menu != 'header-menu-minor') {
+    return $item_output;
+  }
+
+  $slug = mb_strtolower( get_last_url_component( $item->url ) );
+  $class = 'icon-' . $slug;
+
+  return preg_replace( 
+    '/(<a.*?>[^>]*?)</',
+    "<div class=\"$class\" data-grunticon-embed></div>" . "$1" . "<",
+    $item_output 
+  );
+}
 add_filter( 
-  'nav_menu_css_class', 
-  'omed2016_add_class_to_menu_minor_item', 
-  10, 
-  4 );
+  'walker_nav_menu_start_el',
+  'omed2016_add_class_to_menu_minor_anchor_element',
+  10,
+  4
+);
 
 function omed2016_add_class_to_anchor( $nav_menu, $args ) {
     return preg_replace(

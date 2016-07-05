@@ -275,8 +275,10 @@
   text-align: center;
 
   & li {
+    position: relative;
     flex-basis: 85px;
     height: 100%;
+    margin-top: 1rem;
     line-height: 1.4;
 
     &.icon-ticket {
@@ -287,8 +289,9 @@
 
   & li a {
     display: block;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    
+    padding-top: 2rem;
+    /*padding-bottom: 1.5rem;*/
     /* border-bottom: 1px solid #808080; */
     position: relative;
     cursor: pointer;
@@ -296,10 +299,21 @@
     color: inherit;
 
     &:link {
-      position: relative;
-      bottom: -39px;
+      /*position: relative;*/
+      /*bottom: -39px;*/
       text-decoration: none;
     }
+  }
+
+  & .menu-item > div {
+    position: absolute;
+    width: 25px;
+    height: auto;
+    left: 35%;
+  }
+
+  & .menu-item svg {
+    fill: $white;
   }
 
 }

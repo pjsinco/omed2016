@@ -1233,26 +1233,35 @@ object {
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center; }
   .menu-minor li {
+    position: relative;
     -ms-flex-preferred-size: 85px;
         flex-basis: 85px;
     height: 100%;
+    margin-top: 1rem;
     line-height: 1.4; }
     .menu-minor li.icon-ticket {
       background-position: 20px 20px;
       background-size: 50px; }
   .menu-minor li a {
     display: block;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    /*padding-bottom: 1.5rem;*/
     /* border-bottom: 1px solid #808080; */
     position: relative;
     cursor: pointer;
     text-transform: none;
     color: inherit; }
     .menu-minor li a:link {
-      position: relative;
-      bottom: -39px;
+      /*position: relative;*/
+      /*bottom: -39px;*/
       text-decoration: none; }
+  .menu-minor .menu-item > div {
+    position: absolute;
+    width: 25px;
+    height: auto;
+    left: 35%; }
+  .menu-minor .menu-item svg {
+    fill: #fff; }
 
 .branding {
   display: none; }
@@ -1632,7 +1641,7 @@ object {
   fill: #fff; }
 
 .footer .icon-aoa-logo {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
   fill: #fff; }
 
