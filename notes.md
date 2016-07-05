@@ -113,7 +113,7 @@
 * CSS-Tricks: [Shortcode in a Template | CSS-Tricks](https://css-tricks.com/snippets/wordpress/shortcode-in-a-template/)
 
 #####Tue Jul  5 17:12:47 2016 CDT
-  * Gist: [Adds Menu Description to Wordpress Menu with the walker_nav_menu_start_el filter.](https://gist.github.com/christophercochran/2844529)
+* Gist: [Adds Menu Description to Wordpress Menu with the walker_nav_menu_start_el filter.](https://gist.github.com/christophercochran/2844529)
     ```php
     add_filter( 'walker_nav_menu_start_el', 'gt_add_menu_item_description', 10, 4); 
     function gt_add_menu_item_description( $item_output, $item, $depth, $args ) {
@@ -121,3 +121,5 @@
         return preg_replace('/(<a.*?>[^<]*?)</', '$1' . "<small class=\"nav-desc\">{$desc}</small><", $item_output); 
     }
     ```
+
+* Blog: [Improve your Wordpress Navigation Menu Output | Kriesi.at - Premium WordPress Themes](http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output)
