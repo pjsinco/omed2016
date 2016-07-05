@@ -34,7 +34,7 @@
     <?php 
 
     global $post;
-    $asides = get_field( 'omed_aside', $post->id );
+    $asides = get_field( 'omed_asides', $post->ID );
     if ( !empty( $asides ) ):
       foreach ($asides as $aside):
     ?>

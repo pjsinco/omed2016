@@ -70,16 +70,22 @@
 
     &--small {
       header &.icon-omed-logo-alone {
-        position: absolute;
-        top: 29%;
+        /*position: absolute;*/
+        /*top: 29%;*/
         width: 170px;
         height: 100%;
         fill: $white;
 
+        @include breakpoint($screen $navflip) {
+          fill: $teal;
+        }
+
 
       }
 
-      @include breakpoint($screen $navflip) {
+
+      /*@include breakpoint($screen $navflip) {*/
+      @include breakpoint($screen $xlarge-start) {
         display: none;
       }
     }
@@ -99,7 +105,8 @@
         }
       }
 
-      @include breakpoint($screen $navflip) {
+      /*@include breakpoint($screen $navflip) {*/
+      @include breakpoint($screen $xlarge-start) {
         display: block;
       }
     }
