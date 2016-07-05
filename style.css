@@ -1262,6 +1262,8 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center; }
   @media screen and (min-width: 56rem) {
@@ -1307,6 +1309,14 @@ object {
     width: 25px;
     height: auto;
     left: 35%; }
+  .menu-minor .menu-item-branding {
+    -ms-flex-preferred-size: 80% !important;
+        flex-basis: 80% !important; }
+    .menu-minor .menu-item-branding svg {
+      width: 160px; }
+  .menu-minor .menu-item-branding > div {
+    left: 0;
+    width: 100%; }
   .menu-minor .menu-item svg {
     fill: #fff; }
     @media screen and (min-width: 56rem) {
@@ -1696,7 +1706,7 @@ object {
 .header .icon-omed-logo-alone {
   fill: #fff; }
 
-.footer .icon-aoa-logo {
+.footer .icon-aoa {
   width: 280px;
   margin: 0 auto;
   fill: #fff; }

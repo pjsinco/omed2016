@@ -274,12 +274,45 @@ function omed2016_add_class_to_menu_minor_item(
 //  10, 
 //  4 );
 
+/**
+ * Take the page title and format it for reference in our 
+ * title => icon-class-name mapping.
+ *
+ * Ex.: "Exhibtors" becomes "for-exhibitors"
+ *
+ * @param string $title The title to format
+ * @return string
+ */
+function omed2016_format_menu_slug( $title ) {
+
+  return mb_strtolower( str_replace( " ", "-", $title ) );
+
+}
+
+function omed2016_get_icon_class_name( $title ) {
+
+    $icon_class_names = array(
+      'registration' => 'registration',
+      'faqs' => 'faq',
+      'for-exhibitors' => 'for-exhibitors',
+      'aoa' => 'aoa',
+    );
+
+
+    if ( $icon_class_names[$title] ) {
+      return 'icon-' . $icon_class_names[$title];
+    }
+
+    return NULL;
+}
+
 function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $depth, $args ) {
 
   if ( $args->menu == 'header-menu-minor') {
 
-    $slug = mb_strtolower( get_last_url_component( $item->url ) );
-    $class = 'icon-' . $slug;
+
+    $slug = omed2016_format_menu_slug( $item->title );
+    $class = omed2016_get_icon_class_name( $slug );
 
     return preg_replace( 
       '/(<a.*?>[^>]*?)</',
@@ -316,3 +349,19 @@ function omed2016_add_class_to_anchor( $nav_menu, $args ) {
 //  );
 }
 //add_filter( 'wp_nav_menu', 'omed2016_add_class_to_anchor', 10, 2 );
+
+function omed2016_remove_aoa_from_menu_link( $title, $item, $args, $depth ) {
+
+  if ( $args->menu != 'header-menu-minor' ) {
+    return $title;
+  }
+
+  if ( $title != 'AOA' ) {
+    return $title;
+  } 
+
+  return '';
+
+
+}
+add_filter( 'nav_menu_item_title', 'omed2016_remove_aoa_from_menu_link', 10, 4 );

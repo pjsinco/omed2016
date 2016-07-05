@@ -309,6 +309,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   font-family: $font-book;
   text-align: center;
 
@@ -365,6 +366,20 @@
     left: 35%;
   }
 
+  & .menu-item-branding {
+  
+    flex-basis: 80% !important;
+  
+    svg {
+      width: 160px;
+    }
+  }
+
+  & .menu-item-branding > div {
+    left: 0;
+    width: 100%;
+  }
+
   & .menu-item svg {
     fill: $white;
 
@@ -373,4 +388,6 @@
     }
   }
 
+
 }
+
