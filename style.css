@@ -1364,7 +1364,7 @@ object {
       .branding:hover {
         cursor: pointer;
         opacity: 1; }
-      .page-child .branding {
+      .page-child .branding, .page-template-page-standalone .branding {
         display: none; } }
   .branding__body--footer {
     max-width: 600px;

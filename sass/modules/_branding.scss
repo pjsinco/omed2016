@@ -23,7 +23,7 @@
       opacity: 1;
     }
 
-    .page-child & {
+    .page-child &, .page-template-page-standalone & {
       display: none;
     }
   }
