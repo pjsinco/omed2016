@@ -1731,6 +1731,8 @@ object {
     color: #00b0b9; }
   .breakout p {
     font-size: inherit; }
+    .breakout p:last-child {
+      margin-bottom: 0; }
 
 .header .icon-omed-logo-alone {
   fill: #fff; }
