@@ -2,8 +2,8 @@
 
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   @include breakpoint($screen $navflip) {
     flex-direction: row;
@@ -24,6 +24,7 @@
   &__center {
     /*flex-basis: 58.33333333%; // 7 of 12*/
     position: relative;
+    margin-bottom: 2rem;
 
     @include breakpoint($screen $navflip) {
       flex-basis: 50%; // 7 of 12

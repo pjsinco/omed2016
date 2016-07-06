@@ -1,14 +1,18 @@
 %p-base {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: $bodylineheight;
+  font-size: .875rem;
+  line-height: $bodylineheight-bigger;
   /*letter-spacing: -.5px;*/
   color: $verydark;
 
   @include breakpoint($screen $large-start) {
-    line-height: $bodylineheight-bigger;
+    /*line-height: $bodylineheight;*/
     font-size: $font-size-base;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
 }
@@ -48,7 +52,34 @@ img {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+  font-size: inherit;
+  color: $teal;
+  line-height: inherit;
 }
+
+h1 {
+  margin-bottom: 2rem;
+  font-family: $font-book;
+  font-size: 2rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  letter-spacing: -.5px;
+  border-bottom: 3px solid $yellow;
+  padding-bottom: 2rem;
+
+  @include breakpoint($screen $navflip) {
+    padding-bottom: initial;
+    font-size: 2.625rem;
+    border-bottom: none;
+  }
+}
+
+h3 {
+  font-family: $font-bold;
+  line-height: $bodylineheight;
+  font-weight: normal;
+}
+
 
 ul {
   padding: 0;
