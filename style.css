@@ -1326,10 +1326,14 @@ object {
     -ms-flex-preferred-size: 80% !important;
         flex-basis: 80% !important; }
     .menu-minor .menu-item-branding svg {
-      width: 160px; }
+      width: 160px;
+      /*@include breakpoint($screen $navflip) {*/
+      /*width: 240px;*/
+      /*fill: rgba($white, .8) !important;*/
+      /*}*/ }
     @media screen and (min-width: 56rem) {
       .menu-minor .menu-item-branding {
-        position: absolute; } }
+        display: none; } }
   .menu-minor .menu-item-branding > div {
     left: 0;
     width: 100%; }
@@ -1344,19 +1348,23 @@ object {
   @media screen and (min-width: 56rem) {
     .branding {
       display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 12.25em;
+      position: relative;
+      top: 7rem;
+      height: 0;
+      /*right: 13.5rem;*/
+      /*width: 12.25em;*/
       z-index: 10;
-      /*opacity: .8;*/
+      opacity: .6;
       -webkit-transition: opacity;
               transition: opacity;
       -webkit-transition-duration: 0.3s;
               transition-duration: 0.3s; }
+      .branding svg {
+        fill: #fff; }
       .branding:hover {
+        cursor: pointer;
         opacity: 1; }
-      .sticky .branding {
+      .page-child .branding {
         display: none; } }
   .branding__body--footer {
     max-width: 600px;
@@ -1722,6 +1730,10 @@ object {
 .header .icon-omed-logo-alone {
   fill: #fff; }
 
+@media screen and (min-width: 56rem) {
+  .branding .icon-aoa {
+    width: 180px;
+    float: right; } }
 .footer .icon-aoa {
   width: 280px;
   margin: 0 auto;

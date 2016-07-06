@@ -26,12 +26,6 @@
   max-width: $contentwidth;
 }
 
-%clearfix {
-  content: "";
-  display: table;
-  clear: both; 
-}
-
 %container--bleed {
 
 }
@@ -41,7 +35,9 @@
 }
 
 .clearfix:after {
-  @extend %clearfix;
+  content: "";
+  display: table;
+  clear: both; 
 }
 
 .clear {

@@ -8,6 +8,15 @@
 
 .icon-aoa {
 
+  .branding & {
+
+    @include breakpoint($screen $navflip) {
+      width: 180px;
+      float: right;
+    }
+
+  }
+
   .footer & {
     width: 280px; 
     margin: 0 auto;

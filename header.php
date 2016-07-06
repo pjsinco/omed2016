@@ -73,11 +73,12 @@
         </div>
       </div> <!-- .menu__block -->
     
-        <div class="branding">
-          <a  href="http://www.osteopathic.org" title="American Osteopathic Association">
-            <div class="icon-aoa-logo" style="width: 114px; height: 32px;" data-grunticon-embed></div>
-          </a>
-        </div> <!-- .branding -->
     </header>
+
+    <div class="branding wrap container-fluid">
+      <a  href="http://www.osteopathic.org" title="American Osteopathic Association">
+        <div class="icon-aoa" data-grunticon-embed></div>
+      </a>
+    </div> <!-- .branding -->
 
     <div id="content" class="site-content">

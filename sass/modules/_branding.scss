@@ -4,20 +4,26 @@
 
   @include breakpoint($screen $navflip) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 12.25em;
+    position: relative;
+    top: 7rem;
+    height: 0;
+    /*right: 13.5rem;*/
+    /*width: 12.25em;*/
     z-index: 10;
-    /*opacity: .8;*/
+    opacity: .6;
     transition: opacity;
     transition-duration: $transitionduration;
 
+    & svg {
+      fill: $white;
+    }
+
     &:hover {
+      cursor: pointer;
       opacity: 1;
     }
 
-    .sticky & {
+    .page-child & {
       display: none;
     }
   }

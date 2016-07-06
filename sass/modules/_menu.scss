@@ -384,10 +384,15 @@
   
     svg {
       width: 160px;
+
+      /*@include breakpoint($screen $navflip) {*/
+        /*width: 240px;*/
+        /*fill: rgba($white, .8) !important;*/
+      /*}*/
     }
 
     @include breakpoint($screen $navflip) {
-      position: absolute;
+      display: none;
     }
   }
 
