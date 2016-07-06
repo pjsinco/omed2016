@@ -15,11 +15,14 @@ if ( !empty( $splinkles ) ):
     <ul class="splinkle__items">
     <?php foreach( $splinkles as $splinkle ): ?>
       <li class="splinkle__item">
-        <a class="splinkle__link" href="<?php echo $splinkle->guid; ?>"><?php echo $splinkle->post_title; ?></a>
-        <?php $blurb = get_field( 'omed_page_blurb', $splinkle->ID ); ?>
-        <?php if ( !empty( $blurb ) ): ?>
-        <p class="splinkle__blurb"><?php echo $blurb; ?></p>
-        <?php endif; ?>
+        <a class="splinkle__link" href="<?php echo $splinkle->guid; ?>">
+          <span class="boldfont"><?php echo $splinkle->post_title; ?></span>
+
+          <?php $blurb = get_field( 'omed_page_blurb', $splinkle->ID ); ?>
+          <?php if ( !empty( $blurb ) ): ?>
+          <p class="splinkle__blurb"><?php echo $blurb; ?></p>
+          <?php endif; ?>
+        </a>
       </li>
     <?php endforeach; ?>
     </ul>

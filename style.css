@@ -143,6 +143,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 .relative {
   position: relative; }
 
+.boldfont {
+  font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+
 /*@import 'vendor/flexboxgrid';*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -1718,14 +1721,16 @@ object {
 
 .breakout {
   padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: .875rem;
   border: 1px solid #fcef06; }
   .breakout h3 {
     margin-bottom: 2rem;
     font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 0.8125em;
+    font-size: inherit;
     color: #00b0b9; }
   .breakout p {
-    font-size: 0.8125em; }
+    font-size: inherit; }
 
 .header .icon-omed-logo-alone {
   fill: #fff; }
@@ -1741,5 +1746,28 @@ object {
 
 .menu-minor .icon-registration {
   width: 35px !important; }
+
+.splinkle {
+  font-size: .875rem;
+  color: #00b0b9;
+  line-height: 1.4; }
+  .splinkle__items {
+    position: relative; }
+  .splinkle__item {
+    padding-left: 2rem;
+    margin-bottom: 2rem; }
+    .splinkle__item:before {
+      content: "\25ba";
+      position: absolute;
+      left: 0;
+      color: #fcef06; }
+  .splinkle__link {
+    font-size: inherit;
+    color: inherit; }
+    .splinkle__link:hover {
+      cursor: pointer; }
+  .splinkle__blurb {
+    font-size: inherit;
+    color: inherit; }
 
 /*@import 'icons/index';*/

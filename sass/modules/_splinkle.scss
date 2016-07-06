@@ -1,0 +1,38 @@
+.splinkle {
+
+  font-size: .875rem;
+  color: $teal;
+  line-height: 1.4;
+
+  &__items {
+    position: relative;
+  }
+
+  &__item {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+
+    &:before {
+      content: "\25ba";
+      position: absolute;
+      left: 0;
+      color: $yellow;
+    }
+  }
+
+  &__link {
+
+    font-size: inherit;
+    color: inherit;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__blurb {
+    font-size: inherit;
+    color: inherit;
+  }
+
+}
