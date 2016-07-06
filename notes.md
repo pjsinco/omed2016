@@ -123,3 +123,6 @@
     ```
 
 * Blog: [Improve your Wordpress Navigation Menu Output | Kriesi.at - Premium WordPress Themes](http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output)
+
+#####Wed Jul  6 17:26:42 2016 CDT
+* Blog: [Using Grunticon to inline SVG • Steve McKinney](https://iamsteve.me/blog/entry/using-grunticon-to-inline-svg)
