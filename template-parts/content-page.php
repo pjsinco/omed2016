@@ -33,17 +33,11 @@
     <section class="content__right">
     <?php 
 
-    global $post;
-    $asides = get_field( 'omed_asides', $post->ID );
-    if ( !empty( $asides ) ):
-      foreach ($asides as $aside):
+    get_template_part( 'template-parts/sidebar', 'asides' );
+
+    get_template_part( 'template-parts/sidebar', 'splinkles' );
+
     ?>
-      <aside class="breakout">
-        <h3><?php echo $aside->post_title ?></h3>
-        <?php echo $aside->post_content; ?>
-      </aside>
-      
-    <?php endforeach; endif; ?>
     </section>
   
   </div> <!-- .content -->

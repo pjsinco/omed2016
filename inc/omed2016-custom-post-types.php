@@ -62,7 +62,7 @@ function omed2016_custom_post_types() {
     'show_ui'             => true,
     'show_in_menu'        => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 20,
+    'menu_position'       => 21,
     'capability_type'     => 'post',
     'hierarchical'        => false,
     'rewrite'             => array( 'slug' => 'aside' ),
@@ -92,7 +92,7 @@ function omed2016_custom_post_types() {
     'show_ui'             => true,
     'show_in_menu'        => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 20,
+    'menu_position'       => 24,
     'capability_type'     => 'post',
     'hierarchical'        => false,
     'rewrite'             => array( 'slug' => 'quicklink' ),
@@ -129,10 +129,41 @@ function omed2016_custom_post_types() {
     'supports'            => array( 'title', 'revision' ),
   );
 
+  $splinkle_labels = array(
+    'name'               => 'Splinkles',
+    'singular_name'      => 'Splinkle',
+    'menu_name'          => 'Splinkles',
+    'name_admin_bar'     => 'Splinkle',
+    'add_new'            => 'Add new',
+    'add_new_item'       => 'Add new splinkle',
+    'edit_item'          => 'Edit splinkle',
+    'view_item'          => 'View splinkle',
+    'all_items'          => 'All splinkles',
+    'search_items'       => 'Search splinkles',
+    'not_found'          => 'No splinkles found',
+    'not_found_in_trash' => 'No splinkles found in trash.',
+  );
+
+  $splinkle_args = array(
+    'labels'              => $splinkle_labels,
+    'public'              => false,
+    'publicly_queryable'  => false,
+    'exclude_from_search' => true,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'show_in_admin_bar'   => true,
+    'menu_position'       => 20,
+    'capability_type'     => 'post',
+    'hierarchical'        => false,
+    'rewrite'             => array( 'slug' => 'splinkle' ),
+    'supports'            => array( 'title', 'revision' ),
+  );
+
   register_post_type( 'omed_session', $featured_session_args );
   register_post_type( 'omed_aside', $aside_args );
   register_post_type( 'omed_quicklink', $quicklink_args );
   register_post_type( 'omed_highlightable', $highlightable_args );
+  register_post_type( 'omed_splinkle', $splinkle_args );
 }
 
 

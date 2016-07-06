@@ -17,7 +17,7 @@
   global $post; 
   $fields = get_fields( $post->ID );
   if ( !empty( $fields['highlightables'] ) ):
-    $highlightable = $fields['highlightables'][0];
+    $highlightable = $fields['highlightables'];
 
     echo do_shortcode( "[block type='Omed2016_Highlightable' id='$highlightable->ID' pinned='true']" );
   endif;
