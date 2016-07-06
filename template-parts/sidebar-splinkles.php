@@ -12,6 +12,7 @@ $splinkles = get_field('omed_splinkle', $page_splinkle->ID);
 if ( !empty( $splinkles ) ):
 ?>
   <aside class="splinkle">
+    <h3 class="splinkle__header">Related Pages</h3>
     <ul class="splinkle__items">
     <?php foreach( $splinkles as $splinkle ): ?>
       <li class="splinkle__item">

@@ -1,5 +1,6 @@
 .splinkle {
 
+  margin-top: 3rem;
   font-size: .875rem;
   color: $teal;
   line-height: 1.4;
@@ -33,6 +34,16 @@
   &__blurb {
     font-size: inherit;
     color: inherit;
+  }
+
+  &__header {
+    font-family: "gotham-book";
+    opacity: .5;
+    font-weight: lighter;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fcef06;
+    padding-bottom: 10px;
   }
 
 }

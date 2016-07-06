@@ -81,15 +81,16 @@ $btn-primary-border: $teal;
 $btn-reverse-border: $white;
 
 /* Breakpoints */
-$small-start        : 20rem;     // 320px
-$small-minor-start  : 25.625rem; // 410px
-$medium-start       : 30rem;     // 480px
-$medium-minor-start : 36rem;     // 576px
-$large-start        : 48rem;     // 768px
-$large-minor-start  : 56rem;     // 896px
-$xlarge-start       : 67.75rem;  // 1084px
-$xlarge-minor-start : 73rem;     // 1168px
-$xxlarge-start      : 90rem;     // 1440px
+$small-start              : 20rem;     // 320px
+$small-minor-start        : 25.625rem; // 410px
+$medium-start             : 30rem;     // 480px
+$medium-minor-start       : 36rem;     // 576px
+$medium-minor-minor-start : 41.5rem;   // 664px
+$large-start              : 48rem;     // 768px
+$large-minor-start        : 56rem;     // 896px
+$xlarge-start             : 67.75rem;  // 1084px
+$xlarge-minor-start       : 73rem;     // 1168px
+$xxlarge-start            : 90rem;     // 1440px
 
 
 $screen: 'screen';

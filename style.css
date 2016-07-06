@@ -1673,25 +1673,44 @@ object {
         display: block;
         -ms-flex-preferred-size: 16.66666667%;
             flex-basis: 16.66666667%; } }
-  .content__center {
-    /*flex-basis: 58.33333333%; // 7 of 12*/
+  .content__main {
     position: relative;
     margin-bottom: 2rem; }
     @media screen and (min-width: 56rem) {
-      .content__center {
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; }
-        .content__center:before {
+      .content__main {
+        -ms-flex-preferred-size: 79%;
+            flex-basis: 79%; }
+        .content__main:before {
           content: "";
           position: absolute;
           left: -2.6875rem;
           top: 0;
           bottom: 0;
           border-right: 1px solid #fcef06; } }
-  @media screen and (min-width: 56rem) {
-    .content__right {
-      -ms-flex-preferred-size: 25%;
-          flex-basis: 25%; } }
+  .content__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media screen and (min-width: 41.5rem) {
+      .content__block {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    .content__block--primary {
+      -ms-flex-preferred-size: 63.1%;
+          flex-basis: 63.1%;
+      margin-bottom: 2rem; }
+    .content__block--secondary {
+      -ms-flex-preferred-size: 31.8%;
+          flex-basis: 31.8%; }
 
 .footer__block, .footer__block--row {
   display: -webkit-box;
@@ -1776,6 +1795,7 @@ object {
   width: 35px !important; }
 
 .splinkle {
+  margin-top: 3rem;
   font-size: .875rem;
   color: #00b0b9;
   line-height: 1.4; }
@@ -1797,5 +1817,16 @@ object {
   .splinkle__blurb {
     font-size: inherit;
     color: inherit; }
+  .splinkle__header {
+    font-family: "gotham-book";
+    opacity: .5;
+    font-weight: lighter;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fcef06;
+    padding-bottom: 10px; }
+
+.entry__header {
+  margin-bottom: 3rem; }
 
 /*@import 'icons/index';*/
