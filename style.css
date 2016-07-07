@@ -1059,7 +1059,7 @@ object {
     -webkit-animation: mainnavreveal .3s ease-out;
             animation: mainnavreveal .3s ease-out; } }
 @media screen and (min-width: 56rem) {
-  .admin-bar.omedscrolled .header {
+  .omedscrolled .admin-bar .header {
     top: 32px; } }
 @media screen and (min-width: 56rem) {
   .header {

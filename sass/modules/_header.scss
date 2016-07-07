@@ -58,7 +58,7 @@
     }
   }
 
-  .admin-bar.omedscrolled & {
+  .omedscrolled .admin-bar & {
     @include breakpoint($screen $navflip) {
       top: 32px;
     }
