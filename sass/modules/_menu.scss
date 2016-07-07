@@ -170,6 +170,14 @@
     justify-content: space-between;
     align-items: center;
     height: $navbarheight;
+
+    @include breakpoint($screen $navflip) {
+      max-width: $contentwidth;
+      
+      .omedscrolled & {
+        max-width: initial;
+      }
+    }
   }
 
   &__nav {
@@ -337,10 +345,10 @@
     /*padding-top: .5rem;*/
     align-items: flex-start;
 
-    visibility: hidden;
+    display: none !important;
 
     .omedscrolled & {
-      visibility: visible;
+      display: flex !important;
     }
   }
 

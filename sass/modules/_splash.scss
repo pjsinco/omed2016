@@ -81,26 +81,49 @@
   
   &--home {
     @extend %splash-base;
-    background-image: url(images/omed-splash-audience.jpg);
+    /*background-image: url(images/omed-splash-audience.jpg);*/
+    /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(images/omed-splash-audience.jpg);*/
+    /*background: linear-gradient(rgba(59, 69, 255, 0.0), rgba(0, 188,212,.61)), url(images/omed-splash-audience.jpg);*/
+    background: linear-gradient(rgba(0, 188,212,.61), rgba(0, 188,212,.61)), url(images/omed-splash-audience.jpg);
+    /*background: linear-gradient(rgba(0,0,0,0.12) 42%, rgba(0, 176, 185, 0.76) 100%), url(images/omed-splash-audience.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
   }
   
   &--connection {
     @extend %splash-base;
-    background-image: url(http://placehold.it/1766x725);
+    /*background-image: url(http://placehold.it/1766x725);*/
+    /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(http://placehold.it/1766x725);*/
+    background: linear-gradient(rgba(59, 69, 255, 0.0), rgba(0, 188,212,.61)), url(http://placehold.it/1766x725);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
     /*background-image: url(../img/omed-splash-poster.jpg);*/
     
   }
 
   &--education {
     @extend %splash-base;
-    background-image: url(images/omed-splash-poster.jpg);
+    /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(images/omed-splash-poster.jpg);*/
+    background: linear-gradient(rgba(0, 188,212,.61), rgba(0, 188,212,.61)), url(images/omed-splash-poster.jpg);
+    /*background: linear-gradient(rgba(0,0,0,0.12) 42%, rgba(0, 176, 185, 0.76) 100%), url(images/omed-splash-poster.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    /*background-image: url(images/omed-splash-poster.jpg);*/
     /* background-image: url(../img/omed-splash-central.jpg); */
   }
 
   &--inspiration {
     @extend %splash-base;
     /*background-image: url(https://placekitten.com/1766/725);*/
-    background-image: url(http://placehold.it/1766x725);
+    /*background-image: url(http://placehold.it/1766x725);*/
+    /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(http://placehold.it/1766x725);*/
+    background: linear-gradient(rgba(59, 69, 255, 0.0), rgba(0, 188,212,.61)), url(http://placehold.it/1766x725);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
   }
 
 
