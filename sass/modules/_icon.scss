@@ -15,7 +15,10 @@
       padding: 1rem;
       float: right;
       /*background: rgba(121, 121, 121, 0.46);*/
-      background: rgba(49, 49, 49, 0.46);
+      /*background: rgba(49, 49, 49, 0.46);*/
+      border-right: 1px solid rgba($white, .5);
+      border-left: 1px solid rgba($white, .5);
+      border-bottom: 1px solid rgba($white, .5);
     }
 
   }

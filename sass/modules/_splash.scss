@@ -17,7 +17,7 @@
   
   @include breakpoint($screen $navflip) {
     height: 650px;
-    top: -$navbarheight;
+    /*top: -$navbarheight;*/
   }
   
 }

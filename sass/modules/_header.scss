@@ -4,8 +4,6 @@
     top: 0;
     z-index: 100;
     background-color: rgba($teal, .96);
-//    box-shadow: 0 0px 18px rgba($verydark,.1);
-    /*border-bottom: 1px solid #e9f0f3;*/
 
   }
 }
@@ -18,12 +16,17 @@
     background: none;
     padding-left: 1rem;
     padding-right: 1rem;
+    opacity: .85;
     
     animation-name: fadein;
     animation-duration: 1s;
     transition-property: fill;
     transition-duration: .3s;
     transition-timing-function: ease-in;
+
+    .omedscrolled & {
+      opacity: 1;
+    }
 
   }
 }
@@ -98,7 +101,7 @@
   }
 
   to {
-    opacity: 1;
+    opacity: .85;
   }
 
 }

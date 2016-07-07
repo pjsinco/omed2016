@@ -735,7 +735,7 @@ object {
   @media screen and (min-width: 56rem) {
     .splash--home, .splash--connection, .splash--education, .splash--inspiration {
       height: 650px;
-      top: -3.75rem; } }
+      /*top: -$navbarheight;*/ } }
 
 @-webkit-keyframes fade-in {
   from {
@@ -1011,8 +1011,7 @@ object {
     position: fixed;
     top: 0;
     z-index: 100;
-    background-color: rgba(0, 176, 185, 0.96);
-    /*border-bottom: 1px solid #e9f0f3;*/ } }
+    background-color: rgba(0, 176, 185, 0.96); } }
 
 .header {
   height: 3.75rem;
@@ -1022,6 +1021,7 @@ object {
       background: none;
       padding-left: 1rem;
       padding-right: 1rem;
+      opacity: .85;
       -webkit-animation-name: fadein;
               animation-name: fadein;
       -webkit-animation-duration: 1s;
@@ -1031,7 +1031,9 @@ object {
       -webkit-transition-duration: .3s;
               transition-duration: .3s;
       -webkit-transition-timing-function: ease-in;
-              transition-timing-function: ease-in; } }
+              transition-timing-function: ease-in; }
+      .omedscrolled .header {
+        opacity: 1; } }
 
 @-webkit-keyframes mainnavreveal {
   0% {
@@ -1078,7 +1080,7 @@ object {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: .85; } }
 .menu {
   /* End .menu li a */ }
   @media screen and (min-width: 56rem) {
@@ -1131,6 +1133,12 @@ object {
     max-height: 55em;
     padding-bottom: 1rem;
     z-index: 1; }
+    @media screen and (min-width: 56rem) {
+      .menu.active, .menu > ul ul.active {
+        color: #00b0b9;
+        border-left: 1px solid rgba(0, 176, 185, 0.19);
+        border-right: 1px solid rgba(0, 176, 185, 0.19);
+        border-bottom: 1px solid rgba(0, 176, 185, 0.19); } }
   .menu, .menu > ul ul {
     clear: both;
     -webkit-transition: all 0.3s ease-out;
@@ -1147,7 +1155,7 @@ object {
     .menu > ul ul {
       display: none;
       position: absolute;
-      top: 59px;
+      top: 60px;
       /*left: 12em;*/
       width: 12em;
       background: #fff; } }
@@ -1207,7 +1215,7 @@ object {
   .menu .level-2 > li > a {
     text-transform: initial;
     letter-spacing: .5px;
-    font-family: gotham-book;
+    font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     opacity: .8; }
 
 /* End .menu */
@@ -1256,7 +1264,7 @@ object {
       /*color: $teal;*/ } }
 
 .menu-major {
-  font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   @media screen and (min-width: 56rem) {
     .menu-major {
       -webkit-box-align: center;
@@ -1283,7 +1291,8 @@ object {
     border-bottom: 1px solid rgba(255, 255, 255, 0.17); }
     @media screen and (min-width: 56rem) {
       .menu-major li a {
-        border-bottom: none; } }
+        border-bottom: none;
+        font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
 
 .menu-minor {
   display: -webkit-box;
@@ -1426,9 +1435,6 @@ object {
       width: 170px;
       height: 100%;
       fill: #fff; }
-      @media screen and (min-width: 56rem) {
-        header .branding__omed--small.icon-omed-logo-alone {
-          fill: #00b0b9; } }
     @media screen and (min-width: 67.75rem) {
       .branding__omed--small {
         display: none; } }
@@ -1798,7 +1804,10 @@ object {
     padding: 1rem;
     float: right;
     /*background: rgba(121, 121, 121, 0.46);*/
-    background: rgba(49, 49, 49, 0.46); } }
+    /*background: rgba(49, 49, 49, 0.46);*/
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
 
 .footer .icon-aoa {
   width: 280px;
