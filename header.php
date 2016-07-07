@@ -29,7 +29,7 @@
     <?php wp_head(); ?>
   </head>
 
-  <body <?php //if (!is_front_page()): body_class('sticky'); endif; ?><?php body_class('omedsticky') ?>>
+  <body <?php //if (!is_front_page()): body_class('sticky'); endif; ?><?php // body_class('omedsticky') ?>>
     <header class="header">
 <!--       <div class="wrap relative"> -->
       <div class="menu__block container-fluid--alt relative"> <div class="menu__logo">

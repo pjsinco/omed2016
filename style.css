@@ -1007,7 +1007,7 @@ object {
     border-radius: 3px; }
 
 @media screen and (min-width: 56rem) {
-  .omedsticky .header, .header--fixed {
+  .omedscrolled .header, .header--fixed {
     position: fixed;
     top: 0;
     z-index: 100;
@@ -1053,11 +1053,11 @@ object {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
 @media screen and (min-width: 56rem) {
-  .omedsticky .header {
+  .omedscrolled .header {
     -webkit-animation: mainnavreveal .3s ease-out;
             animation: mainnavreveal .3s ease-out; } }
 @media screen and (min-width: 56rem) {
-  .admin-bar.omedsticky .header {
+  .admin-bar.omedscrolled .header {
     top: 32px; } }
 @media screen and (min-width: 56rem) {
   .header {

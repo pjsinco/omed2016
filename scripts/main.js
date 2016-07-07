@@ -26,9 +26,9 @@
     //}
     var y = $(this).scrollTop();
     if (y > actionableScrollTop) {
-      $('html').addClass('sticky');
+      $('html').addClass('omedscrolled');
     } else {
-      $('html').removeClass('sticky');
+      $('html').removeClass('omedscrolled');
     }
     //console.log('scrolltop: ' + $(this).scrollTop());
   });

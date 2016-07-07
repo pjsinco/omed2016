@@ -47,7 +47,7 @@
 
   @extend %header-base;
 
-  .omedsticky & {
+  .omedscrolled & {
     @extend %header-fixed-base;
     
     @include breakpoint($screen $navflip) {
@@ -55,7 +55,7 @@
     }
   }
 
-  .admin-bar.omedsticky & {
+  .admin-bar.omedscrolled & {
     @include breakpoint($screen $navflip) {
       top: 32px;
     }
