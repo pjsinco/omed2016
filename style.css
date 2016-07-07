@@ -794,7 +794,7 @@ object {
 
 @media screen and (min-width: 56rem) {
   .splash-inside {
-    top: 3.75rem;
+    /*top: $navbarheight;*/
     margin-bottom: 8rem; } }
 .splash--home {
   background-image: url(images/omed-splash-audience.jpg); }
@@ -1011,8 +1011,8 @@ object {
     position: fixed;
     top: 0;
     z-index: 100;
-    background-color: #fff;
-    border-bottom: 1px solid #e9f0f3; } }
+    background-color: rgba(0, 176, 185, 0.96);
+    /*border-bottom: 1px solid #e9f0f3;*/ } }
 
 .header {
   height: 3.75rem;
@@ -1062,7 +1062,7 @@ object {
 @media screen and (min-width: 56rem) {
   .header {
     position: absolute;
-    top: 3em;
+    /*top: 3em;*/
     left: 0;
     right: 0; } }
 .header__block {
@@ -1198,8 +1198,9 @@ object {
     color: #fff; }
     @media screen and (min-width: 56rem) {
       .menu__items {
-        position: initial;
-        color: #808080; } }
+        position: initial; }
+        .omedscrolled .menu__items {
+          /*color: $font-color-lighter;*/ } }
   .menu__logo {
     /*position: absolute;*/
     /*z-index: 2;*/ }
@@ -1251,7 +1252,8 @@ object {
   @media screen and (min-width: 56rem) {
     .current-menu-item {
       font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #00b0b9; } }
+      color: inherit;
+      /*color: $teal;*/ } }
 
 .menu-major {
   font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -1260,7 +1262,9 @@ object {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      color: #808080; } }
+      color: #fff; }
+      .omedscrolled .menu-major {
+        /*color: $teal;*/ } }
   @media screen and (min-width: 56rem) {
     .menu-major > li {
       /*padding-left: 1rem;*/
@@ -1303,7 +1307,10 @@ object {
       /*padding-top: .5rem;*/
       -webkit-box-align: start;
           -ms-flex-align: start;
-              align-items: flex-start; } }
+              align-items: flex-start;
+      visibility: hidden; }
+      .omedscrolled .menu-minor {
+        visibility: visible; } }
   .menu-minor li {
     position: relative;
     /*flex-basis: 85px;*/
@@ -1367,8 +1374,8 @@ object {
   .menu-minor .menu-item svg {
     fill: #fff; }
     @media screen and (min-width: 56rem) {
-      .menu-minor .menu-item svg {
-        fill: #808080; } }
+      .omedscrolled .menu-minor .menu-item svg {
+        /*fill: $font-color-lighter;*/ } }
 
 .branding {
   display: none; }
@@ -1376,12 +1383,13 @@ object {
     .branding {
       display: block;
       position: relative;
-      top: 7rem;
+      top: 0;
+      right: -181px;
       height: 0;
       /*right: 13.5rem;*/
       /*width: 12.25em;*/
       z-index: 10;
-      opacity: .6;
+      opacity: .85;
       -webkit-transition: opacity;
               transition: opacity;
       -webkit-transition-duration: 0.3s;
@@ -1432,7 +1440,9 @@ object {
       width: 350px;
       height: 100%; }
       header .branding__omed--large.icon-omed-logo .omedLogo {
-        fill: #00b0b9; }
+        fill: #fff; }
+        .omedscrolled header .branding__omed--large.icon-omed-logo .omedLogo {
+          /*fill: $teal;*/ }
     @media screen and (min-width: 67.75rem) {
       .branding__omed--large {
         display: block; } }
@@ -1783,9 +1793,13 @@ object {
   fill: #fff; }
 
 @media screen and (min-width: 56rem) {
-  .branding .icon-aoa {
-    width: 180px;
-    float: right; } }
+  .branding .icon-aoa-vert {
+    width: 120px;
+    padding: 1rem;
+    float: right;
+    /*background: rgba(121, 121, 121, 0.46);*/
+    background: rgba(49, 49, 49, 0.46); } }
+
 .footer .icon-aoa {
   width: 280px;
   margin: 0 auto;

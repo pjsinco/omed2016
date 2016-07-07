@@ -6,16 +6,23 @@
 
 }
 
-.icon-aoa {
+.icon-aoa-vert {
 
   .branding & {
 
     @include breakpoint($screen $navflip) {
-      width: 180px;
+      width: 120px;
+      padding: 1rem;
       float: right;
+      /*background: rgba(121, 121, 121, 0.46);*/
+      background: rgba(49, 49, 49, 0.46);
     }
 
   }
+}
+
+.icon-aoa {
+
 
   .footer & {
     width: 280px; 

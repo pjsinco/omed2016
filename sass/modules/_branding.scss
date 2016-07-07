@@ -5,12 +5,13 @@
   @include breakpoint($screen $navflip) {
     display: block;
     position: relative;
-    top: 7rem;
+    top: 0;
+    right: -181px;
     height: 0;
     /*right: 13.5rem;*/
     /*width: 12.25em;*/
     z-index: 10;
-    opacity: .6;
+    opacity: .85;
     transition: opacity;
     transition-duration: $transitionduration;
 
@@ -107,7 +108,11 @@
 
 
         & .omedLogo {
-          fill: $teal;
+          fill: $white;
+
+          .omedscrolled & {
+            /*fill: $teal;*/
+          }
         }
       }
 

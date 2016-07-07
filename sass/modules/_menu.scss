@@ -182,7 +182,10 @@
 
     @include breakpoint($screen $navflip) {
       position: initial;
-      color: $font-color-lighter;
+
+      .omedscrolled & {
+        /*color: $font-color-lighter;*/
+      }
     }
   }
 
@@ -262,7 +265,8 @@
 
   @include breakpoint($screen $navflip) {
     font-family: $font-bold;
-    color: $teal;
+    color: inherit;
+    /*color: $teal;*/
   }
 }
 
@@ -271,7 +275,11 @@
 
   @include breakpoint($screen $navflip) {
     align-items: center;
-    color: $font-color-lighter;
+    color: $white;
+    
+    .omedscrolled & {
+      /*color: $teal;*/
+    }
   }
 
   & > li {
@@ -319,6 +327,12 @@
   @include breakpoint($screen $navflip) {
     /*padding-top: .5rem;*/
     align-items: flex-start;
+
+    visibility: hidden;
+
+    .omedscrolled & {
+      visibility: visible;
+    }
   }
 
   & li {
@@ -404,8 +418,10 @@
   & .menu-item svg {
     fill: $white;
 
-    @include breakpoint($screen $navflip) {
-      fill: $font-color-lighter;
+    .omedscrolled & {
+      @include breakpoint($screen $navflip) {
+        /*fill: $font-color-lighter;*/
+      }
     }
   }
 
