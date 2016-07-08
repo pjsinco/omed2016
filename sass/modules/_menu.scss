@@ -1,6 +1,8 @@
 .menu {
 
+
   @include breakpoint($screen $navflip) {
+    height: 100%;
     display: flex;    
     justify-content: space-between;
   }
@@ -147,6 +149,7 @@
 
     @include breakpoint($screen $navflip) {
       display: flex;
+      height: 100%;
       /*margin: 0 0 0 -0.25em;*/
       border: 0;
     }
@@ -154,6 +157,7 @@
 
   & > ul li {
     @include breakpoint($screen $navflip) {
+      height: 100%;
       margin: 0;
     }
   }
@@ -169,7 +173,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: $navbarheight;
+    height: 100%;
 
     @include breakpoint($screen $navflip) {
       max-width: $contentwidth;
@@ -185,6 +189,7 @@
 
   &__nav {
     @include breakpoint($screen $navflip) {
+      height: 100%;
       margin-left: 2rem;
     
       .omedscrolled & {
@@ -199,6 +204,7 @@
     left: 0;
     right: 0;
     top: $navbarheight;
+    height: 100%;
     color: $white;
 
     @include breakpoint($screen $navflip) {
@@ -451,6 +457,21 @@
     }
   }
 
+
+}
+
+.menu-item-highlight {
+
+  background: $yellow;  
+  color: $teal;
+
+  & a {
+    font-family: $font-medium !important;
+  }
+
+  & svg {
+    fill: $teal !important;
+  }
 
 }
 

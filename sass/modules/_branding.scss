@@ -73,7 +73,9 @@
         fill: $teal;
 
         .omedscrolled & {
-          left: -2rem;
+          /*left: -2rem;*/
+          background: transparent;
+          fill: $white;
         }
       }
     }
