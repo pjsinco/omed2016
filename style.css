@@ -1226,7 +1226,10 @@ object {
         max-width: 63rem;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
-                justify-content: flex-start; }
+                justify-content: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
         .omedscrolled .menu__block {
           max-width: 100%;
           -webkit-box-pack: justify;
