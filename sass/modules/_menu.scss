@@ -149,7 +149,7 @@
 
     @include breakpoint($screen $navflip) {
       display: flex;
-      height: 100%;
+      /*height: 100%;*/
       /*margin: 0 0 0 -0.25em;*/
       border: 0;
     }
@@ -352,6 +352,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 22.5rem;
+  height: 100%;
   margin: 0 auto;
   font-family: $font-book;
   text-align: center;
