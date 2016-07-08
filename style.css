@@ -1147,7 +1147,7 @@ object {
       display: none; }
       @media screen and (min-width: 56rem) {
         .menu li a > i {
-          display: initial; } }
+          display: inline-block; } }
     .menu-major .menu li a {
       border-bottom: 1px solid #fff; }
       @media screen and (min-width: 56rem) {
@@ -1228,7 +1228,7 @@ object {
             -ms-flex-pack: start;
                 justify-content: flex-start; }
         .omedscrolled .menu__block {
-          max-width: initial;
+          max-width: flex;
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between; } }

@@ -43,7 +43,7 @@
       display: none;
   
       @include breakpoint($screen $navflip) {
-        display: initial;
+        display: inline-block;
       }
     }
   
@@ -176,7 +176,7 @@
       justify-content: flex-start;
       
       .omedscrolled & {
-        max-width: initial;
+        max-width: flex;
         justify-content: space-between;
       }
     }
