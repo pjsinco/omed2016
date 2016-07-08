@@ -1246,7 +1246,7 @@ object {
     color: #fff; }
     @media screen and (min-width: 56rem) {
       .menu__items {
-        position: initial; }
+        position: static; }
         .omedscrolled .menu__items {
           /*color: $font-color-lighter;*/ } }
   .menu__logo {

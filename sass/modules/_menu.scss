@@ -201,7 +201,7 @@
     color: $white;
 
     @include breakpoint($screen $navflip) {
-      position: initial;
+      position: static;
 
       .omedscrolled & {
         /*color: $font-color-lighter;*/
