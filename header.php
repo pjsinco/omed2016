@@ -32,14 +32,12 @@
   <body <?php if ( is_page_template( 'page-standalone.php' ) || is_page_template( 'page-sublevel.php' ) ): body_class('omedscrolled'); else: body_class(); endif; ?>>
     <header class="header">
 <!--       <div class="wrap relative"> -->
-      <div class="menu__block container-fluid--alt relative"> <div class="menu__logo">
+      <div class="menu__block container-fluid--alt relative">
+        <div class="menu__logo">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="svg" title="OMED 2016">
-            <div class="branding__omed--small icon-omed-logo-alone" data-grunticon-embed></div>
+            <div class="branding--omed icon-omed-logo-alone" data-grunticon-embed></div>
           </a>
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="svg" title="OMED 2016">
-            <div class="branding__omed--large icon-omed-logo" data-grunticon-embed></div>
-          </a>
-        </div>
+        </div> <!-- .menu__logo -->
         <div class="menu__nav">
           <a href="#menu" class="menu-link"></a>
           <div class="menu__items">
@@ -77,7 +75,7 @@
 
     <div class="branding wrap container-fluid">
       <a  href="http://www.osteopathic.org" title="American Osteopathic Association">
-        <div class="icon-aoa-vert" data-grunticon-embed></div>
+        <div class="icon-aoa" data-grunticon-embed></div>
       </a>
     </div> <!-- .branding -->
 

@@ -5,11 +5,8 @@
   @include breakpoint($screen $navflip) {
     display: block;
     position: relative;
-    top: 0;
-    right: -181px;
+    top: .875rem;
     height: 0;
-    /*right: 13.5rem;*/
-    /*width: 12.25em;*/
     z-index: 10;
     opacity: .85;
     transition: opacity;
@@ -61,38 +58,26 @@
     }
   }
 
-//  &--menu {
-//    @include breakpoint($screen $navflip) {
-//      width: 24.375em;
-//      /*opacity: .7;*/
-//    }
-//
-//    .sticky & {
-//      /*opacity: 1;*/
-//    }
-//  }
+  &--omed {
 
+    header &.icon-omed-logo-alone {
+      width: 168px;
+      height: 100%;
+      fill: $white;
 
-  &__omed {
+      @include breakpoint($screen $navflip) {
+        position: relative;
+        left: -1rem;
+        padding: 1rem;
+        background: $yellow;
+        fill: $teal;
 
-    &--small {
-      header &.icon-omed-logo-alone {
-        /*position: absolute;*/
-        /*top: 29%;*/
-        width: 170px;
-        height: 100%;
-        fill: $white;
-
-
-
-      }
-
-
-      /*@include breakpoint($screen $navflip) {*/
-      @include breakpoint($screen $xlarge-start) {
-        display: none;
+        .omedscrolled & {
+          left: -2rem;
+        }
       }
     }
+
 
     &--large {
 
@@ -113,52 +98,9 @@
         }
       }
 
-      /*@include breakpoint($screen $navflip) {*/
       @include breakpoint($screen $xlarge-start) {
         display: block;
       }
     }
-
-    
   }
-//    &--small {
-//
-//      max-width: 187px; 
-//      height: auto;
-//
-//      @include breakpoint($screen $navflip) {
-//        display: none;          
-//      }
-//
-//    }
-//    
-//    &--large {
-//      display: none;
-//
-//      @include breakpoint($screen $navflip) {
-//        display: block;
-//      }
-//    }
-//
-//  }
 }
-
-
-
-//#omedLogoWhite div {
-//  background-image: url(../img/omed-logo-white-alone.png);
-//  background-size: 15.25em;
-//}
-//
-//#omedLogoWhiteWithTagline div {
-//  background-image: url(../img/omed-logo-white-white-tagline.png);
-//  background-size: 15.25em;
-//}
-//
-//#omedLogoTeal div {
-//  background-image: url(../img/omed-logo-teal.png);
-//  /*background-size: 15.25em;*/
-//
-//}
-
-/*.big-words{fill:#FF0033;}*/

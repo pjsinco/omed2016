@@ -173,17 +173,22 @@
 
     @include breakpoint($screen $navflip) {
       max-width: $contentwidth;
+      justify-content: flex-start;
       
       .omedscrolled & {
         max-width: initial;
+        justify-content: space-between;
       }
     }
   }
 
   &__nav {
     @include breakpoint($screen $navflip) {
-      /*flex-basis: 1000px;*/
-      
+      margin-left: 2rem;
+    
+      .omedscrolled & {
+        margin-left: initial;
+      }
     }
   }
 
