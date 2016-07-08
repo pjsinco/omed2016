@@ -55,6 +55,7 @@
     
     @include breakpoint($screen $navflip) {
       animation: mainnavreveal .3s ease-out;
+      box-shadow: inset 0px -1px rgba(255, 255, 255, 0.1);
     }
   }
 

@@ -126,3 +126,6 @@
 
 #####Wed Jul  6 17:26:42 2016 CDT
 * Blog: [Using Grunticon to inline SVG • Steve McKinney](https://iamsteve.me/blog/entry/using-grunticon-to-inline-svg)
+
+#####Fri Jul  8 16:08:49 2016 CDT
+* Blog: [Simple CSS3 Transitions, Transforms, & Animations Compilation - Call Me Nick](http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation)

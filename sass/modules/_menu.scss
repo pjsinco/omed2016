@@ -22,7 +22,7 @@
   
     @include breakpoint($screen $navflip) {
       padding: 1.5rem 0;
-      text-align: center;
+      /*text-align: center;*/
       font-family: $font-book;
       border: 0;
     }
@@ -70,10 +70,14 @@
     z-index: 1;
 
     @include breakpoint($screen $navflip) {
-      color: #00b0b9;
-      border-left:   1px solid rgba($teal, 0.19);
-      border-right:  1px solid rgba($teal, 0.19);
-      border-bottom: 1px solid rgba($teal, 0.19);
+      flex-direction: column;
+      padding-bottom: 0;
+      background-color: lighten($teal, 5%);
+      color: $white;
+      border-top: 1px solid $yellow;
+      /*border-left:   1px solid rgba($teal, 0.19);*/
+      /*border-right:  1px solid rgba($teal, 0.19);*/
+      /*border-bottom: 1px solid rgba($teal, 0.19);*/
     }
   }
 
@@ -116,12 +120,21 @@
 
   & > ul ul {
     @include breakpoint($screen $navflip) {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
       top: 60px;
-      /*left: 12em;*/
+      left: 0;
       width: 12em;
+      padding-left:  .5625rem;
+      padding-right: .5625rem;
       background: $white;
+      transition: $transitionduration ease;
+    }
+
+    @include breakpoint($screen $large-minor-minor-start) {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -134,7 +147,9 @@
   & > ul li:hover > ul {
 
     @include breakpoint($screen $navflip) {
-      display: block;
+      /*display: block;*/
+      visibility: visible;
+      opacity: 1;
      }
   }
 
@@ -309,28 +324,45 @@
     color: $white;
     
     .omedscrolled & {
+      /*margin-right: 0.625rem;*/
       /*color: $teal;*/
     }
   }
 
   & > li {
 
-    @include breakpoint($screen $navflip) {
-      /*padding-left: 1rem;*/
-      padding-right: 2rem;
+//    @include breakpoint($screen $navflip) {
+//      padding-left: 1rem;
+//      padding-right: 1rem;
+//    }
+
+    .omedscrolled & {
+      transition: background-color 0.4s ease;
+
+      &:hover {
+        background-color: lighten($teal, 5%);
+      }
     }
 
     @include breakpoint($screen $large-minor-start) {
-      padding-right: .75rem;
+      padding-left:  .5625rem;
+      padding-right: .5625rem;
     }
 
-    @include breakpoint($screen $xlarge-start) {
+    @include breakpoint($screen $large-minor-minor-start) {
+      padding-left:  1rem;
       padding-right: 1rem;
     }
 
-    @include breakpoint($screen $xlarge-minor-start) {
-      padding-right: 2rem;
-    }
+    /*@include breakpoint($screen $xlarge-start) {*/
+      /*padding-left: 1rem;*/
+      /*padding-right: 1rem;*/
+    /*}*/
+
+    /*@include breakpoint($screen $xlarge-minor-start) {*/
+      /*padding-left: 2rem;*/
+      /*padding-right: 2rem;*/
+    /*}*/
   }
   
   & li a {

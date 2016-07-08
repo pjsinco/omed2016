@@ -1084,7 +1084,8 @@ object {
 @media screen and (min-width: 56rem) {
   .omedscrolled .header {
     -webkit-animation: mainnavreveal .3s ease-out;
-            animation: mainnavreveal .3s ease-out; } }
+            animation: mainnavreveal .3s ease-out;
+    box-shadow: inset 0px -1px rgba(255, 255, 255, 0.1); } }
 @media screen and (min-width: 56rem) {
   .omedscrolled .admin-bar .header, .omedscrolled.admin-bar .header {
     top: 32px; } }
@@ -1135,7 +1136,7 @@ object {
     @media screen and (min-width: 56rem) {
       .menu li a {
         padding: 1.5rem 0;
-        text-align: center;
+        /*text-align: center;*/
         font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
         border: 0; } }
     .menu li a:link {
@@ -1163,10 +1164,17 @@ object {
     z-index: 1; }
     @media screen and (min-width: 56rem) {
       .menu.active, .menu > ul ul.active {
-        color: #00b0b9;
-        border-left: 1px solid rgba(0, 176, 185, 0.19);
-        border-right: 1px solid rgba(0, 176, 185, 0.19);
-        border-bottom: 1px solid rgba(0, 176, 185, 0.19); } }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding-bottom: 0;
+        background-color: #00c8d3;
+        color: #fff;
+        border-top: 1px solid #fcef06;
+        /*border-left:   1px solid rgba($teal, 0.19);*/
+        /*border-right:  1px solid rgba($teal, 0.19);*/
+        /*border-bottom: 1px solid rgba($teal, 0.19);*/ } }
   .menu, .menu > ul ul {
     clear: both;
     -webkit-transition: all 0.3s ease-out;
@@ -1181,18 +1189,29 @@ object {
         background: none; } }
   @media screen and (min-width: 56rem) {
     .menu > ul ul {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
       top: 60px;
-      /*left: 12em;*/
+      left: 0;
       width: 12em;
-      background: #fff; } }
+      padding-left: .5625rem;
+      padding-right: .5625rem;
+      background: #fff;
+      -webkit-transition: 0.3s ease;
+              transition: 0.3s ease; } }
+  @media screen and (min-width: 61.25rem) {
+    .menu > ul ul {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
   @media screen and (min-width: 56rem) {
     .menu > ul ul li {
       position: relative; } }
   @media screen and (min-width: 56rem) {
     .menu > ul li:hover > ul {
-      display: block; } }
+      /*display: block;*/
+      visibility: visible;
+      opacity: 1; } }
   @media screen and (min-width: 56rem) {
     .menu > ul ul.sub-menu {
       top: 3em;
@@ -1323,20 +1342,30 @@ object {
               align-items: center;
       color: #fff; }
       .omedscrolled .menu-major {
+        /*margin-right: 0.625rem;*/
         /*color: $teal;*/ } }
-  @media screen and (min-width: 56rem) {
-    .menu-major > li {
-      /*padding-left: 1rem;*/
-      padding-right: 2rem; } }
-  @media screen and (min-width: 56rem) {
-    .menu-major > li {
-      padding-right: .75rem; } }
-  @media screen and (min-width: 67.75rem) {
-    .menu-major > li {
-      padding-right: 1rem; } }
-  @media screen and (min-width: 73rem) {
-    .menu-major > li {
-      padding-right: 2rem; } }
+  .menu-major > li {
+    /*@include breakpoint($screen $xlarge-start) {*/
+    /*padding-left: 1rem;*/
+    /*padding-right: 1rem;*/
+    /*}*/
+    /*@include breakpoint($screen $xlarge-minor-start) {*/
+    /*padding-left: 2rem;*/
+    /*padding-right: 2rem;*/
+    /*}*/ }
+    .omedscrolled .menu-major > li {
+      -webkit-transition: background-color 0.4s ease;
+              transition: background-color 0.4s ease; }
+      .omedscrolled .menu-major > li:hover {
+        background-color: #00c8d3; }
+    @media screen and (min-width: 56rem) {
+      .menu-major > li {
+        padding-left: .5625rem;
+        padding-right: .5625rem; } }
+    @media screen and (min-width: 61.25rem) {
+      .menu-major > li {
+        padding-left: 1rem;
+        padding-right: 1rem; } }
   .menu-major li a {
     letter-spacing: 1px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.17); }
