@@ -1,5 +1,6 @@
 %quicklink-header-base {
   margin-bottom: .5rem;
+  line-height: 1.4;
 
   @include breakpoint($screen $medium-minor-start) {
     margin-bottom: 1rem;
@@ -21,7 +22,7 @@
     justify-content: space-between;
 
     @include breakpoint($screen $medium-start) {
-      height: 66%;
+      height: 70%;
     }
 
     @include breakpoint($screen $large-minor-minor-start) {
