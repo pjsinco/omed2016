@@ -1549,7 +1549,8 @@ object {
   margin-bottom: 3em; }
 
 .intro__block {
-  padding-top: 2em; }
+  padding-top: 2em;
+  padding-bottom: 1rem; }
   @media screen and (min-width: 48rem) {
     .intro__block {
       padding-top: 4em; } }
@@ -1562,12 +1563,50 @@ object {
 .intro__logo {
   max-width: 15.375em;
   margin-bottom: 1em; }
-@media screen and (min-width: 56rem) {
-  .intro__text {
-    font-size: 1.25em; } }
-@media screen and (min-width: 67.75rem) {
-  .intro__text {
-    font-size: 1.5em; } }
+.intro__text {
+  text-align: center;
+  font-size: 1rem; }
+  @media screen and (min-width: 56rem) {
+    .intro__text {
+      font-size: 1.25em; } }
+  @media screen and (min-width: 67.75rem) {
+    .intro__text {
+      font-size: 1.5em; } }
+.intro__imagecontainer {
+  margin-bottom: 2rem; }
+  .intro__imagecontainer .icon-omed-logo-stack {
+    width: 13rem;
+    height: 7.75rem;
+    margin: 0 auto; }
+    @media screen and (min-width: 48rem) {
+      .intro__imagecontainer .icon-omed-logo-stack {
+        width: 15.4rem;
+        height: 9rem; } }
+    @media screen and (min-width: 67.75rem) {
+      .intro__imagecontainer .icon-omed-logo-stack {
+        width: 17.4rem;
+        height: 10rem;
+        margin-bottom: 2.5rem; } }
+.intro__body {
+  max-width: 16rem;
+  margin: 0 auto; }
+  @media screen and (min-width: 30rem) {
+    .intro__body {
+      max-width: 26rem; } }
+  @media screen and (min-width: 56rem) {
+    .intro__body {
+      max-width: 36.5rem; } }
+  .intro__body:before {
+    content: "";
+    position: relative;
+    top: -1rem;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #fcef06; }
+    @media screen and (min-width: 30rem) {
+      .intro__body:before {
+        width: 25%; } }
 
 #introOmedLogo div {
   background-image: url(../img/omed-logo-date.png);

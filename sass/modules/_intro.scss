@@ -1,12 +1,14 @@
 $intro-logo-max-width: 15.375em;
+$introinflection: $large-start;
 
 .intro {
 
 
   &__block {
     padding-top: 2em;
+    padding-bottom: 1rem;
 
-    @include breakpoint($screen $large-start) {
+    @include breakpoint($screen $introinflection) {
       padding-top: 4em;
     }
 
@@ -25,6 +27,8 @@ $intro-logo-max-width: 15.375em;
   }
 
   &__text {
+    text-align: center;
+    font-size: 1rem;
 
     @include breakpoint($screen $large-minor-start) {
       font-size: 1.25em;
@@ -32,6 +36,57 @@ $intro-logo-max-width: 15.375em;
 
     @include breakpoint($screen $xlarge-start) {
       font-size: 1.5em;
+    }
+  }
+
+  &__imagecontainer {
+
+    margin-bottom: 2rem;
+
+    & .icon-omed-logo-stack {
+      width: 13rem;
+      height: 7.75rem;
+      margin: 0 auto;
+
+      @include breakpoint($screen $introinflection) {
+        width: 15.4rem;
+        height: 9rem;
+      }
+
+      @include breakpoint($screen $xlarge-start) {
+        width: 17.4rem;
+        height: 10rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+
+  }
+
+  &__body {
+    max-width: 16rem;
+    margin: 0 auto;
+
+    @include breakpoint($screen $medium-start) {
+      max-width: 26rem;      
+    }
+
+    @include breakpoint($screen $large-minor-start) {
+      max-width: 36.5rem;
+    }
+
+    &:before {
+      content: "";
+      position: relative;
+      top: -1rem;
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      border-top: 1px solid $yellow;
+
+      @include breakpoint($screen $medium-start) {
+        width: 25%;
+      }
+
     }
   }
 

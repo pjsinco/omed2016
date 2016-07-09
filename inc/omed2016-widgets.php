@@ -106,29 +106,23 @@ class Omed2016_Intro_Block extends WP_Widget {
     );
 
     parent::__construct( $base_id, $name, $widget_ops );
-
   }
 
   public function widget( $args, $instance ) {
-
     echo $args['before_widget'];
 
     ?>
     <section class="intro__block container-fluid pageblock">
-      <div class="row center-xs">
-        <div class="col-xs-12 icon-omed-logo">
-        </div> <!-- .col -->
-      </div><!-- .row -->
-      <div class="row center-xs">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
-          <p class="intro__text"><?php echo $instance['body']; ?></p>
-        </div> <!-- .col -->
-      </div><!-- .row -->
+      <div class="intro__imagecontainer">
+        <div class="icon-omed-logo-stack"></div>
+      </div> <!-- .intro__imagecontainer -->
+      <div class="intro__body">
+        <p class="intro__text"><?php echo $instance['body']; ?></p>
+      </div> <!-- .intro__body -->
     </section>
     <?php
 
     echo $args['after_widget'];
-
   }
 
   public function form( $instance ) {
@@ -141,7 +135,6 @@ class Omed2016_Intro_Block extends WP_Widget {
     </p>
 
     <?php
-
   }
 
   public function update( $new_instance, $old_instance ) {
