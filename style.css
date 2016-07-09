@@ -1357,7 +1357,8 @@ object {
       -webkit-transition: background-color 0.4s ease;
               transition: background-color 0.4s ease; }
       .omedscrolled .menu-major > li:hover {
-        background-color: #00c8d3; }
+        background-color: #00c8d3;
+        cursor: pointer; }
     @media screen and (min-width: 56rem) {
       .menu-major > li {
         padding-left: .5625rem;
