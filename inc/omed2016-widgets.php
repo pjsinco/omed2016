@@ -53,7 +53,7 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
             </div>
             <div class="card__name"><?php echo get_field( 'session_speaker', $session->ID ); ?></div>
             <div class="card__kicker"><?php echo get_field( 'session_sponsor', $session->ID ); ?></div>
-            <div class="card__header"><?php echo $session->post_title; ?></div>
+            <div class="card__header"><?php echo get_field( 'session_title', $session->ID ) ?></div>
             <div class="card__header--minor"><?php echo get_field( 'date_and_time', $session->ID ); ?></div>
             <a href="<?php echo get_field( 'session_more_info_link', $session->ID ); ?>" class="btn btn--primary">Read more</a>
           </div>
