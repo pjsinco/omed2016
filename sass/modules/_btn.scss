@@ -36,6 +36,21 @@
   }
 
   /*
+   * Button colors
+   */
+  &--red {
+    @include button-variant($red, $btn-primary-bg, $red);
+  }
+
+  &--blue {
+    @include button-variant($blue, $btn-primary-bg, $blue);
+  }
+
+  &--purple {
+    @include button-variant($purple, $btn-primary-bg, $purple);
+  }
+
+  /*
    * Button sizes
    */
 
@@ -51,5 +66,13 @@
     @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-large, $line-height-small, $btn-border-radius-small);
   }
 
+  /*
+   * Button utilities
+   */
+  &--wide {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
 
 }

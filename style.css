@@ -988,7 +988,13 @@ object {
    * Button variations
    */
   /*
+   * Button colors
+   */
+  /*
    * Button sizes
+   */
+  /*
+   * Button utilities
    */ }
   .btn:hover, .btn:focus {
     color: #666666;
@@ -1017,6 +1023,30 @@ object {
       color: #e6e6e6;
       background-color: transparent;
       border-color: #e0e0e0; }
+  .btn--red {
+    color: #cb333b;
+    background-color: transparent;
+    border-color: #cb333b; }
+    .btn--red:hover {
+      color: #a2292f;
+      background-color: transparent;
+      border-color: #9a272d; }
+  .btn--blue {
+    color: #00b3dc;
+    background-color: transparent;
+    border-color: #00b3dc; }
+    .btn--blue:hover {
+      color: #008aa9;
+      background-color: transparent;
+      border-color: #00819f; }
+  .btn--purple {
+    color: #9063cd;
+    background-color: transparent;
+    border-color: #9063cd; }
+    .btn--purple:hover {
+      color: #753dc0;
+      background-color: transparent;
+      border-color: #703bb8; }
   .btn--xs {
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -1032,6 +1062,9 @@ object {
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: 3px; }
+  .btn--wide {
+    padding-left: 2rem;
+    padding-right: 2rem; }
 
 @media screen and (min-width: 56rem) {
   .omedscrolled .header, .header--fixed {
@@ -1614,21 +1647,90 @@ object {
   background-image: url(../img/omed-logo-date.png);
   background-size: 15.375em; }
 
+.quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--purple {
+  margin-bottom: .5rem; }
+  @media screen and (min-width: 36rem) {
+    .quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--purple {
+      margin-bottom: 1rem; } }
+
+.quicklinks__body {
+  max-width: 26rem;
+  margin: 0 auto 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*height: 54%;*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media screen and (min-width: 30rem) {
+    .quicklinks__body {
+      height: 66%; } }
+  @media screen and (min-width: 61.25rem) {
+    .quicklinks__body {
+      height: 58%; } }
+.quicklinks__item {
+  margin-bottom: 2rem;
+  text-align: center;
+  background-position-x: 50%;
+  -ms-flex-preferred-size: 7rem;
+      flex-basis: 7rem; }
+  @media screen and (min-width: 36rem) {
+    .quicklinks__item {
+      -ms-flex-preferred-size: 9rem;
+          flex-basis: 9rem; } }
+  @media screen and (min-width: 41.5rem) {
+    .quicklinks__item {
+      -ms-flex-preferred-size: 11rem;
+          flex-basis: 11rem; } }
+  @media screen and (min-width: 48rem) {
+    .quicklinks__item {
+      -ms-flex-preferred-size: 13rem;
+          flex-basis: 13rem; } }
+  @media screen and (min-width: 61.25rem) {
+    .quicklinks__item {
+      -ms-flex-preferred-size: 18rem;
+          flex-basis: 18rem; } }
+  .quicklinks__item a {
+    margin-top: auto; }
 .quicklinks__icon {
-  width: 5em;
-  margin-bottom: 1rem; }
-
-#ticket div {
-  background-image: url(../img/icon-ticket.png);
-  background-size: 5em; }
-
-#airliner div {
-  background-image: url(../img/icon-airliner.png);
-  background-size: 5em; }
-
-#telephone div {
-  background-image: url(../img/icon-telephone.png);
-  background-size: 5em; }
+  width: 72px;
+  height: 90px;
+  margin: 0 auto; }
+.quicklinks__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media screen and (min-width: 30rem) {
+    .quicklinks__list {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  @media screen and (min-width: 56rem) {
+    .quicklinks__list {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+.quicklinks__header--blue {
+  color: #00b3dc; }
+.quicklinks__header--red {
+  color: #cb333b; }
+.quicklinks__header--purple {
+  color: #9063cd; }
 
 .highlightable, .highlightable--pinned {
   border-top: 7px solid #fcef06;

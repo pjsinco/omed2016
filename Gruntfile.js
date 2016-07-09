@@ -41,11 +41,14 @@ module.exports = function(grunt) {
         options: {
           enhanceSVG: true,
           pngpath: 'images/png',
-//          colors: {
-//            teal: '#00b0b9',
-//            white: '#ffffff',
-//            warmgray: '#babbb1',
-//          },
+          colors: {
+            teal: '#00b0b9',
+            white: '#ffffff',
+            warmgray: '#babbb1',
+            red: '#cb333b',
+            purple: '#9063cd',
+            blue: '#00b3dc',
+          },
           //dynamicColorOnly: true,
         },
       },

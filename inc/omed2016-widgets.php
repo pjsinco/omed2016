@@ -147,7 +147,6 @@ class Omed2016_Intro_Block extends WP_Widget {
 }
 
 class Omed2016_Quicklinks_Block extends WP_Widget {
-
   public function __construct() {
 
     $base_id = 'quicklinks';
@@ -162,18 +161,18 @@ class Omed2016_Quicklinks_Block extends WP_Widget {
   }
 
   public function widget( $args, $instance ) {
-
     echo $args['before_widget'];
 
     ?>
 
     <section class="quicklinks__block container-fluid pageblock wrap">
-      <ul "quicklinks__list">
+      <ul class="quicklinks__list">
 
     <?php
     $args = array(
       'posts_per_page' => 3,
       'post_type' => 'omed_quicklink',
+      'orderby' => 'post__in',
     );
 
     if ( !empty( $instance['ids'] ) ):
@@ -185,11 +184,13 @@ class Omed2016_Quicklinks_Block extends WP_Widget {
     foreach ($quicklinks as $quicklink):
       setup_postdata( $quicklink );
     ?>
-        <li class="quicklinks__item <?php echo get_field( 'omed_quicklink_icon_class_name', $quicklink->ID ); ?>">
+
+        <li class="quicklinks__item">
+          <div class="quicklinks__icon <?php echo get_field( 'omed_quicklink_icon_class_name', $quicklink->ID ); ?>"></div>
           <div class="quicklinks__body">
-            <h4 class="quicklinks__header"><?php echo $quicklink->post_title ?></h4>
-            <p class="quicklinks__body"><?php echo get_field( 'omed_quicklink_body_text', $quicklink->ID ); ?></p>
-            <a href="<?php echo get_field( 'omed_quicklink_link', $quicklink->ID ); ?>" class="btn btn--primary">Go</a>
+            <h4 class="quicklinks__header--<?php echo get_field(  'omed_quicklink_color', $quicklink->ID ); ?>"><?php echo $quicklink->post_title ?></h4>
+            <p class="quicklinks__bodytext"><?php echo get_field( 'omed_quicklink_body_text', $quicklink->ID ); ?></p>
+            <a href="<?php echo get_field( 'omed_quicklink_link', $quicklink->ID ); ?>" class="btn btn--wide btn--<?php echo get_field( 'omed_quicklink_color', $quicklink->ID ); ?>">Go</a>
           </div> <!-- .quicklinks__body -->
         </li> <!-- .col -->
 

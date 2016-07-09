@@ -2,15 +2,6 @@
   <style type="text/css">
     <!--.st0{opacity:0.8;}-->
     <!--.st1{fill:#00B0B9;}-->
-    .icon-hotel { 
-      fill: #ffffff;
-    }
-
-    @media all and (max-width: 25px) {
-      .icon-hotel {
-        fill: #00b0b9;
-      }
-    }
   </style>
   <g class="icon-hotel">
   	<path d="M19.2,25.1H0V11.7l12.4-5.6l6.8,2.4V25.1z M1,24h17.1V9.2l-5.7-2L1,12.3V24z"/>

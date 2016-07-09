@@ -1,31 +1,104 @@
+%quicklink-header-base {
+  margin-bottom: .5rem;
+
+  @include breakpoint($screen $medium-minor-start) {
+    margin-bottom: 1rem;
+  }
+}
 .quicklinks {
 
   &__block {
 
   }
 
-  &__item {
+  &__body {
+    max-width: 26rem;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    /*height: 54%;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint($screen $medium-start) {
+      height: 66%;
+    }
+
+    @include breakpoint($screen $large-minor-minor-start) {
+      height: 58%;
+    }
+  }
+
+  &__bodytext {
 
   }
+
+  &__item {
+    margin-bottom: 2rem;
+    text-align: center;
+    background-position-x: 50%;
+    flex-basis: 7rem;
+
+    @include breakpoint($screen $medium-minor-start) {
+      flex-basis: 9rem;      
+    }
+
+    @include breakpoint($screen $medium-minor-minor-start) {
+      flex-basis: 11rem;      
+    }
+
+    @include breakpoint($screen $large-start) {
+      flex-basis: 13rem;
+    }
+
+    @include breakpoint($screen $large-minor-minor-start) {
+      flex-basis: 18rem;
+    }
+
+    & a {
+      margin-top: auto;
+    }
+
+  }
+
 
   &__icon {
-    width: 5em;
-    margin-bottom: 1rem;
+    width: 72px;
+    height: 90px;
+    margin: 0 auto;
   }
 
-}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-#ticket div {
-  background-image: url(../img/icon-ticket.png);
-  background-size: 5em;
-}
+    @include breakpoint($screen $medium-start) {
+      flex-direction: row;      
+    }
 
-#airliner div {
-  background-image: url(../img/icon-airliner.png);
-  background-size: 5em;
-}
+    @include breakpoint($screen $large-minor-start) {
+      justify-content: space-around;
+    }
 
-#telephone div {
-  background-image: url(../img/icon-telephone.png);
-  background-size: 5em;
+  }
+
+  &__header {
+    
+    &--blue {
+      @extend %quicklink-header-base;
+      color: $blue;
+    }
+
+    &--red {
+      @extend %quicklink-header-base;
+      color: $red;
+    }
+
+    &--purple {
+      @extend %quicklink-header-base;
+      color: $purple;
+    }
+  }
+
 }
