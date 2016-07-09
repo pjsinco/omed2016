@@ -1652,7 +1652,7 @@ object {
   line-height: 1.4; }
   @media screen and (min-width: 36rem) {
     .quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--purple {
-      margin-bottom: 1rem; } }
+      /*margin-bottom: 1rem;*/ } }
 
 .quicklinks__body {
   max-width: 26rem;
