@@ -22,11 +22,15 @@
     justify-content: space-between;
 
     @include breakpoint($screen $medium-start) {
-      height: 70%;
+      /*height: 70%;*/
+    }
+
+    @include breakpoint($screen $large-start) {
+      /*height: 66%;*/
     }
 
     @include breakpoint($screen $large-minor-minor-start) {
-      height: 58%;
+      /*height: 58%;*/
     }
   }
 

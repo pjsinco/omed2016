@@ -1673,10 +1673,13 @@ object {
           justify-content: space-between; }
   @media screen and (min-width: 30rem) {
     .quicklinks__body {
-      height: 70%; } }
+      /*height: 70%;*/ } }
+  @media screen and (min-width: 48rem) {
+    .quicklinks__body {
+      /*height: 66%;*/ } }
   @media screen and (min-width: 61.25rem) {
     .quicklinks__body {
-      height: 58%; } }
+      /*height: 58%;*/ } }
 .quicklinks__item {
   margin-bottom: 2rem;
   text-align: center;
