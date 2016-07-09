@@ -82,6 +82,8 @@ $introinflection: $large-start;
       display: block;
       margin: 0 auto;
       border-top: 1px solid $yellow;
+      height: 5px;
+      /*background: linear-gradient(to bottom, #fcef06, #fcef06 40%, rgba(0, 176, 185, 0.31) 40%, rgba(0, 176, 185, 0.3) 60%, #fcef06 60%, #fcef06 100%)*/
 
       @include breakpoint($screen $medium-start) {
         width: 25%;
