@@ -8,7 +8,8 @@
   @include breakpoint($screen $navflip) {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 7rem;
+    /*margin-top: 7rem;*/
+    margin-top: 0;
   }
   
 

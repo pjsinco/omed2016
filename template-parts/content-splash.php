@@ -1,4 +1,4 @@
-<section class="splash--<?php if (is_page()): global $post; if ( isset( $post ) ): echo $post->post_name; endif; endif; ?> splash-inside<?php //if (!is_front_page()): echo 'splash-inside'; endif; ?>">
+<section class="splash splash--<?php if (is_page()): global $post; if ( isset( $post ) ): echo $post->post_name; endif; endif; ?> <?php //if (!is_front_page()): echo 'splash-inside'; endif; ?>">
   <div class="wrap">
     <div class="splash__block container-fluid fade-in--left">
       <div class="splash__header">

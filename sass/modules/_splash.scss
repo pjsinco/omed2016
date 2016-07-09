@@ -72,11 +72,9 @@
 
 .splash {
 
-  &-inside {
-    @include breakpoint($screen $navflip) {
-      /*top: $navbarheight;*/
-      margin-bottom: 8rem;
-    }
+  @include breakpoint($screen $navflip) {
+    /*top: $navbarheight;*/
+    margin-bottom: 4.5rem;
   }
   
   &--home {

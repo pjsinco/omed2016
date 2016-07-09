@@ -793,9 +793,9 @@ object {
           animation-fill-mode: forwards; }
 
 @media screen and (min-width: 56rem) {
-  .splash-inside {
+  .splash {
     /*top: $navbarheight;*/
-    margin-bottom: 8rem; } }
+    margin-bottom: 4.5rem; } }
 .splash--home {
   /*background-image: url(images/omed-splash-audience.jpg);*/
   /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(images/omed-splash-audience.jpg);*/
@@ -1772,7 +1772,8 @@ object {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      margin-top: 7rem; } }
+      /*margin-top: 7rem;*/
+      margin-top: 0; } }
   .content__left {
     display: none; }
     @media screen and (min-width: 56rem) {
