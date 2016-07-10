@@ -1007,11 +1007,11 @@ object {
       color: #4d4d4d;
       background-color: transparent;
       border-color: #9d9e90; }
-  .btn--primary {
+  .btn--primary, .btn--teal {
     color: #00b0b9;
     background-color: transparent;
     border-color: #00b0b9; }
-    .btn--primary:hover {
+    .btn--primary:hover, .btn--teal:hover {
       color: #007f86;
       background-color: transparent;
       border-color: #00767c; }
@@ -1647,11 +1647,11 @@ object {
   background-image: url(../img/omed-logo-date.png);
   background-size: 15.375em; }
 
-.quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--purple {
+.quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--teal, .quicklinks__header--purple {
   margin-bottom: .5rem;
   line-height: 1.4; }
   @media screen and (min-width: 36rem) {
-    .quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--purple {
+    .quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--teal, .quicklinks__header--purple {
       /*margin-bottom: 1rem;*/ } }
 
 .quicklinks__body {
@@ -1733,6 +1733,8 @@ object {
   color: #00b3dc; }
 .quicklinks__header--red {
   color: #cb333b; }
+.quicklinks__header--teal {
+  color: #00b0b9; }
 .quicklinks__header--purple {
   color: #9063cd; }
 
