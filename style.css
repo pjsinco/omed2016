@@ -1586,16 +1586,30 @@ object {
 .intro__block {
   /*padding-bottom: 1rem;*/
   /*padding-top: 1.8em;*/
+  position: relative;
+  top: -1rem;
   max-width: 33rem;
-  margin: 0 auto 4rem;
-  padding: 3rem 4rem;
+  padding: 1rem 2rem;
+  margin: 0 1rem 1rem;
+  border-top: 1px solid rgba(252, 239, 6, 0.5);
   border-left: 1px solid rgba(252, 239, 6, 0.5);
   border-right: 1px solid rgba(252, 239, 6, 0.5);
   border-bottom: 1px solid rgba(252, 239, 6, 0.5);
   background: #fff; }
+  @media screen and (min-width: 30rem) {
+    .intro__block {
+      margin: 0 2rem 1rem;
+      padding: 2rem 3rem; } }
+  @media screen and (min-width: 592px) {
+    .intro__block {
+      margin: 0 auto 2rem; } }
   @media screen and (min-width: 48rem) {
     .intro__block {
-      /*padding-top: 4em;*/ } }
+      /*padding-top: 4em;*/
+      position: static;
+      padding: 3rem 4rem;
+      margin: 0 auto 4rem;
+      border-top: none; } }
   @media screen and (min-width: 56rem) {
     .intro__block {
       /*padding-top: 0;*/ } }
@@ -1603,7 +1617,16 @@ object {
     .intro__block {
       /*padding-top: 1.8em;*/ } }
 .intro__dropclothcontainer {
-  min-height: 48rem; }
+  min-height: 68rem; }
+  @media screen and (min-width: 30rem) {
+    .intro__dropclothcontainer {
+      min-height: 42rem; } }
+  @media screen and (min-width: 48rem) {
+    .intro__dropclothcontainer {
+      border-top: 8px solid #fcef06; } }
+  @media screen and (min-width: 56rem) {
+    .intro__dropclothcontainer {
+      min-height: 48rem; } }
 .intro__dropcloth {
   background: rgba(252, 239, 6, 0.15);
   position: absolute;
@@ -1626,9 +1649,12 @@ object {
 .intro__imagecontainer {
   margin-bottom: 2rem; }
   .intro__imagecontainer .icon-omed-logo-stack {
-    width: 13rem;
+    width: 12rem;
     height: 7.75rem;
     margin: 0 auto; }
+    @media screen and (min-width: 30rem) {
+      .intro__imagecontainer .icon-omed-logo-stack {
+        width: 13rem; } }
     @media screen and (min-width: 48rem) {
       .intro__imagecontainer .icon-omed-logo-stack {
         width: 15.4rem;

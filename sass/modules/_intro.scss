@@ -8,22 +8,32 @@ $introinflection: $large-start;
     /*padding-bottom: 1rem;*/
     /*padding-top: 1.8em;*/
 
-
-
-
+    position: relative;
+    top: -1rem;
     max-width: 33rem;
-    margin: 0 auto 4rem;
-    padding: 3rem 4rem;
+    padding: 1rem 2rem;
+    margin: 0 1rem 1rem;
+    border-top: 1px solid rgba($yellow, .5);
     border-left: 1px solid rgba($yellow, .5);
     border-right: 1px solid rgba($yellow, .5);
     border-bottom: 1px solid rgba($yellow, .5);
     background: $white;
 
+    @include breakpoint($screen $medium-start) {
+      margin: 0 2rem 1rem;
+      padding: 2rem 3rem;
+    }
 
-
+    @include breakpoint($screen 592px) {
+      margin: 0 auto 2rem;
+    }
 
     @include breakpoint($screen $introinflection) {
       /*padding-top: 4em;*/
+      position: static;
+      padding: 3rem 4rem;
+      margin: 0 auto 4rem;
+      border-top: none;
     }
 
     @include breakpoint($screen $large-minor-start) {
@@ -36,7 +46,19 @@ $introinflection: $large-start;
   }
 
   &__dropclothcontainer {
-    min-height: 48rem;
+    min-height: 68rem;
+
+    @include breakpoint($screen $medium-start) {
+      min-height: 42rem;
+    }
+
+    @include breakpoint($screen $introinflection) {
+      border-top: 8px solid $yellow;
+    }
+  
+    @include breakpoint($screen $large-minor-start) {
+      min-height: 48rem;
+    }
   }
 
   &__dropcloth {
@@ -71,9 +93,13 @@ $introinflection: $large-start;
     margin-bottom: 2rem;
 
     & .icon-omed-logo-stack {
-      width: 13rem;
+      width: 12rem;
       height: 7.75rem;
       margin: 0 auto;
+
+      @include breakpoint($screen $medium-start) {
+        width: 13rem;
+      }
 
       @include breakpoint($screen $introinflection) {
         width: 15.4rem;
