@@ -34,6 +34,12 @@ body {
   font-family: $primaryfont;
   background-color: $white;
   height: 100%;
+
+  &.page-child, &.page-template-page-standalone {
+    @include breakpoint($screen $navflip) {
+      padding-top: 8rem;
+    }
+  }
 }
 
 p {

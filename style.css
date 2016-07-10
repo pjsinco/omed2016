@@ -646,6 +646,9 @@ body {
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
   height: 100%; }
+  @media screen and (min-width: 56rem) {
+    body.page-child, body.page-template-page-standalone {
+      padding-top: 8rem; } }
 
 figure {
   margin: 0; }
