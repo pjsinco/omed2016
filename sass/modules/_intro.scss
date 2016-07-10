@@ -5,20 +5,47 @@ $introinflection: $large-start;
 
 
   &__block {
-    padding-top: 2em;
-    padding-bottom: 1rem;
+    /*padding-bottom: 1rem;*/
+    /*padding-top: 1.8em;*/
+
+
+
+
+    max-width: 33rem;
+    margin: 0 auto 4rem;
+    padding: 3rem 4rem;
+    border-left: 1px solid rgba($yellow, .5);
+    border-right: 1px solid rgba($yellow, .5);
+    border-bottom: 1px solid rgba($yellow, .5);
+    background: $white;
+
+
+
 
     @include breakpoint($screen $introinflection) {
-      padding-top: 4em;
+      /*padding-top: 4em;*/
     }
 
     @include breakpoint($screen $large-minor-start) {
-      padding-top: 0;
+      /*padding-top: 0;*/
     }
 
     @include breakpoint($screen $xlarge-start) {
-      padding-top: 1.8em;
+      /*padding-top: 1.8em;*/
     }
+  }
+
+  &__dropclothcontainer {
+    min-height: 48rem;
+  }
+
+  &__dropcloth {
+    background: rgba($yellow, .15);
+    position: absolute;
+    top: 0;
+    bottom: -8rem;
+    left: 0;
+    right: 0;
   }
 
   &__logo {

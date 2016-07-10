@@ -76,6 +76,10 @@
     /*top: $navbarheight;*/
     margin-bottom: 4.5rem;
   }
+
+  &--nomargin {
+    margin-bottom: 0 !important;
+  }
   
   &--home {
     @extend %splash-base;
@@ -87,6 +91,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    
   }
   
   &--connection {
