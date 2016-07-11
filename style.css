@@ -1324,7 +1324,7 @@ object {
     text-transform: initial;
     letter-spacing: .5px;
     font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    opacity: .8; }
+    /*opacity: .8;*/ }
 
 /* End .menu */
 .menu-link {
@@ -1515,6 +1515,22 @@ object {
     font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
   .menu-item-highlight svg {
     fill: #00b0b9 !important; }
+
+@media screen and (min-width: 56rem) {
+  .level-2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+.level-2 .menu-item {
+  background-color: transparent; }
+  @media screen and (min-width: 56rem) {
+    .level-2 .menu-item {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      height: 4rem;
+      -webkit-transition: background-color 0.3s ease;
+              transition: background-color 0.3s ease; } }
+  .level-2 .menu-item:hover {
+    background-color: #00b0b9; }
 
 .branding {
   display: none; }

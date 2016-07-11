@@ -244,7 +244,7 @@
     text-transform: initial;
     letter-spacing: .5px;
     font-family: $font-book;
-    opacity: .8;
+    /*opacity: .8;*/
   }
 } /* End .menu */
 
@@ -505,6 +505,32 @@
 
   & svg {
     fill: $teal !important;
+  }
+
+}
+
+.level-2 {
+
+  @include breakpoint($screen $navflip) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+  }
+
+
+  & .menu-item {
+    background-color: transparent;
+  
+    @include breakpoint($screen $navflip) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      height: 4rem;
+      transition: background-color $transitionduration ease;
+    }
+  
+    &:hover {
+       background-color: $teal;
+    }
   }
 
 }
