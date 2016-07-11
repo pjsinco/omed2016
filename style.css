@@ -686,6 +686,12 @@ h3 {
   font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
   font-weight: normal; }
+  article h3 {
+    margin-top: 2rem;
+    margin-bottom: .25rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid #fcef06;
+    opacity: .75; }
 
 ul {
   padding: 0; }

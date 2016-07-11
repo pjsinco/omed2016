@@ -88,6 +88,15 @@ h3 {
   font-family: $font-bold;
   line-height: $bodylineheight;
   font-weight: normal;
+
+  article & {
+    margin-top: 2rem;
+    margin-bottom: .25rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid $yellow;
+    opacity: .75;
+
+  }
 }
 
 
