@@ -1,6 +1,8 @@
 %quicklink-header-base {
   margin-bottom: .5rem;
+  padding-bottom: 6px; 
   line-height: 1.4;
+  border-bottom: 1px solid #fcef06;
 
   @include breakpoint($screen $medium-minor-start) {
     /*margin-bottom: 1rem;*/
@@ -39,13 +41,29 @@
   }
 
   &__item {
-    margin-bottom: 2rem;
+    position: relative;
+    top: -1rem;
+    max-width: 33rem;
+    padding: 1rem 2rem;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
-    background-position-x: 50%;
-    flex-basis: 7rem;
+    border-top: 1px solid rgba($yellow, .5);
+    border-left: 1px solid rgba($yellow, .5);
+    border-right: 1px solid rgba($yellow, .5);
+    border-bottom: 1px solid rgba($yellow, .5);
+    background: $white;
+    margin-bottom: 2rem;
+    /*text-align: center;*/
+    /*background-position-x: 50%;*/
+    /*flex-basis: 7rem;*/
+
+    @include breakpoint($screen $medium-start) {
+      margin: 0 0 1rem;
+    }
 
     @include breakpoint($screen $medium-minor-start) {
-      flex-basis: 9rem;      
+      /*flex-basis: 9rem;      */
     }
 
     @include breakpoint($screen $medium-minor-minor-start) {
@@ -64,6 +82,7 @@
       margin-top: auto;
     }
 
+
   }
 
 
@@ -74,22 +93,31 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    @include breakpoint($screen $medium-start) {
+    /*@include breakpoint($screen $medium-start) {*/
+    @include breakpoint($screen 592px) {
       flex-direction: row;      
-    }
-
-    @include breakpoint($screen $large-minor-start) {
       justify-content: space-around;
-    }
 
+      &:after {
+        content: "";
+        position: absolute;
+        left: 7rem;
+        right: 7rem;
+        border-top: 6px solid rgba($yellow, .36);
+        z-index: -1;
+        top: calc(50% - 2rem);
+      }
+    }
   }
 
   &__header {
-    
+
+
     &--blue {
       @extend %quicklink-header-base;
       color: $blue;
