@@ -2190,7 +2190,7 @@ object {
     color: inherit; }
   .splinkle__header {
     font-family: "gotham-book";
-    opacity: .5;
+    /*opacity: .5;*/
     font-weight: lighter;
     font-size: 24px;
     margin-bottom: 20px;
