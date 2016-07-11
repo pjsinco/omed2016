@@ -1831,7 +1831,7 @@ object {
         position: absolute;
         left: 7rem;
         right: 7rem;
-        border-top: 6px solid rgba(252, 239, 6, 0.36);
+        border-top: 3px dotted rgba(252, 239, 6, 0.8);
         z-index: -1;
         top: calc(50% - 2rem); } }
 .quicklinks__header--blue {

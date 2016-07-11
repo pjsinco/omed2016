@@ -45,7 +45,7 @@
   
   $menuTrigger.click(function(e) {
   	var $this = $(this);
-  	$this.toggleClass('active').next('ul').toggleClass('active');
+  	$this.toggleClass('active');
   });
 
 })(jQuery);
