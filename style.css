@@ -687,11 +687,12 @@ h3 {
   line-height: 1.4;
   font-weight: normal; }
   article h3 {
-    margin-top: 2rem;
     margin-bottom: .25rem;
     padding-bottom: .25rem;
     border-bottom: 1px solid #fcef06;
     opacity: .75; }
+    article h3:not(:first-child) {
+      margin-top: 2rem; }
 
 ul {
   padding: 0; }
@@ -2166,5 +2167,14 @@ object {
 
 .entry__header {
   margin-bottom: 3rem; }
+
+.leadin {
+  color: #babbb1;
+  font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7; }
+  @media screen and (min-width: 56rem) {
+    .leadin {
+      font-size: 1.3125rem; } }
 
 /*@import 'icons/index';*/

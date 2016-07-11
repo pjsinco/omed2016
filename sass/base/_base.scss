@@ -90,11 +90,14 @@ h3 {
   font-weight: normal;
 
   article & {
-    margin-top: 2rem;
     margin-bottom: .25rem;
     padding-bottom: .25rem;
     border-bottom: 1px solid $yellow;
     opacity: .75;
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
 
   }
 }

@@ -1,0 +1,10 @@
+.leadin {
+  color: $warmgray;
+  font-family: $font-book;
+  font-size: 1rem;
+  line-height: 1.7;
+
+  @include breakpoint($screen $navflip) {
+    font-size: 1.3125rem;
+  }
+}
