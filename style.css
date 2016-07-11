@@ -650,6 +650,9 @@ body {
     body.page-child, body.page-template-page-standalone {
       padding-top: 8rem; } }
 
+li strong, p strong {
+  font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 figure {
   margin: 0; }
 

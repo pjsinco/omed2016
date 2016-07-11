@@ -46,6 +46,10 @@ p {
   @extend %p-base;
 }
 
+li strong, p strong {
+  font-family: $font-medium;
+}
+
 figure {
   margin: 0;
 }
