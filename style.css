@@ -2172,6 +2172,7 @@ object {
   color: #babbb1;
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
+  font-weight: normal;
   line-height: 1.7; }
   @media screen and (min-width: 56rem) {
     .leadin {
