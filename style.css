@@ -1140,7 +1140,7 @@ object {
 @media screen and (min-width: 56rem) {
   .header {
     position: absolute;
-    /*top: 3em;*/
+    top: 3em;
     left: 0;
     right: 0; } }
 .header__block {
@@ -1587,7 +1587,8 @@ object {
   header .branding--omed.icon-omed-logo-alone {
     width: 168px;
     height: 100%;
-    fill: #fff; }
+    fill: #fff;
+    border-radius: 15px; }
     @media screen and (min-width: 56rem) {
       header .branding--omed.icon-omed-logo-alone {
         position: relative;

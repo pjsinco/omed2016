@@ -67,7 +67,7 @@
 
   @include breakpoint($screen $navflip) {
     position: absolute;
-    /*top: 3em;*/
+    top: 3em;
     left: 0;
     right: 0;
 
