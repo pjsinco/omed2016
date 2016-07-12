@@ -1739,6 +1739,7 @@ object {
   background-size: 15.375em; }
 
 .quicklinks__header--blue, .quicklinks__header--red, .quicklinks__header--teal, .quicklinks__header--purple {
+  display: inline-block;
   margin-bottom: .5rem;
   padding-bottom: 6px;
   line-height: 1.4;
