@@ -1,8 +1,7 @@
 (function($) {
 
-  console.log('baz');
 
-  //$('body').addClass('js');
+
 
   // We don't care about resize events on screens below 768px wide
   var actionableScreenWidth = 768; // $large-start breakpoint
@@ -48,5 +47,9 @@
   	$this.toggleClass('active');
   });
 
+  $('#fsCarousel').owlCarousel({
+    'items': 3,
+    'itemsDesktop': [1199, 3],
+  });
 })(jQuery);
 

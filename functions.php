@@ -146,6 +146,37 @@ function omed2016_scripts() {
     true
   );
 
+  /**
+   * Owl Carousel for Featured Sessions slider
+   *
+   */
+  wp_register_script(
+    'owl-carousel-js',
+    get_template_directory_uri() . '/scripts/owl.carousel.min.js', 
+    array( 'jquery' ),
+    false,
+    true
+  );
+
+  wp_register_style(
+    'owl-carousel-css',
+    get_template_directory_uri() . '/styles/owl.carousel.css', 
+    array()
+  );
+
+  wp_register_style(
+    'owl-theme-css',
+    get_template_directory_uri() . '/styles/owl.theme.css', 
+    array( 'owl-carousel-css' )
+  );
+
+  if ( is_front_page() ) {
+    wp_enqueue_style( 'owl-carousel-css' );
+    wp_enqueue_style( 'owl-theme-css' );
+    wp_enqueue_script( 'owl-carousel-js' );
+  }
+  
+
 	//wp_enqueue_script( 'omed2016-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	//wp_enqueue_script( 'omed2016-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

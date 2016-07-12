@@ -34,11 +34,11 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
       </div>
 
       <section class="fs__block container-fluid pageblock wrap">
-        <ul class="fs__items">
+        <ul class="fs__items" id="fsCarousel" >
           
         <?php 
           $post_args = array(
-            'posts_per_page' => 3,
+            //'posts_per_page' => 3,
             'post_type' => 'omed_session',
           );
 
@@ -54,7 +54,7 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
               <h5 class="fs__name"><?php echo get_field( 'session_speaker_name', $session->ID ); ?></h5>
               <h6 class="fs__kicker"><?php echo get_field( 'session_sponsor', $session->ID ); ?></h6>
               <h3 class="fs__header"><?php echo get_field( 'session_title', $session->ID ) ?></h3>
-              <div class="fs__header--minor"><?php echo get_field( 'date_and_time', $session->ID ); ?></div>
+              <div class="fs__header--minor"><?php echo get_field( 'session_date_and_time', $session->ID ); ?></div>
               <a href="<?php echo get_field( 'session_more_info_link', $session->ID ); ?>" class="btn btn--primary">Read more</a>
           </li> <!-- .fs__item -->
         <?php
