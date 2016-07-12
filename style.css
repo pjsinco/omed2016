@@ -1751,20 +1751,11 @@ object {
 .quicklinks__body {
   max-width: 26rem;
   margin: 0 auto 1rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /*display: flex;*/
   /*height: 54%;*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: space-between;*/ }
   @media screen and (min-width: 30rem) {
     .quicklinks__body {
       /*height: 70%;*/ } }
