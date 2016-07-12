@@ -46,8 +46,8 @@
     top: -1rem;
     max-width: 33rem;
     padding: 1rem 2rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: .5rem;
+    margin-right: .5rem;
     text-align: center;
     border-top:    1px solid $yellow;
     border-left:   1px solid $yellow;
@@ -60,11 +60,15 @@
     /*flex-basis: 7rem;*/
 
     @include breakpoint($screen $medium-start) {
-      margin: 0 0 1rem;
+      margin: 0 .5rem 1rem;
+    }
+
+    @include breakpoint($screen $large-minor-start) {
+      max-width: 294px;
     }
 
     @include breakpoint($screen 592px) {
-      flex-basis: 31%;
+      /*flex-basis: 31%;*/
     }
 
     @include breakpoint($screen $medium-minor-start) {
@@ -72,15 +76,17 @@
     }
 
     @include breakpoint($screen $medium-minor-minor-start) {
-      flex-basis: 11rem;      
+      /*flex-basis: 11rem;      */
     }
 
     @include breakpoint($screen $large-start) {
-      flex-basis: 13rem;
+      /*flex-basis: 13rem;*/
     }
 
     @include breakpoint($screen $large-minor-minor-start) {
-      flex-basis: 18rem;
+      margin-left: auto;
+      margin-right: auto;
+      /*flex-basis: 18rem;*/
     }
 
     & a {
@@ -99,14 +105,14 @@
 
   &__list {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
 
     /*@include breakpoint($screen $medium-start) {*/
     @include breakpoint($screen 592px) {
-      flex-direction: row;      
-      justify-content: space-between;
+      /*flex-direction: row;      */
+      /*justify-content: space-between;*/
 
 //      &:after {
 //        content: "";
@@ -120,8 +126,9 @@
     }
 
     @include breakpoint($screen $medium-minor-minor-start) {
-      justify-content: space-around;
+      /*justify-content: space-around;*/
     }
+
   }
 
   &__header {

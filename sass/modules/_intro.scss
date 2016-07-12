@@ -13,7 +13,9 @@ $introinflection: $large-start;
     max-width: 33rem;
     /*padding: 1rem 2rem;*/
     /*margin-left: auto;*/
-    margin: 2rem 1rem 3rem;
+    margin: 2rem 1rem .5rem;
+      margin-left: auto;
+      margin-right: auto;
     /*border-top: 1px solid rgba($yellow, .5);*/
     /*border-top: 6px solid $yellow;*/
     /*border-left: 1px solid rgba($yellow, .5);*/
@@ -32,29 +34,19 @@ $introinflection: $large-start;
     }
 
     @include breakpoint($screen 592px) {
-      margin: 2rem auto 3rem;
-    }
-
-    @include breakpoint($screen $introinflection) {
-      /*padding-top: 4em;*/
-      /*position: static;*/
-      /*padding: 3rem 4rem;*/
-      /*margin: 0 auto 4rem;*/
-      /*border-top: none;*/
-    }
-
-    @include breakpoint($screen $large-minor-start) {
-      /*padding-top: 0;*/
+      /*margin: 2rem auto 2rem;*/
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @include breakpoint($screen $large-start) {
       margin-top: 3rem;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     @include breakpoint($screen $xlarge-start) {
       margin-top: 5rem;
-      margin-bottom: 6rem;
+      margin-bottom: 3.5rem;
     }
   }
 

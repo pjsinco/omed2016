@@ -31,6 +31,11 @@ $fsbreak: $large-start;
       max-width: 18.375rem;
     }
 
+    @include breakpoint($screen $large-minor-minor-start) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @include breakpoint($screen $fsbreak) {
       /*flex-basis: 30%;*/
     }

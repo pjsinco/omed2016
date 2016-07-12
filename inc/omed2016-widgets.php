@@ -153,6 +153,7 @@ class Omed2016_Intro_Block extends WP_Widget {
 }
 
 class Omed2016_Quicklinks_Block extends WP_Widget {
+
   public function __construct() {
 
     $base_id = 'quicklinks';
@@ -172,7 +173,7 @@ class Omed2016_Quicklinks_Block extends WP_Widget {
     ?>
 
     <section class="quicklinks__block  wrap">
-      <ul class="quicklinks__list">
+      <ul class="quicklinks__list" id="qlCarousel">
 
     <?php
     $args = array(
@@ -230,8 +231,8 @@ class Omed2016_Quicklinks_Block extends WP_Widget {
 		return $instance;
 
   }
-}
 
+}
 
 class Omed2016_Highlightable extends WP_Widget {
 
@@ -335,7 +336,6 @@ function omed2016_register_widgets( ) {
   register_widget( 'Omed2016_Quicklinks_Block' );
   register_widget( 'Omed2016_Intro_Block' );
   register_widget( 'Omed2016_Highlightable' );
-
   
 }
 add_action( 'widgets_init' , 'omed2016_register_widgets' );

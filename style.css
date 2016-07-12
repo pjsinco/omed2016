@@ -1634,7 +1634,9 @@ object {
   max-width: 33rem;
   /*padding: 1rem 2rem;*/
   /*margin-left: auto;*/
-  margin: 2rem 1rem 3rem;
+  margin: 2rem 1rem .5rem;
+  margin-left: auto;
+  margin-right: auto;
   /*border-top: 1px solid rgba($yellow, .5);*/
   /*border-top: 6px solid $yellow;*/
   /*border-left: 1px solid rgba($yellow, .5);*/
@@ -1650,25 +1652,17 @@ object {
       /*padding: 2rem 3rem;*/ } }
   @media screen and (min-width: 592px) {
     .intro__block {
-      margin: 2rem auto 3rem; } }
-  @media screen and (min-width: 48rem) {
-    .intro__block {
-      /*padding-top: 4em;*/
-      /*position: static;*/
-      /*padding: 3rem 4rem;*/
-      /*margin: 0 auto 4rem;*/
-      /*border-top: none;*/ } }
-  @media screen and (min-width: 56rem) {
-    .intro__block {
-      /*padding-top: 0;*/ } }
+      /*margin: 2rem auto 2rem;*/
+      margin-left: auto;
+      margin-right: auto; } }
   @media screen and (min-width: 48rem) {
     .intro__block {
       margin-top: 3rem;
-      margin-bottom: 4rem; } }
+      margin-bottom: 2rem; } }
   @media screen and (min-width: 67.75rem) {
     .intro__block {
       margin-top: 5rem;
-      margin-bottom: 6rem; } }
+      margin-bottom: 3.5rem; } }
 .intro__dropclothcontainer {
   min-height: 76rem; }
   @media screen and (min-width: 30rem) {
@@ -1785,8 +1779,8 @@ object {
   top: -1rem;
   max-width: 33rem;
   padding: 1rem 2rem;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: .5rem;
+  margin-right: .5rem;
   text-align: center;
   border-top: 1px solid #fcef06;
   border-left: 1px solid #fcef06;
@@ -1799,26 +1793,27 @@ object {
   /*flex-basis: 7rem;*/ }
   @media screen and (min-width: 30rem) {
     .quicklinks__item {
-      margin: 0 0 1rem; } }
+      margin: 0 .5rem 1rem; } }
+  @media screen and (min-width: 56rem) {
+    .quicklinks__item {
+      max-width: 294px; } }
   @media screen and (min-width: 592px) {
     .quicklinks__item {
-      -ms-flex-preferred-size: 31%;
-          flex-basis: 31%; } }
+      /*flex-basis: 31%;*/ } }
   @media screen and (min-width: 36rem) {
     .quicklinks__item {
       /*flex-basis: 9rem;      */ } }
   @media screen and (min-width: 41.5rem) {
     .quicklinks__item {
-      -ms-flex-preferred-size: 11rem;
-          flex-basis: 11rem; } }
+      /*flex-basis: 11rem;      */ } }
   @media screen and (min-width: 48rem) {
     .quicklinks__item {
-      -ms-flex-preferred-size: 13rem;
-          flex-basis: 13rem; } }
+      /*flex-basis: 13rem;*/ } }
   @media screen and (min-width: 61.25rem) {
     .quicklinks__item {
-      -ms-flex-preferred-size: 18rem;
-          flex-basis: 18rem; } }
+      margin-left: auto;
+      margin-right: auto;
+      /*flex-basis: 18rem;*/ } }
   .quicklinks__item a {
     margin-top: auto; }
 .quicklinks__icon {
@@ -1827,30 +1822,17 @@ object {
   margin: 0 auto; }
 .quicklinks__list {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: space-between;*/
   /*@include breakpoint($screen $medium-start) {*/ }
   @media screen and (min-width: 592px) {
     .quicklinks__list {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; } }
+      /*flex-direction: row;      */
+      /*justify-content: space-between;*/ } }
   @media screen and (min-width: 41.5rem) {
     .quicklinks__list {
-      -ms-flex-pack: distribute;
-          justify-content: space-around; } }
+      /*justify-content: space-around;*/ } }
 .quicklinks__header--blue {
   color: #00b3dc; }
 .quicklinks__header--red {
@@ -1973,6 +1955,10 @@ object {
       margin-left: 1rem;
       margin-right: 1rem;
       max-width: 18.375rem; } }
+  @media screen and (min-width: 61.25rem) {
+    .fs__item {
+      margin-left: auto;
+      margin-right: auto; } }
   @media screen and (min-width: 48rem) {
     .fs__item {
       /*flex-basis: 30%;*/ } }
