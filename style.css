@@ -1219,12 +1219,14 @@ object {
             -ms-flex-direction: column;
                 flex-direction: column;
         padding-bottom: 0;
-        background-color: #00c8d3;
+        background-color: rgba(0, 200, 211, 0.4);
         color: #fff;
         border-top: 1px solid #fcef06;
         /*border-left:   1px solid rgba($teal, 0.19);*/
         /*border-right:  1px solid rgba($teal, 0.19);*/
-        /*border-bottom: 1px solid rgba($teal, 0.19);*/ } }
+        /*border-bottom: 1px solid rgba($teal, 0.19);*/ }
+        .omedscrolled .menu.active, .omedscrolled .menu > ul ul.active {
+          background-color: #00c8d3; } }
   .menu, .menu > ul ul {
     clear: both;
     -webkit-transition: all 0.3s ease-out;
@@ -1399,6 +1401,8 @@ object {
         /*margin-right: 0.625rem;*/
         /*color: $teal;*/ } }
   .menu-major > li {
+    -webkit-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
     /*@include breakpoint($screen $xlarge-start) {*/
     /*padding-left: 1rem;*/
     /*padding-right: 1rem;*/
@@ -1407,6 +1411,9 @@ object {
     /*padding-left: 2rem;*/
     /*padding-right: 2rem;*/
     /*}*/ }
+    @media screen and (min-width: 56rem) {
+      .menu-major > li:hover {
+        background-color: rgba(0, 200, 211, 0.4); } }
     .omedscrolled .menu-major > li {
       -webkit-transition: background-color 0.4s ease;
               transition: background-color 0.4s ease; }

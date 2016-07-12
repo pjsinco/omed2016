@@ -72,12 +72,16 @@
     @include breakpoint($screen $navflip) {
       flex-direction: column;
       padding-bottom: 0;
-      background-color: lighten($teal, 5%);
+      background-color: rgba(0, 200, 211, 0.4);
       color: $white;
       border-top: 1px solid $yellow;
       /*border-left:   1px solid rgba($teal, 0.19);*/
       /*border-right:  1px solid rgba($teal, 0.19);*/
       /*border-bottom: 1px solid rgba($teal, 0.19);*/
+
+      .omedscrolled & {
+        background-color: lighten($teal, 5%);
+      }
     }
   }
 
@@ -339,6 +343,15 @@
 //      padding-left: 1rem;
 //      padding-right: 1rem;
 //    }
+
+    transition: background-color $transitionduration ease;
+
+    @include breakpoint($screen $navflip) {
+      &:hover {
+        background-color: rgba(0, 200, 211, 0.4);
+      }
+      
+    }
 
     .omedscrolled & {
       transition: background-color 0.4s ease;
