@@ -112,21 +112,19 @@ class Omed2016_Intro_Block extends WP_Widget {
     echo $args['before_widget'];
 
     ?>
-    <div class="intro__dropclothcontainer container-fluid relative">
-      <div class="intro__dropcloth">
-        <section class="intro__block">
-          <div class="intro__imagecontainer">
-            <div class="icon-omed-logo-stack"></div>
-          </div> <!-- .intro__imagecontainer -->
-          <div class="intro__body">
-            <p class="intro__text"><?php echo $instance['body']; ?></p>
-          </div> <!-- .intro__body -->
-        </section>
+    <div class="container-fluid relative">
+      <section class="intro__block">
+        <div class="intro__imagecontainer">
+          <div class="icon-omed-logo-stack"></div>
+        </div> <!-- .intro__imagecontainer -->
+        <div class="intro__body">
+          <p class="intro__text"><?php echo $instance['body']; ?></p>
+        </div> <!-- .intro__body -->
+      </section>
 
-        <?php 
-          $ids = $instance['quicklink_ids'];
-          echo do_shortcode( "[block type='Omed2016_Quicklinks_Block' ids=$ids]" ); ?>
-      </div> <!-- .intro__dropcloth -->
+      <?php 
+        $ids = $instance['quicklink_ids'];
+        echo do_shortcode( "[block type='Omed2016_Quicklinks_Block' ids=$ids]" ); ?>
 
     </div><!-- .intro__dropclothcontainer -->
 
@@ -173,7 +171,7 @@ class Omed2016_Quicklinks_Block extends WP_Widget {
 
     ?>
 
-    <section class="quicklinks__block container-fluid pageblock wrap">
+    <section class="quicklinks__block  wrap">
       <ul class="quicklinks__list">
 
     <?php

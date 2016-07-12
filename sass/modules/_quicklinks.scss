@@ -2,6 +2,7 @@
   margin-bottom: .5rem;
   padding-bottom: 6px; 
   line-height: 1.4;
+  font-family: $font-medium;
   border-bottom: 1px solid #fcef06;
 
   @include breakpoint($screen $medium-minor-start) {
@@ -48,11 +49,11 @@
     margin-left: 0;
     margin-right: 0;
     text-align: center;
-    border-top: 1px solid rgba($yellow, .5);
-    border-left: 1px solid rgba($yellow, .5);
-    border-right: 1px solid rgba($yellow, .5);
-    border-bottom: 1px solid rgba($yellow, .5);
-    background: $white;
+    border-top:    5px solid $yellow;
+    border-left:   1px solid $yellow;
+    border-right:  1px solid $yellow;
+    border-bottom: 1px solid $yellow;
+    background: rgba($yellow, .08);
     margin-bottom: 2rem;
     /*text-align: center;*/
     /*background-position-x: 50%;*/
@@ -60,6 +61,10 @@
 
     @include breakpoint($screen $medium-start) {
       margin: 0 0 1rem;
+    }
+
+    @include breakpoint($screen 592px) {
+      flex-basis: 31%;
     }
 
     @include breakpoint($screen $medium-minor-start) {
@@ -101,17 +106,21 @@
     /*@include breakpoint($screen $medium-start) {*/
     @include breakpoint($screen 592px) {
       flex-direction: row;      
-      justify-content: space-around;
+      justify-content: space-between;
 
-      &:after {
-        content: "";
-        position: absolute;
-        left: 7rem;
-        right: 7rem;
-        border-top: 3px dotted rgba($yellow, .8);
-        z-index: -1;
-        top: calc(50% - 2rem);
-      }
+//      &:after {
+//        content: "";
+//        position: absolute;
+//        left: 7rem;
+//        right: 7rem;
+//        border-top: 3px dotted rgba($yellow, .8);
+//        z-index: -1;
+//        top: calc(50% - 2rem);
+//      }
+    }
+
+    @include breakpoint($screen $medium-minor-minor-start) {
+      justify-content: space-around;
     }
   }
 
