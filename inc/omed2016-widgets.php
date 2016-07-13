@@ -194,11 +194,9 @@ class Omed2016_Quicklinks_Block extends WP_Widget {
 
         <li class="quicklinks__item">
           <div class="quicklinks__icon <?php echo get_field( 'omed_quicklink_icon_class_name', $quicklink->ID ); ?>"></div>
-          <div class="quicklinks__body">
-            <h4 class="quicklinks__header--<?php echo get_field(  'omed_quicklink_color', $quicklink->ID ); ?>"><?php echo $quicklink->post_title ?></h4>
-            <p class="quicklinks__bodytext"><?php echo get_field( 'omed_quicklink_body_text', $quicklink->ID ); ?></p>
-            <a href="<?php echo get_field( 'omed_quicklink_link', $quicklink->ID ); ?>" class="btn btn--wide btn--<?php echo get_field( 'omed_quicklink_color', $quicklink->ID ); ?>">Go</a>
-          </div> <!-- .quicklinks__body -->
+          <h4 class="quicklinks__header--<?php echo get_field(  'omed_quicklink_color', $quicklink->ID ); ?>"><?php echo $quicklink->post_title ?></h4>
+          <p class="quicklinks__bodytext"><?php echo get_field( 'omed_quicklink_body_text', $quicklink->ID ); ?></p>
+          <a href="<?php echo get_field( 'omed_quicklink_link', $quicklink->ID ); ?>" class="btn btn--wide btn--<?php echo get_field( 'omed_quicklink_color', $quicklink->ID ); ?>">Go</a>
         </li> <!-- .col -->
 
     <?php
