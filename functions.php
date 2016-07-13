@@ -170,6 +170,17 @@ function omed2016_scripts() {
     array( 'owl-carousel-css' )
   );
 
+  /**
+   * Fitvids
+   */
+  wp_register_script( 
+    'fitvids', 
+    get_template_directory_uri() . '/scripts/jquery.fitvids.js', 
+    array( 'jquery' ), 
+    false, 
+    true
+  );
+
   if ( is_front_page() ) {
     wp_enqueue_style( 'owl-carousel-css' );
     wp_enqueue_style( 'owl-theme-css' );
@@ -186,10 +197,9 @@ function omed2016_scripts() {
 	//}
   
 	wp_enqueue_style( 'omed2016-style' );
-
   wp_enqueue_script( 'main' );
-
   wp_enqueue_script( 'grunticon-loader' );
+	//wp_enqueue_script( 'fitvids' );
 
 }
 add_action( 'wp_enqueue_scripts', 'omed2016_scripts' );
@@ -396,3 +406,18 @@ function omed2016_remove_aoa_from_menu_link( $title, $item, $args, $depth ) {
 
 }
 add_filter( 'nav_menu_item_title', 'omed2016_remove_aoa_from_menu_link', 10, 4 );
+
+/**
+ * Add our fitvids loader
+ *
+ * http://fitvidsjs.com/
+ */
+function omed_add_fitvids_script() {
+  ?>
+  <script>
+    jQuery(document).ready(function() {
+      jQuery('#videoContainer').fitVids();
+    });
+  </script>
+  <?php
+}

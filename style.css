@@ -615,7 +615,7 @@ i {
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal; }
-p {
+p, .video__caption {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: .875rem;
@@ -623,10 +623,10 @@ p {
   /*letter-spacing: -.5px;*/
   color: #666666; }
   @media screen and (min-width: 48rem) {
-    p {
+    p, .video__caption {
       /*line-height: $bodylineheight;*/
       font-size: 1rem; } }
-  p:last-child {
+  p:last-child, .video__caption:last-child {
     margin-bottom: 0; }
 
 * {
@@ -1597,7 +1597,7 @@ object {
     width: 168px;
     height: 100%;
     fill: #fff;
-    border-radius: 15px; }
+    border-radius: 5px; }
     @media screen and (min-width: 56rem) {
       header .branding--omed.icon-omed-logo-alone {
         position: relative;
@@ -2231,5 +2231,13 @@ object {
   @media screen and (min-width: 56rem) {
     .leadin {
       font-size: 1.3125rem; } }
+
+.video__block {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem; }
+.video__container {
+  margin-bottom: .5rem; }
+.video__caption {
+  color: #808080; }
 
 /*@import 'icons/index';*/

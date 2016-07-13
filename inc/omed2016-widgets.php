@@ -328,12 +328,59 @@ class Omed2016_Highlightable extends WP_Widget {
 
 }
 
+class Omed2016_Video extends WP_Widget {
+
+  public function __construct() {
+    $base_id = 'omed-video';
+    $name = 'Video';
+
+    $widget_ops = array( 
+      'classname' => 'omed-video',
+      'description' => 'Embed a video',
+    );
+
+    parent::__construct( $base_id, $name, $widget_ops );
+  }
+
+  public function widget( $args, $instance ) {
+    echo $args['before_widget'];
+
+    $embed = $instance['embed']; 
+    $caption = $instance['caption'];
+    $container = $instance['container'];
+    echo do_shortcode( "[omed-video embed='$embed' caption='$caption' container='$container']" ); 
+
+    echo $args['after_widget'];
+  }
+
+  public function form( $instance ) {
+    $embed = !empty( $instance['embed'] ) ? $instance['embed'] : '';
+
+    ?>
+    <p>
+      <label for="<?php echo esc_attr( $this->get_field_id( 'embed' ) ); ?>">Embed code: </label>
+      <textarea class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'embed' ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( 'embed') ); ?>"><?php echo esc_attr( $embed ); ?></textarea>
+    </p>
+    <?php
+  }
+
+  public function update( $new_instance, $old_instance ) {
+		$instance = array();
+    $instance['embed'] = 
+      ( !empty( $new_instance['embed'] ) ? $new_instance['embed'] : '' );
+
+    return $instance;
+  }
+
+}
+
 function omed2016_register_widgets( ) {
 
   register_widget( 'Omed2016_Featured_Sessions_Block' );
   register_widget( 'Omed2016_Quicklinks_Block' );
   register_widget( 'Omed2016_Intro_Block' );
   register_widget( 'Omed2016_Highlightable' );
+  register_widget( 'Omed2016_Video' );
   
 }
 add_action( 'widgets_init' , 'omed2016_register_widgets' );

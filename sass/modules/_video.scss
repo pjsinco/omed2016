@@ -1,0 +1,18 @@
+.video {
+
+  &__block {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__container {
+    margin-bottom: .5rem;
+  }
+
+  &__caption {
+    @extend %p-base;
+    color: $font-color-lighter;
+    
+  }
+
+}

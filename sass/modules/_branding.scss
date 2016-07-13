@@ -64,7 +64,7 @@
       width: 168px;
       height: 100%;
       fill: $white;
-      border-radius: 15px;
+      border-radius: 5px;
 
       @include breakpoint($screen $navflip) {
         position: relative;
