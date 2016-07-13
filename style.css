@@ -1937,6 +1937,7 @@ object {
   text-align: center;
   border: 1px solid #fcef06;
   border-bottom: 5px solid #fcef06;
+  background: rgba(252, 239, 6, 0.08);
   /*border-radius: $border-radius-base;*/ }
   @media screen and (min-width: 30rem) {
     .fs__item {
