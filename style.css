@@ -831,15 +831,11 @@ object {
   background-position: center top;
   /*background-image: url(../img/omed-splash-poster.jpg);*/ }
 .splash--education {
-  /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(images/omed-splash-poster.jpg);*/
   background: -webkit-linear-gradient(rgba(0, 188, 212, 0.61), rgba(0, 188, 212, 0.61)), url(images/omed-splash-poster.jpg);
   background: linear-gradient(rgba(0, 188, 212, 0.61), rgba(0, 188, 212, 0.61)), url(images/omed-splash-poster.jpg);
-  /*background: linear-gradient(rgba(0,0,0,0.12) 42%, rgba(0, 176, 185, 0.76) 100%), url(images/omed-splash-poster.jpg);*/
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
-  /*background-image: url(images/omed-splash-poster.jpg);*/
-  /* background-image: url(../img/omed-splash-central.jpg); */ }
+  background-position: 65% 0; }
 .splash--inspiration {
   /*background-image: url(https://placekitten.com/1766/725);*/
   /*background-image: url(http://placehold.it/1766x725);*/
@@ -851,30 +847,15 @@ object {
   background-position: center top; }
 .splash-enhanced {
   background-image: url(../img/omed-super-audience.jpg); }
-.splash__emph {
-  font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #00b0b9; }
-  @media screen and (min-width: 30rem) {
-    .splash__emph {
-      text-shadow: 3px 3px 3px rgba(102, 102, 102, 0.5);
-      letter-spacing: -1px;
-      color: #fcef06; } }
-  @media (min-width: 56rem) {
-    .splash__emph {
-      /*font-size: 3.5em;*/
-      /*font-size: 1.6em;*/
-      /*letter-spacing: -6px;*/ } }
 .splash__block {
   position: absolute;
   bottom: -1vw;
   padding-bottom: 1rem;
-  position: absolute;
-  color: #666666; }
+  position: absolute; }
   @media screen and (min-width: 30rem) {
     .splash__block {
       bottom: 5%;
-      border: none;
-      color: #fff; } }
+      border: none; } }
 .splash__header {
   /*animation-delay: .7s;*/
   font-size: 2rem;
@@ -887,11 +868,13 @@ object {
       margin-bottom: 1rem;
       font-size: 4.375em;
       letter-spacing: -3px; } }
+  .splash__header > span {
+    color: #fcef06; }
 .splash__body {
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
   line-height: 1.4;
-  opacity: .8; }
+  opacity: .95; }
   @media screen and (min-width: 56rem) {
     .splash__body {
       max-width: 31.3rem;

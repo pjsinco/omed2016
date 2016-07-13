@@ -108,14 +108,20 @@
 
   &--education {
     @extend %splash-base;
-    /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(images/omed-splash-poster.jpg);*/
     background: linear-gradient(rgba(0, 188,212,.61), rgba(0, 188,212,.61)), url(images/omed-splash-poster.jpg);
-    /*background: linear-gradient(rgba(0,0,0,0.12) 42%, rgba(0, 176, 185, 0.76) 100%), url(images/omed-splash-poster.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top;
-    /*background-image: url(images/omed-splash-poster.jpg);*/
-    /* background-image: url(../img/omed-splash-central.jpg); */
+    background-position: 65% 0;
+
+   // @include breakpoint($screen $medium-minor-start) {
+   //   background-position: 50% 0;
+   // }
+
+   // @include breakpoint($screen $navflip) {
+   //   background-position: 65% 0;
+   // }
+
+    
   }
 
   &--inspiration {
@@ -136,36 +142,16 @@
   }
 
 
-  &__emph {
-    font-family: $font-medium;
-    color: $teal;
-
-    @include breakpoint($screen $medium-start) {
-      text-shadow: 3px 3px 3px rgba($verydark, .5);
-      letter-spacing: -1px;
-      color: $yellow;
-      
-    }
-
-    @include breakpoint($navflip) {
-      /*font-size: 3.5em;*/
-      /*font-size: 1.6em;*/
-      /*letter-spacing: -6px;*/
-    }
-
-  }
 
   &__block {
     position: absolute;
     bottom: -1vw;
     padding-bottom: 1rem;
     position: absolute;
-    color: $font-color;
 
     @include breakpoint($screen $medium-start) {
       bottom: 5%;
       border: none;
-      color: $white;
     }
   }
 
@@ -183,12 +169,16 @@
       font-size: 4.375em;
       letter-spacing: -3px;
     }
+
+    & > span {
+      color: $yellow;
+    }
   }
   
   &__body {
     animation-delay: 1.4s;
     line-height: 1.4;
-    opacity: .8;
+    opacity: .95;
     
     @include breakpoint($screen $navflip) {
       max-width: 31.3rem;

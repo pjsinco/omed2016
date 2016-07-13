@@ -1,11 +1,23 @@
+<?php 
+/**
+ * Display the splash image and textk
+ *
+ * @package omed2016
+ */
+
+global $post;
+$splash_header = get_field( 'omed_splash_header', $post->ID );
+$splash_body = get_field( 'omed_splash_body', $post->ID );
+
+?>
 <section class="splash splash--<?php if ( is_page()): global $post; if ( isset( $post ) ): echo $post->post_name; endif; endif; ?> <?php if ( is_front_page() ): echo 'splash--nomargin'; endif; ?>">
   <div class="wrap">
     <div class="splash__block container-fluid fade-in--left">
       <div class="splash__header">
-        <span class="splash__emph">Lorem</span> ipsum dolor
+        <?php if ($splash_header): echo $splash_header; endif; ?>
       </div>
       <div class="splash__body">
-        Vivamus sagittis lacus vel augue laoreet rutrum September 17–20. Donec sed odio dui Donec id elit non mieget metus.
+        <?php if ($splash_body): echo $splash_body; endif; ?>
       </div>
     </div> <!-- .splash__block -->
   </div> <!-- .container-fluid -->
