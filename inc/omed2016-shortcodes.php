@@ -42,12 +42,13 @@ function omed_video_shortcode($atts, $content = null ) {
   );
 
   $output = '';
+  $class = 'video__block' . ($a['container'] == 'pageblock' ? '--nopad' : '');
 
   if ( $a['container'] == 'pageblock' ) {
     $output .= '<div class="container-fluid pageblock wrap">' . PHP_EOL;
   }
 
-  $output .= '<div class="video__block">' . PHP_EOL;
+  $output .= "<div class='$class'>" . PHP_EOL;
   $output .= '<figure class="video__container" id="videoContainer">';
   $output .= $a['embed'];
   $output .= '</figure>' . PHP_EOL;
@@ -59,10 +60,26 @@ function omed_video_shortcode($atts, $content = null ) {
   $output .= '</div> <!-- .video__block -->' . PHP_EOL;
 
   if ( $a['container'] == 'pageblock' ) {
-    $output .= '<div> <!-- .container-fluid pageblock wrap -->' . PHP_EOL;
+    $output .= '</div> <!-- hiya .container-fluid pageblock wrap -->' . PHP_EOL;
   }
 
   return $output;
   
 }
 add_shortcode('omed-video', 'omed_video_shortcode' );
+
+function omed_section_title_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts(
+    array(
+      'title' => '',
+    ), $atts
+  );
+  
+  $output  = '<div class="container-fluid pageblock wrap">' . PHP_EOL;
+  $output .= '<h3 class="section__header">' . PHP_EOL;
+  $output .= $a['title'] . '</h3>' . PHP_EOL;
+  $output .= '</div>' . PHP_EOL;
+
+  return $output;
+}
+add_shortcode('section-title', 'omed_section_title_shortcode' );

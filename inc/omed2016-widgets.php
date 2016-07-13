@@ -19,55 +19,40 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
   public function widget( $args, $instance ) {
 
     echo $args['before_widget'];
+  ?>
 
-    if ( !empty( $instance['title'] ) ):
-    ?>
+   <section class="fs__block container-fluid pageblock wrap">
+     <ul class="fs__items" id="fsCarousel" >
+       
+     <?php 
+       $post_args = array(
+         //'posts_per_page' => 3,
+         'post_type' => 'omed_session',
+       );
 
-      <div class="container-fluid pageblock wrap">
-        <h3 class="section__header">
-        <?php
-          echo $args['before_title'] . 
-          apply_filters( 'widget_title', $instance['title'] ) . 
-          $args['after_title'];
-        ?>
-        </h3>
-      </div>
+       $sessions = get_posts( $post_args );
 
-      <section class="fs__block container-fluid pageblock wrap">
-        <ul class="fs__items" id="fsCarousel" >
-          
-        <?php 
-          $post_args = array(
-            //'posts_per_page' => 3,
-            'post_type' => 'omed_session',
-          );
+       foreach ( $sessions as $session ):
+         setup_postdata( $session );
+     ?>        
+       <li class="fs__item">
+           <div class="fs__imagecontainer">
+             <img class="fs__image" src="<?php echo get_field( 'session_speaker_photo_url', $session->ID ); ?>">
+           </div>
+           <h5 class="fs__name"><?php echo get_field( 'session_speaker_name', $session->ID ); ?></h5>
+           <h6 class="fs__kicker"><?php echo get_field( 'session_sponsor', $session->ID ); ?></h6>
+           <h3 class="fs__header"><?php echo get_field( 'session_title', $session->ID ) ?></h3>
+           <div class="fs__header--minor"><?php echo get_field( 'session_date_and_time', $session->ID ); ?></div>
+           <a href="<?php echo get_field( 'session_more_info_link', $session->ID ); ?>" class="btn btn--primary">Read more</a>
+       </li> <!-- .fs__item -->
+     <?php
+       endforeach;
 
-          $sessions = get_posts( $post_args );
-
-          foreach ( $sessions as $session ):
-            setup_postdata( $session );
-        ?>        
-          <li class="fs__item">
-              <div class="fs__imagecontainer">
-                <img class="fs__image" src="<?php echo get_field( 'session_speaker_photo_url', $session->ID ); ?>">
-              </div>
-              <h5 class="fs__name"><?php echo get_field( 'session_speaker_name', $session->ID ); ?></h5>
-              <h6 class="fs__kicker"><?php echo get_field( 'session_sponsor', $session->ID ); ?></h6>
-              <h3 class="fs__header"><?php echo get_field( 'session_title', $session->ID ) ?></h3>
-              <div class="fs__header--minor"><?php echo get_field( 'session_date_and_time', $session->ID ); ?></div>
-              <a href="<?php echo get_field( 'session_more_info_link', $session->ID ); ?>" class="btn btn--primary">Read more</a>
-          </li> <!-- .fs__item -->
-        <?php
-          endforeach;
-
-        echo $args['after_widget'];
-        ?>
-        </ul>
-      </section>
-      <?php
-      
-    endif;
-
+     echo $args['after_widget'];
+     ?>
+     </ul>
+   </section>
+   <?php
   }
 
   public function form( $instance ) {
