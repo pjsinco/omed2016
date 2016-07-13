@@ -16,9 +16,10 @@
   while ( have_posts() ): 
     the_post(); 
     the_content();
+
+    get_template_part( 'template-parts/content', 'sponsors' );
   endwhile; 
 ?>
 
-<?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>
