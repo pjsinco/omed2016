@@ -89,13 +89,19 @@ function omed_button_shortcode( $atts, $content = null ) {
       array(
         'link' => '',
         'text' => '',
+        'style' => '',
       ), $atts
     )
   );
 
+  $btn_style = ( empty( $style ) || $style == 'outline' ) ? '' : 'btn--solid';
+
   $output  = '' . PHP_EOL;
   $output .= '' . PHP_EOL;
-  $output = "<p class='omed-button'><a href='$link' class='btn btn--primary'>$text</a></p>";
+  $output .= "<p class='omed-button'>" . PHP_EOL;
+  $output .= 
+    "<a href='$link' class='btn btn--primary $btn_style'>$text</a>" .  PHP_EOL;
+  $output .= "</p>" . PHP_EOL;
   
   return $output;
 

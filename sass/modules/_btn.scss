@@ -42,6 +42,16 @@
     }
   }
 
+  &--solid {
+    @include button-variant($btn-reverse-color, $teal, $teal);
+    &:hover {
+      box-shadow: inset 0 0 0 1px $teal;
+      color: $teal;
+      background-color: $white; 
+    }
+
+  }
+
   /*
    * Button colors
    */

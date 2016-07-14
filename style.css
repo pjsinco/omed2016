@@ -1027,6 +1027,18 @@ object {
       box-shadow: inset 0 0 0 1px #fcef06;
       color: #00b0b9;
       background-color: #fcef06; }
+  .btn--solid {
+    color: #fff;
+    background-color: #00b0b9;
+    box-shadow: inset 0 0 0 1px #00b0b9; }
+    .btn--solid:hover {
+      color: #fff;
+      background-color: #00b0b9;
+      /*box-shadow: inset 0 0 0 1px $border;*/ }
+    .btn--solid:hover {
+      box-shadow: inset 0 0 0 1px #00b0b9;
+      color: #00b0b9;
+      background-color: #fff; }
   .btn--red {
     color: #cb333b;
     background-color: transparent;
