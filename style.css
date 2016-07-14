@@ -1980,6 +1980,8 @@ object {
   right: 0;
   top: -2.75rem; }
 .fs__image {
+  -webkit-filter: hue-rotate(114deg) saturate(2) sepia();
+          filter: hue-rotate(114deg) saturate(2) sepia();
   -webkit-clip-path: ellipse(50% 50% at 50% 50%);
           clip-path: ellipse(50% 50% at 50% 50%); }
 

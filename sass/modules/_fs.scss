@@ -98,6 +98,7 @@ $fsbreak: $large-start;
   }
 
   &__image {
+    filter: hue-rotate(114deg) saturate(2) sepia();
     clip-path: ellipse(50% 50% at 50% 50%);
   }
 
