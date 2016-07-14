@@ -13,13 +13,18 @@
     <?php if ( !is_page_template( 'page-standalone.php' ) ): ?>
   
     <!--  Navigation -->
-    <nav class="content__left pagenav__block">
-      <ul class="leftnav__items">
-        <li class="leftnav__item">
-          <a href="">hiya</a>
-        </li>
-      </ul>
-    </nav>
+    <?php
+    $nav_args = array(
+      'menu' => 'header-menu-major',
+      'theme_location' => 'side-nav',
+      'menu_class' => 'hiya',
+      'container' => false,
+      'depth' => 0,
+      'walker' => new Omed2016_Side_Nav_Walker_Class(),
+    );
+    wp_nav_menu( $nav_args );
+    ?>
+    
     <?php endif; ?>
   
     <!--   Main content -->

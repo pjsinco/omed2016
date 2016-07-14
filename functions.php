@@ -33,11 +33,11 @@ function omed2016_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( 
     array( 
       'header-menu-major' => 'Header Major Menu', 
       'header-menu-minor' => 'Header Minor Menu', 
+      'side-nav' => 'Side Navigation', 
     ) 
   );
 
@@ -279,6 +279,35 @@ class Omed2016_Major_Nav_Walker_Class extends Walker_Nav_Menu {
   }
   
 }
+
+class Omed2016_Side_Nav_Walker_Class extends Walker_Nav_Menu {
+
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
+    $indent = str_repeat( "\t", $depth );
+    $output .= "\n$indent<ul class=\"leftnav__items\">\n";
+  }
+
+  function start_el( &$output, $item, $depth = 0, $args = array() ) {
+
+    global $post;
+
+    // Show only items within this section
+    if ( $item->post_parent != 0 ) {
+      if ( $item->post_parent == $post->post_parent || 
+           $item->post_parent == $post->ID) {
+        parent::start_el( $output, $item, $depth, $args );
+      }
+    }
+
+  }
+
+  function end_el( &$output, $item, $depth = 0, $args = array() ) {
+
+    parent::end_el( $output, $item, $depth, $args );
+
+  }
+}
+
 
 class Omed2016_Minor_Nav_Walker_Class extends Walker_Nav_Menu {
 
