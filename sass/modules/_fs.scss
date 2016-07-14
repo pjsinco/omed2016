@@ -14,7 +14,7 @@ $fsbreak: $large-start;
     margin-bottom: 1rem;
     margin-left: .5rem;
     margin-right: .5rem;
-    padding: 6.75rem 1rem 2rem;
+    padding: 6rem 1rem 2rem;
     text-align: center;
     border: 1px solid $yellow;
     border-bottom: 5px solid $yellow;
@@ -50,18 +50,19 @@ $fsbreak: $large-start;
     letter-spacing: .5px;
     line-height: 1.4;
     color: $primarycolor;
+    opacity: .6;
 
-    &:after {
-      content: "";
-      /* height: 10px; */
-      position: absolute;
-      top: -5px;
-      left: -1rem;
-      right: -1rem;
-      height: calc(100% + 10px);
-      z-index: -1;
-      background-color: rgba($yellow, .3);
-    }
+//    &:after {
+//      content: "";
+//      /* height: 10px; */
+//      position: absolute;
+//      top: -5px;
+//      left: -1rem;
+//      right: -1rem;
+//      height: calc(100% + 10px);
+//      z-index: -1;
+//      background-color: rgba($yellow, .3);
+//    }
   }
 
   &__kicker {

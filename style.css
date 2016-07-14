@@ -1521,13 +1521,14 @@ object {
       .omedscrolled .menu-minor .menu-item svg {
         /*fill: $font-color-lighter;*/ } }
 
-.menu-item-highlight {
-  background: #fcef06;
-  color: #00b0b9; }
-  .menu-item-highlight a {
-    font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
-  .menu-item-highlight svg {
-    fill: #00b0b9 !important; }
+@media screen and (min-width: 56rem) {
+  .menu-item-highlight {
+    background: #fcef06;
+    color: #00b0b9; }
+    .menu-item-highlight a {
+      font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+    .menu-item-highlight svg {
+      fill: #00b0b9 !important; } }
 
 @media screen and (min-width: 56rem) {
   .level-2 {
@@ -1923,7 +1924,7 @@ object {
   margin-bottom: 1rem;
   margin-left: .5rem;
   margin-right: .5rem;
-  padding: 6.75rem 1rem 2rem;
+  padding: 6rem 1rem 2rem;
   text-align: center;
   border: 1px solid #fcef06;
   border-bottom: 5px solid #fcef06;
@@ -1952,17 +1953,8 @@ object {
   font-size: .75rem;
   letter-spacing: .5px;
   line-height: 1.4;
-  color: #00b0b9; }
-  .fs__name:after {
-    content: "";
-    /* height: 10px; */
-    position: absolute;
-    top: -5px;
-    left: -1rem;
-    right: -1rem;
-    height: calc(100% + 10px);
-    z-index: -1;
-    background-color: rgba(252, 239, 6, 0.3); }
+  color: #00b0b9;
+  opacity: .6; }
 .fs__kicker {
   display: inline-block;
   margin-bottom: .5rem;

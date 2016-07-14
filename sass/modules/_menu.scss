@@ -524,15 +524,17 @@
 
 .menu-item-highlight {
 
-  background: $yellow;  
-  color: $teal;
+  @include breakpoint($screen $navflip) {
+    background: $yellow;  
+    color: $teal;
 
-  & a {
-    font-family: $font-medium !important;
-  }
+    & a {
+      font-family: $font-medium !important;
+    }
 
-  & svg {
-    fill: $teal !important;
+    & svg {
+      fill: $teal !important;
+    }
   }
 
 }
