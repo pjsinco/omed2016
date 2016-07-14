@@ -1,7 +1,6 @@
 <?php
 
 function omed_block_shortcode( $atts ) {
-
   extract( 
     shortcode_atts(
       array(
@@ -83,3 +82,22 @@ function omed_section_title_shortcode( $atts, $content = null ) {
   return $output;
 }
 add_shortcode('section-title', 'omed_section_title_shortcode' );
+
+function omed_button_shortcode( $atts, $content = null ) {
+  extract(
+    shortcode_atts(
+      array(
+        'link' => '',
+        'text' => '',
+      ), $atts
+    )
+  );
+
+  $output  = '' . PHP_EOL;
+  $output .= '' . PHP_EOL;
+  $output = "<p class='omed-button'><a href='$link' class='btn btn--primary'>$text</a></p>";
+  
+  return $output;
+
+}
+add_shortcode('omed-button', 'omed_button_shortcode' );

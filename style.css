@@ -1070,6 +1070,11 @@ object {
     padding-left: 2rem;
     padding-right: 2rem; }
 
+.omed-button {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
 @media screen and (min-width: 56rem) {
   .omedscrolled .header, .header--fixed {
     position: fixed;
