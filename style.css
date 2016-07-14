@@ -824,8 +824,9 @@ object {
 .splash--connection {
   /*background-image: url(http://placehold.it/1766x725);*/
   /*background: linear-gradient(rgba(59, 69, 255, 0.4), rgba(0, 188,212,.61)), url(http://placehold.it/1766x725);*/
-  background: -webkit-linear-gradient(rgba(59, 69, 255, 0), rgba(0, 188, 212, 0.61)), url(http://placehold.it/1766x725);
-  background: linear-gradient(rgba(59, 69, 255, 0), rgba(0, 188, 212, 0.61)), url(http://placehold.it/1766x725);
+  /*background: linear-gradient(rgba(59, 69, 255, 0.0), rgba(0, 188,212,.61)), url(http://placehold.it/1766x725);*/
+  background: -webkit-linear-gradient(rgba(0, 188, 212, 0.61), rgba(0, 188, 212, 0.61)), url(images/omed-splash-gentlemen.jpg);
+  background: linear-gradient(rgba(0, 188, 212, 0.61), rgba(0, 188, 212, 0.61)), url(images/omed-splash-gentlemen.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -1194,7 +1195,8 @@ object {
   .menu.active, .menu > ul ul.active {
     max-height: 55em;
     padding-bottom: 1rem;
-    z-index: 1; }
+    z-index: 1;
+    color: #fff; }
     @media screen and (min-width: 56rem) {
       .menu.active, .menu > ul ul.active {
         -webkit-box-orient: vertical;
@@ -1203,7 +1205,7 @@ object {
                 flex-direction: column;
         padding-bottom: 0;
         background-color: rgba(0, 200, 211, 0.4);
-        color: #fff;
+        /*color: $white;*/
         border-top: 1px solid #fcef06;
         /*border-left:   1px solid rgba($teal, 0.19);*/
         /*border-right:  1px solid rgba($teal, 0.19);*/
@@ -1365,12 +1367,17 @@ object {
       border-top: none; } }
 
 .current-menu-item {
-  color: #fff; }
+  color: #fcef06 !important;
+  /*.level-1 > & {*/
+  /*color: $yellow;*/
+  /*}*/ }
   @media screen and (min-width: 56rem) {
     .current-menu-item {
       font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: inherit;
       /*color: $teal;*/ } }
+
+.current-page-ancestor {
+  color: #fcef06; }
 
 .menu-major {
   font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
