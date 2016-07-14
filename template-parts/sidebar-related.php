@@ -6,8 +6,8 @@
  */
 
 global $post;
-$link_group = get_field( 'omed_link_group_for_page', $post->ID );
-$links = get_field('omed_link_group', $link_group->ID); 
+$link_group = get_field( 'omed_splinkle_for_page', $post->ID );
+$links = get_field('omed_splinkle', $link_group->ID); 
 
 
 if ( !empty( $links ) ):
