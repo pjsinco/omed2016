@@ -972,14 +972,13 @@ object {
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   vertical-align: middle;
   cursor: pointer;
-  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 1px #00b0b9;
+  border: 0;
   background-image: none;
   background-color: transparent;
   white-space: nowrap;
-  -webkit-transition-property: border, color, background;
-          transition-property: border, color, background;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition: box-shadow .15s linear, color .15s linear, background-color .15s linear;
+          transition: box-shadow .15s linear, color .15s linear, background-color .15s linear;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.4;
@@ -997,56 +996,61 @@ object {
    * Button utilities
    */ }
   .btn:hover, .btn:focus {
-    color: #666666;
-    text-decoration: none; }
+    /*color: $btn-default-color;*/
+    text-decoration: none;
+    /*box-shadow: inset 0 0 0 2px $teal;*/ }
   .btn--default {
     color: #666666;
     background-color: transparent;
-    border-color: #babbb1; }
+    box-shadow: inset 0 0 0 1px #babbb1; }
     .btn--default:hover {
-      color: #4d4d4d;
-      background-color: transparent;
-      border-color: #9d9e90; }
+      color: #fff;
+      background-color: #00b0b9;
+      /*box-shadow: inset 0 0 0 1px $border;*/ }
   .btn--primary, .btn--teal {
     color: #00b0b9;
     background-color: transparent;
-    border-color: #00b0b9; }
+    box-shadow: inset 0 0 0 1px #00b0b9; }
     .btn--primary:hover, .btn--teal:hover {
-      color: #007f86;
-      background-color: transparent;
-      border-color: #00767c; }
+      color: #fff;
+      background-color: #00b0b9;
+      /*box-shadow: inset 0 0 0 1px $border;*/ }
   .btn--reverse {
     color: #fff;
     background-color: transparent;
-    border-color: #fff; }
+    box-shadow: inset 0 0 0 1px #fff; }
     .btn--reverse:hover {
-      color: #e6e6e6;
-      background-color: transparent;
-      border-color: #e0e0e0; }
+      color: #fff;
+      background-color: #00b0b9;
+      /*box-shadow: inset 0 0 0 1px $border;*/ }
+    .btn--reverse:hover {
+      box-shadow: inset 0 0 0 1px #fcef06;
+      color: #00b0b9;
+      background-color: #fcef06; }
   .btn--red {
     color: #cb333b;
     background-color: transparent;
-    border-color: #cb333b; }
+    box-shadow: inset 0 0 0 1px #cb333b; }
     .btn--red:hover {
-      color: #a2292f;
-      background-color: transparent;
-      border-color: #9a272d; }
+      color: #fff;
+      background-color: #00b0b9;
+      /*box-shadow: inset 0 0 0 1px $border;*/ }
   .btn--blue {
     color: #00b3dc;
     background-color: transparent;
-    border-color: #00b3dc; }
+    box-shadow: inset 0 0 0 1px #00b3dc; }
     .btn--blue:hover {
-      color: #008aa9;
-      background-color: transparent;
-      border-color: #00819f; }
+      color: #fff;
+      background-color: #00b0b9;
+      /*box-shadow: inset 0 0 0 1px $border;*/ }
   .btn--purple {
     color: #9063cd;
     background-color: transparent;
-    border-color: #9063cd; }
+    box-shadow: inset 0 0 0 1px #9063cd; }
     .btn--purple:hover {
-      color: #753dc0;
-      background-color: transparent;
-      border-color: #703bb8; }
+      color: #fff;
+      background-color: #00b0b9;
+      /*box-shadow: inset 0 0 0 1px $border;*/ }
   .btn--xs {
     padding: 0.5rem 1rem;
     font-size: 1rem;
