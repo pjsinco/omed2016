@@ -1,30 +1,17 @@
 <?php
 /**
- * Template part for displaying page content
+ * Template part for displaying standalone page content
  *
  * @package omed2016
  */
 
 ?>
-<?php while (have_posts()): the_post(); ?>
-
   <div class="container-fluid wrap content">
-
-    <?php if ( !is_page_template( 'page-standalone.php' ) ): ?>
-  
-    <!--  Navigation -->
-    <nav class="content__left pagenav__block">
-      <ul class="leftnav__items">
-        <li class="leftnav__item">
-          <a href="">hiya</a>
-        </li>
-      </ul>
-    </nav>
-    <?php endif; ?>
   
     <!--   Main content -->
-    <section class="content__main<?php if ( is_page_template( 'page-standalone.php' ) ): echo '--full'; endif;  ?>">
+    <section class="content__main">
 
+      <?php while (have_posts()): the_post(); ?>
 
         <?php get_template_part( 'template-parts/content', 'page_article_header' ); ?>
 
@@ -45,3 +32,4 @@
   
   
   </div> <!-- .content -->
+

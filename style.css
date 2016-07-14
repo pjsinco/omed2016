@@ -2066,6 +2066,10 @@ object {
           top: 0;
           bottom: 0;
           border-right: 1px solid #fcef06; } }
+    @media screen and (min-width: 56rem) {
+      .content__main--full {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
   .content__block {
     display: -webkit-box;
     display: -ms-flexbox;

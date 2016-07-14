@@ -38,6 +38,12 @@
       }
     }
 
+    &--full {
+      @include breakpoint($screen $navflip) {
+        flex-basis: 100%;
+      }
+    }
+
   }
 
   &__block {
