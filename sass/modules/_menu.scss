@@ -360,6 +360,7 @@
     @include breakpoint($screen $navflip) {
       &:hover {
         background-color: rgba(0, 200, 211, 0.4);
+        color: $yellow;
       }
       
     }
@@ -558,7 +559,12 @@
       transition: background-color $transitionduration ease;
 
       &:hover {
-         background-color: $teal;
+         /*background-color: $teal;*/
+        color: $yellow;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba($white, .25);
       }
     }
   

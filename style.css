@@ -1438,7 +1438,8 @@ object {
     /*}*/ }
     @media screen and (min-width: 56rem) {
       .menu-major > li:hover {
-        background-color: rgba(0, 200, 211, 0.4); } }
+        background-color: rgba(0, 200, 211, 0.4);
+        color: #fcef06; } }
     .omedscrolled .menu-major > li {
       -webkit-transition: background-color 0.4s ease;
               transition: background-color 0.4s ease; }
@@ -1588,7 +1589,10 @@ object {
       -webkit-transition: background-color 0.3s ease;
               transition: background-color 0.3s ease; }
       .level-2 .menu-item:hover {
-        background-color: #00b0b9; } }
+        /*background-color: $teal;*/
+        color: #fcef06; }
+      .level-2 .menu-item:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25); } }
 
 .branding {
   display: none; }
