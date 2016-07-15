@@ -287,18 +287,30 @@ class Omed2016_Side_Nav_Walker_Class extends Walker_Nav_Menu {
     $output .= "\n$indent<ul class=\"leftnav__items\">\n";
   }
 
+  /**
+   * We're not doing anything much different from the parent
+   * class's start_el() method.
+   *
+   */
   function start_el( &$output, $item, $depth = 0, $args = array() ) {
 
     global $post;
 
-    $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
     // Show only items within this section
     if ( $item->post_parent != 0 ) {
       if ( $item->post_parent == $post->post_parent || 
            $item->post_parent == $post->ID) {
         
-        $output .= $indent . '<li class="pagenav__item">';
+        $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+
+        $args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+
+        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+        $output .= $indent . '<li ' . $class_names . '>';
 
         $atts = array();
         $atts['title'] = !empty( $item->attr_title ) ? $item->attr_title : '';
