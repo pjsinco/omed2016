@@ -10,22 +10,23 @@
 
   <div class="container-fluid wrap content">
 
-    <?php if ( !is_page_template( 'page-standalone.php' ) ): ?>
+  <?php if ( !is_page_template( 'page-standalone.php' ) ):
   
-    <!--  Navigation -->
-    <?php
+    // Navigation
     $nav_args = array(
       'menu' => 'header-menu-major',
       'theme_location' => 'side-nav',
-      'menu_class' => 'hiya',
-      'container' => false,
+      'menu_class' => 'pagenav__items',
+      'menu_id' => null,
+      'container' => 'nav',
+      'container_class' => 'content__left pagenav__block',
       'depth' => 0,
+      'items_wrap' => '%3$s',
       'walker' => new Omed2016_Side_Nav_Walker_Class(),
     );
     wp_nav_menu( $nav_args );
-    ?>
     
-    <?php endif; ?>
+  endif; ?>
   
     <!--   Main content -->
     <section class="content__main<?php if ( is_page_template( 'page-standalone.php' ) ): echo '--full'; endif;  ?>">
