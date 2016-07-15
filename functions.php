@@ -436,14 +436,15 @@ function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $
       $item_output 
     );
 
-  } else if ( $args->menu == 'header-menu-major' ) {
-
+  } else if ( $args->menu == 'header-menu-major' && $item->menu_item_parent == "0") {
     return preg_replace(
       "/(<a.+?>)(\\w*)/u", 
       "$1$2 <i class=\"icon-ctrl-down\"></i>", 
       $item_output
     );
   }
+
+  return $item_output;
 }
 add_filter( 
   'walker_nav_menu_start_el',
