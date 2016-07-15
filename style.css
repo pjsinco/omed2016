@@ -1358,7 +1358,7 @@ object {
     padding-right: 1.5rem;
     height: 100%;
     width: 100%;
-    text-transform: initial;
+    text-transform: none;
     letter-spacing: .5px;
     font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /*opacity: .8;*/ }
