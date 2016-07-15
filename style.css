@@ -1365,7 +1365,7 @@ object {
     @media screen and (min-width: 56rem) {
       .menu .level-2 > li a {
         padding: 1rem 1rem;
-        height: initial;
+        height: auto;
         -webkit-flex-basis: 100%;
             -ms-flex-preferred-size: 100%;
                 flex-basis: 100%;

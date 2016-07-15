@@ -256,7 +256,7 @@
 
     @include breakpoint($screen $navflip) {
       padding: 1rem 1rem;
-      height: initial;
+      height: auto;
       flex-basis: 100%;
       line-height: 1.4;
       letter-spacing: .25px;
