@@ -284,7 +284,7 @@ class Omed2016_Side_Nav_Walker_Class extends Walker_Nav_Menu {
 
   function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat( "\t", $depth );
-    $output .= "\n$indent<ul class=\"leftnav__items\">\n";
+    $output .= "\n$indent<ul class=\"pagenav__items\">\n";
   }
 
   /**
@@ -305,10 +305,20 @@ class Omed2016_Side_Nav_Walker_Class extends Walker_Nav_Menu {
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
+
         $args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
 
-        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
-        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+        $class_names = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );
+
+        // We only care about 
+        $class_names =  array_filter( $class_names, function($k) {
+            return strpos( $k, 'current-menu-item') === 0;
+          } 
+        );
+
+        $class_names[] = 'pagenav__item';
+
+        $class_names = $class_names ? ' class="' . esc_attr( implode( ' ', $class_names ) ) . '"' : '';
 
         $output .= $indent . '<li ' . $class_names . '>';
 

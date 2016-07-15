@@ -2090,8 +2090,23 @@ object {
       .section__header:after {
         width: 8%; } }
 
-.pagenav__block {
-  color: fuchsia; }
+@media screen and (min-width: 56rem) {
+  .pagenav__items {
+    font-size: .875rem; }
+  .pagenav__item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-right: 35%;
+    padding-bottom: 1.5rem;
+    line-height: 1.4; }
+    .pagenav__item:not(:last-child) {
+      border-bottom: 1px solid #fcef06; } }
+  @media screen and (min-width: 56rem) and (min-width: 61.25rem) {
+    .pagenav__item {
+      margin-right: 31%; } }
+  @media screen and (min-width: 56rem) and (min-width: 67.75rem) {
+    .pagenav__item {
+      margin-right: 27%; } }
 
 .content {
   display: -webkit-box;
