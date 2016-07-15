@@ -4,36 +4,45 @@
 
     &__items {
       font-size: .875rem;
+      width: 75%;
     }
 
     &__item {
       position: relative;
-      margin-bottom: 1.5rem;
-      margin-right: 35%;
-      padding-bottom: 1.5rem;
-      line-height: 1.4;
+
+      & a {
+        display: block;
+        padding: 0 1.5rem 1.5rem 0;
+        width: 100%;
+        line-height: 1.4;
+      }
+
+      &:not(:first-child) a {
+        padding: 1.5rem 1.5rem 1.5rem 0;
+      }
+      /*margin-right: 35%;*/
 
       &:not(:last-child) {
-        border-bottom: 1px solid $yellow;
+        /*border-bottom: 1px solid $yellow;*/
 
       }
 
       @include breakpoint($screen $large-minor-minor-start) {
-        margin-right: 31%;
+        /*margin-right: 31%;*/
       }
 
       @include breakpoint($screen $xlarge-start) {
-        margin-right: 27%;
+        /*margin-right: 27%;*/
       }
 
-//      &:not(:last-child):after {
-//        content: "";
-//        position: absolute;
-//        bottom: 0;
-//        left: 0;
-//        width: 75%;
-//        border-bottom: 1px solid $yellow;
-//      }
+      &:not(:last-child):after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid $yellow;
+      }
     }
  
   }
