@@ -56,12 +56,17 @@
     }
 
     &--primary {
-      flex-basis: 63.1%;
       margin-bottom: 2rem;
+
+      @include breakpoint($screen $medium-minor-minor-start) {
+        flex-basis: 63.1%;
+      }
     }
 
     &--secondary {
-      flex-basis: 31.8%;
+      @include breakpoint($screen $medium-minor-minor-start) {
+        flex-basis: 31.8%;
+      }
     }
   }
 
