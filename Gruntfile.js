@@ -80,8 +80,16 @@ module.exports = function(grunt) {
 
     autoprefixer: {
       css: {
-        //src: './**/*.css'
-        src: '*.css'
+        src: '*.css',
+        options: {
+          browsers: [
+            '> 1%',
+            'last 2 versions',
+            'Firefox ESR',
+            'iOS >= 7',
+            'ie >= 10'
+          ],
+        },
       },
     },
 
