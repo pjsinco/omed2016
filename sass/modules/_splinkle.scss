@@ -1,9 +1,13 @@
 .splinkle {
 
-  margin-top: 3rem;
+  margin-top: 0;
   font-size: .875rem;
   color: $teal;
   line-height: 1.4;
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
 
   &__items {
     position: relative;

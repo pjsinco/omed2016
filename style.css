@@ -2351,10 +2351,12 @@ input, textarea {
   width: 35px !important; }
 
 .splinkle {
-  margin-top: 3rem;
+  margin-top: 0;
   font-size: .875rem;
   color: #00b0b9;
   line-height: 1.4; }
+  .splinkle:not(:first-child) {
+    margin-top: 3rem; }
   .splinkle__items {
     position: relative; }
   .splinkle__item {
