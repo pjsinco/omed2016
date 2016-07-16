@@ -139,3 +139,23 @@ a {
 object {
   width: 100%;
 }
+
+input, textarea {
+  padding: .5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-radius: $border-radius-base;
+  border-color: $teal;
+  border-width: 1px;
+  color: $font-color;
+  transition: box-shadow .15s linear;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 2px 2px rgba($teal, .2);
+  }
+}

@@ -507,3 +507,63 @@ function omed_add_fitvids_script() {
   </script>
   <?php
 }
+
+function omed_add_custom_ninja_form_class ( $form_class, $form_id ) 
+{
+  if ( $form_id == 1 ) {
+    $form_class .= ' contact-form';
+  }
+
+  return $form_class;
+}
+add_filter( 'ninja_forms_form_class', 'omed_add_custom_ninja_form_class', 10, 2 );
+
+function omed_add_ninja_form_styles( $form_id ) {
+
+  if ( $form_id == 1 ) {
+
+    echo '<style> 
+
+    .page-contact-us .ninja-forms-required-items {
+      /* display: none; */
+    }
+
+    .page-contact-us .ninja-forms-req-symbol {
+      color: #00b0b9;
+    }
+
+    .page-contact-us .ninja-forms-field {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-top: .5rem;
+      border-color: #00b0b9;
+    }
+
+    .page-contact-us .ninja-forms-error .ninja-forms-field {
+      margin-bottom: .33rem;
+    }
+
+    .page-contact-us .ninja-forms-field-error p {
+      font-size: .75rem;
+      text-align: center;
+      color: #cb333b;
+    }
+
+    .ninja-forms-error-msg {
+      margin-bottom: 1rem;
+      text-align: center;
+      background: #fcef06;
+      padding: .5rem 0;
+      font-size: .875rem;
+      color: #00b0b9;
+    }
+
+    </style>';
+
+
+  }
+
+}
+add_action( 'ninja_forms_display_css' , 'omed_add_ninja_form_styles' );
+

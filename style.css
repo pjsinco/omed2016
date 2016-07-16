@@ -713,6 +713,24 @@ a {
 object {
   width: 100%; }
 
+input, textarea {
+  padding: .5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-radius: 4px;
+  border-color: #00b0b9;
+  border-width: 1px;
+  color: #666666;
+  -webkit-transition: box-shadow .15s linear;
+          transition: box-shadow .15s linear; }
+  input:focus, textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 2px 2px rgba(0, 176, 185, 0.2); }
+
 .container-fluid--alt, .menu-container {
   margin-left: auto;
   margin-right: auto;
@@ -2429,5 +2447,13 @@ object {
       -webkit-flex-basis: 25%;
           -ms-flex-preferred-size: 25%;
               flex-basis: 25%; } }
+
+.contact-form label {
+  font-size: .875rem;
+  color: #808080; }
+.contact__success {
+  font-size: 2rem;
+  text-align: center;
+  color: #00b0b9; }
 
 /*@import 'icons/index';*/
