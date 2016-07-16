@@ -1902,26 +1902,32 @@ object {
 
 .highlightable, .highlightable--pinned {
   border-top: 7px solid #fcef06;
-  margin-top: 3rem; }
+  margin-top: 4.5rem;
+  padding-top: 0; }
   @media screen and (min-width: 48rem) {
     .highlightable, .highlightable--pinned {
+      padding-top: 1rem;
       margin-top: 8rem;
       margin-bottom: 6rem;
       height: 250px; } }
 
 .highlightable {
-  padding-top: 1rem;
   padding-bottom: 1rem;
   /*text-align: center;*/
   background: #00b0b9;
   border-bottom: 7px solid #fcef06;
-  color: #fcef06;
-  /* Giant O in background */ }
+  color: #fcef06; }
   .highlightable--pinned {
     margin-bottom: 0;
     /*box-sizing: content-box;*/
     background: rgba(252, 239, 6, 0.05);
     color: #00b0b9; }
+  .highlightable__block {
+    position: relative;
+    top: -2rem; }
+    @media screen and (min-width: 48rem) {
+      .highlightable__block {
+        top: 0; } }
   .highlightable__kicker {
     margin-bottom: .25rem;
     text-transform: uppercase;
@@ -1930,14 +1936,17 @@ object {
     .highlightable--pinned .highlightable__kicker {
       color: rgba(0, 176, 185, 0.7); }
   .highlightable__header {
-    font-weight: normal; }
+    margin-bottom: 2rem;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: inherit; }
     @media screen and (min-width: 56rem) {
       .highlightable__header {
         margin-bottom: 1rem;
         font-size: 1.75em;
         font-family: "gotham-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        line-height: 1.35;
-        color: inherit; } }
+        line-height: 1.35; } }
   .highlightable__body {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1976,13 +1985,26 @@ object {
                   order: -1;
           margin-left: 0;
           margin-right: 3rem; } }
+    .highlightable__text button {
+      position: absolute;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: -1.2rem; }
+      @media screen and (min-width: 48rem) {
+        .highlightable__text button {
+          position: initial;
+          width: initial;
+          margin: initial; } }
   .highlightable__imagecontainer {
     /*flex-basis: 100%;*/
     /*position: relative;*/
     /*bottom: -3em;*/
     /*max-width: 435px;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/ }
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; }
     @media screen and (min-width: 48rem) {
       .highlightable__imagecontainer {
         /*top: -3em;*/
@@ -1990,6 +2012,7 @@ object {
         /*max-width: none;*/
         position: relative;
         bottom: 80px;
+        margin-bottom: initial;
         /*margin-right: 4rem;*/
         min-width: 250px; } }
   .highlightable__image {

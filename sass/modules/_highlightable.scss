@@ -1,9 +1,11 @@
 $highlightablebreak: $large-start;
 %highlightable-base {
   border-top: 7px solid $yellow;
-  margin-top: 3rem;
+  margin-top: 4.5rem;
+  padding-top: 0;
 
   @include breakpoint($screen $highlightablebreak) {
+    padding-top: 1rem;
     margin-top: 8rem;
     margin-bottom: 6rem;
     height: 250px;
@@ -13,7 +15,6 @@ $highlightablebreak: $large-start;
 .highlightable {
   @extend %highlightable-base;
 
-  padding-top: 1rem;
   padding-bottom: 1rem;
   /*text-align: center;*/
   background: $teal;
@@ -29,21 +30,13 @@ $highlightablebreak: $large-start;
   }
 
 
-    /* Giant O in background */
-//    &:after {
-//      content: "O";
-//      font-family: $font-bold;
-//      color: rgba(255, 255, 255, 0.12);
-//      font-size: 382px;
-//      position: absolute;
-//      right: -66px;
-//      bottom: -130px;
-//      font-weight: bolder;
-//    }
-  
-
   &__block {
+    position: relative;
+    top: -2rem;
 
+    @include breakpoint($screen $highlightablebreak) {
+      top: 0;
+    }
   }
 
   &__kicker {
@@ -58,14 +51,17 @@ $highlightablebreak: $large-start;
   }
 
   &__header {
+    margin-bottom: 2rem;
     font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: inherit;
 
     @include breakpoint($screen $large-minor-start) {
       margin-bottom: 1rem;
       font-size: 1.75em;
       font-family: $font-light;
       line-height: 1.35;
-      color: inherit;
     }
   }
 
@@ -100,6 +96,21 @@ $highlightablebreak: $large-start;
       }
     }
 
+    & button {
+      position: absolute;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: -1.2rem;
+
+      @include breakpoint($screen $highlightablebreak) {
+        position: initial;
+        width: initial;
+        margin: initial;
+      }
+    }
+
   }
 
   &__imagecontainer {
@@ -107,8 +118,9 @@ $highlightablebreak: $large-start;
     /*position: relative;*/
     /*bottom: -3em;*/
     /*max-width: 435px;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
 
     @include breakpoint($screen $highlightablebreak) {
       /*top: -3em;*/
@@ -116,6 +128,7 @@ $highlightablebreak: $large-start;
       /*max-width: none;*/
       position: relative;
       bottom: 80px;
+      margin-bottom: initial;
       /*margin-right: 4rem;*/
       min-width: 250px;
     
