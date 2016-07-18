@@ -86,7 +86,7 @@
 
         &:hover {
           fill: $yellow;
-          background-color: $teal;
+          background-color: rgba($teal, .5);
         }
       }
     }

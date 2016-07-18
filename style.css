@@ -1612,7 +1612,7 @@ input, textarea {
             background-color: transparent; }
         header .branding--omed.icon-omed-logo-alone:hover {
           fill: #fcef06;
-          background-color: #00b0b9; } }
+          background-color: rgba(0, 176, 185, 0.5); } }
   .branding--omed--large {
     display: none; }
     header .branding--omed--large.icon-omed-logo {
