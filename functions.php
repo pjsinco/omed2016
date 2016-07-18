@@ -422,6 +422,7 @@ function omed2016_get_icon_class_name( $title ) {
       'faqs' => 'faq',
       'for-exhibitors' => 'for-exhibitors',
       'aoa' => 'aoa',
+      'program' => 'program',
     );
 
 
@@ -435,7 +436,6 @@ function omed2016_get_icon_class_name( $title ) {
 function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $depth, $args ) {
 
   if ( $args->menu == 'header-menu-minor') {
-
 
     $slug = omed2016_format_menu_slug( $item->title );
     $class = omed2016_get_icon_class_name( $slug ) . ' menu-icon';

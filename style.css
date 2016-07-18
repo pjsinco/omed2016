@@ -2270,6 +2270,10 @@ input, textarea {
 .menu-minor .icon-registration {
   width: 35px !important; }
 
+@media screen and (min-width: 56rem) {
+  .menu-minor .icon-program {
+    width: 21px !important; } }
+
 .splinkle {
   margin-top: 0;
   font-size: .875rem;

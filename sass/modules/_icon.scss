@@ -40,3 +40,13 @@
     width: 35px !important;
   }
 }
+
+.icon-program {
+
+  .menu-minor & {
+    @include breakpoint($screen $navflip) {
+      width: 21px !important;
+    }
+  }
+
+}
