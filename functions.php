@@ -559,11 +559,12 @@ function omed_add_ninja_form_styles( $form_id ) {
       color: #00b0b9;
     }
 
+    .field-wrap:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
     </style>';
-
-
   }
-
 }
 add_action( 'ninja_forms_display_css' , 'omed_add_ninja_form_styles' );
 
