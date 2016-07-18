@@ -206,6 +206,15 @@
     
     @include breakpoint($screen $navflip) {
       height: $navbarheight;
+
+      & a svg {
+        transition: fill .15s linear;
+      }
+
+      & a:hover svg {
+        fill: $yellow;
+      }
+
     }
   }
 
@@ -291,8 +300,13 @@
 
   color: $yellow !important;
 
+  & [class^='icon-'] {
+    fill: $yellow;
+  }
+
   @include breakpoint($screen $navflip) {
     font-family: $font-bold;
+
   }
 }
 
@@ -302,6 +316,12 @@
 
 .menu-major {
   font-family: $font-bold;
+
+  @include breakpoint($screen $xlarge-start) {
+    margin-right: 1rem;
+  }
+
+  
 
   @include breakpoint($screen $navflip) {
     align-items: center;
@@ -387,9 +407,19 @@
       width: 85px;
     }
 
-    &.icon-ticket {
-      background-position: 20px 20px;
-      background-size: 50px;
+    & [class^='icon-'] {
+      /*background-position: 20px 20px;*/
+      /*background-size: 50px;*/
+
+      @include breakpoint($screen $navflip) {
+        transition: fill $transitionduration linear;
+      }
+    }
+
+    &:hover [class^='icon-'] {
+      @include breakpoint($screen $navflip) {
+        fill: $yellow;
+      }
     }
   }
 
@@ -400,12 +430,20 @@
     position: relative;
     cursor: pointer;
     text-transform: none;
+    /*letter-spacing: .5px;*/
     color: inherit;
 
     @include breakpoint($screen $navflip) {
       padding-top: 41px;
       padding-bottom: 3px;
+      font-family: $font-medium;
       font-size: .6875rem;
+      font-weight: bold;
+      transition: color $transitionduration linear;
+    }
+
+    &:hover {
+      color: $yellow;
     }
 
   }
@@ -453,14 +491,22 @@
   @include breakpoint($screen $navflip) {
     background: $yellow;  
     color: $teal;
+    transition: background .15s linear;
 
     & a {
       font-family: $font-medium !important;
     }
 
-    & svg {
-      fill: $teal !important;
+    & [class^='icon-'] {
+      fill: $teal;
     }
+
+
+    &:hover {
+      /*background-color: rgba($teal, .96) !important;*/
+      background-color: #0AB3BB;
+    }
+    
   }
 
 }

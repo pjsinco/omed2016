@@ -34,7 +34,7 @@
 <!--       <div class="wrap relative"> -->
       <div class="menu__block container-fluid--alt relative">
         <div class="menu__logo">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="svg" title="OMED 2016">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="OMED 2016">
             <div class="branding--omed icon-omed-logo-alone" data-grunticon-embed></div>
           </a>
         </div> <!-- .menu__logo -->

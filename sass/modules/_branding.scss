@@ -70,13 +70,23 @@
         position: relative;
         left: -1rem;
         padding: 1rem;
-        background: $yellow;
+        background-color: $yellow;
         fill: $teal;
+        transition: background-color .15s linear, fill .15s linear;
 
         .omedscrolled & {
           /*left: -2rem;*/
-          background: transparent;
+          background-color: transparent;
           fill: $white;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+
+        &:hover {
+          fill: $yellow;
+          background-color: $teal;
         }
       }
     }
