@@ -1351,6 +1351,9 @@ input, textarea {
   @media screen and (min-width: 56rem) {
     .current-menu-item {
       font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
+  .current-menu-item a {
+    pointer-events: none;
+    cursor: none; }
 
 .current-page-ancestor {
   color: #fcef06; }

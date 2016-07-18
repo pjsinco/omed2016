@@ -306,7 +306,11 @@
 
   @include breakpoint($screen $navflip) {
     font-family: $font-bold;
+  }
 
+  & a {
+    pointer-events: none;
+    cursor: none;
   }
 }
 
