@@ -105,10 +105,20 @@ $icomoon-font-path: $font-path;
 $icon-ctrl: "\ea50";
 
 
+/* Tables */
+$table-border-color: $lightgray;
+$table-condensed-cell-padding: .25rem;
+$table-bg-accent: $lightgray;
+$table-bg-hover: $lightgray;
+$table-bg-active: $lightgray;
+$body-bg: $white;
+
 /* Numbers we use */
 $navflip: $large-minor-start;
 $spacebetween: 1.25rem;
 $gutter: 1.25rem;
 $navbarheight: 3.75rem;
 $transitionduration: .3s;
+
+
 
