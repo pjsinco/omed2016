@@ -1214,7 +1214,6 @@ input, textarea {
     @media screen and (min-width: 56rem) {
       .menu li a {
         padding: 1.5rem 0;
-        /*text-align: center;*/
         font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
         border: 0; } }
     .menu li a:link {
@@ -1250,11 +1249,7 @@ input, textarea {
                 flex-direction: column;
         padding-bottom: 0;
         background-color: rgba(0, 200, 211, 0.4);
-        /*color: $white;*/
-        border-top: 1px solid #fcef06;
-        /*border-left:   1px solid rgba($teal, 0.19);*/
-        /*border-right:  1px solid rgba($teal, 0.19);*/
-        /*border-bottom: 1px solid rgba($teal, 0.19);*/ }
+        border-top: 1px solid #fcef06; }
         .omedscrolled .menu.active, .omedscrolled .menu > ul ul.active {
           background-color: #00c8d3; } }
   .menu, .menu > ul ul {
@@ -1304,8 +1299,6 @@ input, textarea {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      /*height: 100%;*/
-      /*margin: 0 0 0 -0.25em;*/
       border: 0; } }
   @media screen and (min-width: 56rem) {
     .menu > ul li {
@@ -1362,15 +1355,10 @@ input, textarea {
     color: #fff; }
     @media screen and (min-width: 56rem) {
       .menu__items {
-        position: static; }
-        .omedscrolled .menu__items {
-          /*color: $font-color-lighter;*/ } }
-  .menu__logo {
-    /*position: absolute;*/
-    /*z-index: 2;*/ }
-    @media screen and (min-width: 56rem) {
-      .menu__logo {
-        height: 3.75rem; } }
+        position: static; } }
+  @media screen and (min-width: 56rem) {
+    .menu__logo {
+      height: 3.75rem; } }
   .menu .level-2 > li a {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1378,8 +1366,7 @@ input, textarea {
     width: 100%;
     text-transform: none;
     letter-spacing: .5px;
-    font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /*opacity: .8;*/ }
+    font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
     @media screen and (min-width: 56rem) {
       .menu .level-2 > li a {
         padding: 1rem 1rem;
@@ -1429,14 +1416,10 @@ input, textarea {
       border-top: none; } }
 
 .current-menu-item {
-  color: #fcef06 !important;
-  /*.level-1 > & {*/
-  /*color: $yellow;*/
-  /*}*/ }
+  color: #fcef06 !important; }
   @media screen and (min-width: 56rem) {
     .current-menu-item {
-      font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      /*color: $teal;*/ } }
+      font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
 
 .current-page-ancestor {
   color: #fcef06; }
@@ -1449,21 +1432,10 @@ input, textarea {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center;
-      color: #fff; }
-      .omedscrolled .menu-major {
-        /*margin-right: 0.625rem;*/
-        /*color: $teal;*/ } }
+      color: #fff; } }
   .menu-major > li {
     -webkit-transition: background-color 0.3s ease;
-            transition: background-color 0.3s ease;
-    /*@include breakpoint($screen $xlarge-start) {*/
-    /*padding-left: 1rem;*/
-    /*padding-right: 1rem;*/
-    /*}*/
-    /*@include breakpoint($screen $xlarge-minor-start) {*/
-    /*padding-left: 2rem;*/
-    /*padding-right: 2rem;*/
-    /*}*/ }
+            transition: background-color 0.3s ease; }
     @media screen and (min-width: 56rem) {
       .menu-major > li:hover {
         background-color: rgba(0, 200, 211, 0.4);
@@ -1514,7 +1486,6 @@ input, textarea {
   text-align: center; }
   @media screen and (min-width: 56rem) {
     .menu-minor {
-      /*padding-top: .5rem;*/
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
@@ -1527,7 +1498,6 @@ input, textarea {
         display: flex !important; } }
   .menu-minor li {
     position: relative;
-    /*flex-basis: 85px;*/
     -webkit-flex-basis: 33%;
         -ms-flex-preferred-size: 33%;
             flex-basis: 33%;
@@ -1553,35 +1523,27 @@ input, textarea {
     color: inherit; }
     @media screen and (min-width: 56rem) {
       .menu-minor li a {
-        padding-top: .4375rem;
-        padding-bottom: 0;
+        padding-top: 41px;
+        padding-bottom: 3px;
         font-size: .6875rem; } }
-    .menu-minor li a:link {
-      /*position: relative;*/
-      /*bottom: -39px;*/
-      /*text-decoration: none;*/ }
   .menu-minor .menu-item > div {
-    /*position: absolute;*/
     position: relative;
     top: 26px;
     width: 25px;
     height: 32px;
-    margin: 0 auto;
-    /*height: auto;*/
-    /*left: 35%;*/ }
+    margin: 0 auto; }
     @media screen and (min-width: 56rem) {
       .menu-minor .menu-item > div {
-        top: .6875rem; } }
+        position: absolute;
+        top: .6875rem;
+        left: 25%;
+        right: 25%; } }
   .menu-minor .menu-item-branding {
     -webkit-flex-basis: 80% !important;
         -ms-flex-preferred-size: 80% !important;
             flex-basis: 80% !important; }
     .menu-minor .menu-item-branding svg {
-      width: 160px;
-      /*@include breakpoint($screen $navflip) {*/
-      /*width: 240px;*/
-      /*fill: rgba($white, .8) !important;*/
-      /*}*/ }
+      width: 160px; }
     @media screen and (min-width: 56rem) {
       .menu-minor .menu-item-branding {
         display: none; } }
@@ -1590,9 +1552,6 @@ input, textarea {
     width: 100%; }
   .menu-minor .menu-item svg {
     fill: #fff; }
-    @media screen and (min-width: 56rem) {
-      .omedscrolled .menu-minor .menu-item svg {
-        /*fill: $font-color-lighter;*/ } }
 
 @media screen and (min-width: 56rem) {
   .menu-item-highlight {
@@ -1613,7 +1572,6 @@ input, textarea {
   @media screen and (min-width: 56rem) {
     .level-2 .menu-item {
       height: 4rem;
-      /*height: 100%;*/
       -webkit-transition: background-color 0.3s ease;
               transition: background-color 0.3s ease;
       display: -webkit-box;
@@ -1634,7 +1592,6 @@ input, textarea {
           -ms-flex-align: center;
               align-items: center; }
       .level-2 .menu-item:hover {
-        /*background-color: $teal;*/
         color: #fcef06; }
       .level-2 .menu-item:not(:last-child) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.25); } }

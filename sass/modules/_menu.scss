@@ -22,7 +22,6 @@
   
     @include breakpoint($screen $navflip) {
       padding: 1.5rem 0;
-      /*text-align: center;*/
       font-family: $font-book;
       border: 0;
     }
@@ -74,40 +73,13 @@
       flex-direction: column;
       padding-bottom: 0;
       background-color: rgba(0, 200, 211, 0.4);
-      /*color: $white;*/
       border-top: 1px solid $yellow;
-      /*border-left:   1px solid rgba($teal, 0.19);*/
-      /*border-right:  1px solid rgba($teal, 0.19);*/
-      /*border-bottom: 1px solid rgba($teal, 0.19);*/
 
       .omedscrolled & {
         background-color: lighten($teal, 5%);
       }
     }
   }
-
-
-//  & li.menu-item-has-children > a:after {
-//    content: '+';
-//    position: absolute;
-//    top: 26%;
-//    right: 0;
-//    display: block;
-//    font-size: 1.5em;
-//    padding: 0.25em 0.5em;
-//
-//    @include breakpoint($screen $navflip) {
-//      /*content: ">";*/
-//      content: none;
-//      font-size: 1em;
-//      padding: 0.8em 0.5em;
-//    }
-//  }
-  
-//  & li.menu-item-has-children > a.active:after {
-//    content: "-";
-//  }
-
 
   &, & > ul ul {
     clear: both;
@@ -169,8 +141,6 @@
 
     @include breakpoint($screen $navflip) {
       display: flex;
-      /*height: 100%;*/
-      /*margin: 0 0 0 -0.25em;*/
       border: 0;
     }
   }
@@ -229,16 +199,10 @@
 
     @include breakpoint($screen $navflip) {
       position: static;
-
-      .omedscrolled & {
-        /*color: $font-color-lighter;*/
-      }
     }
   }
 
   &__logo {
-    /*position: absolute;*/
-    /*z-index: 2;*/
     
     @include breakpoint($screen $navflip) {
       height: $navbarheight;
@@ -262,7 +226,6 @@
       letter-spacing: .25px;
       font-size: .875rem;
     }
-    /*opacity: .8;*/
   }
 } /* End .menu */
 
@@ -328,15 +291,8 @@
 
   color: $yellow !important;
 
-
-  /*.level-1 > & {*/
-    /*color: $yellow;*/
-  /*}*/
-
-
   @include breakpoint($screen $navflip) {
     font-family: $font-bold;
-    /*color: $teal;*/
   }
 }
 
@@ -351,18 +307,9 @@
     align-items: center;
     color: $white;
     
-    .omedscrolled & {
-      /*margin-right: 0.625rem;*/
-      /*color: $teal;*/
-    }
   }
 
   & > li {
-
-//    @include breakpoint($screen $navflip) {
-//      padding-left: 1rem;
-//      padding-right: 1rem;
-//    }
 
     transition: background-color $transitionduration ease;
 
@@ -392,16 +339,6 @@
       padding-left:  1rem;
       padding-right: 1rem;
     }
-
-    /*@include breakpoint($screen $xlarge-start) {*/
-      /*padding-left: 1rem;*/
-      /*padding-right: 1rem;*/
-    /*}*/
-
-    /*@include breakpoint($screen $xlarge-minor-start) {*/
-      /*padding-left: 2rem;*/
-      /*padding-right: 2rem;*/
-    /*}*/
   }
   
   & li a {
@@ -413,7 +350,6 @@
       font-family: $font-bold;
     }
   }
-
 }
 
 .menu-minor {
@@ -429,7 +365,6 @@
   text-align: center;
 
   @include breakpoint($screen $navflip) {
-    /*padding-top: .5rem;*/
     align-items: flex-start;
 
     display: none !important;
@@ -441,7 +376,6 @@
 
   & li {
     position: relative;
-    /*flex-basis: 85px;*/
     flex-basis: 33%;
     height: 100%;
     margin-top: 1rem;
@@ -469,30 +403,25 @@
     color: inherit;
 
     @include breakpoint($screen $navflip) {
-      padding-top: .4375rem;
-      padding-bottom: 0;
+      padding-top: 41px;
+      padding-bottom: 3px;
       font-size: .6875rem;
     }
 
-    &:link {
-      /*position: relative;*/
-      /*bottom: -39px;*/
-      /*text-decoration: none;*/
-    }
   }
 
   & .menu-item > div {
-    /*position: absolute;*/
     position: relative;
     top: 26px;
     width: 25px;
     height: 32px;
     margin: 0 auto;
-    /*height: auto;*/
-    /*left: 35%;*/
 
     @include breakpoint($screen $navflip) {
+      position: absolute;
       top: .6875rem;
+      left: 25%;
+      right: 25%;
     }
   }
 
@@ -502,11 +431,6 @@
   
     svg {
       width: 160px;
-
-      /*@include breakpoint($screen $navflip) {*/
-        /*width: 240px;*/
-        /*fill: rgba($white, .8) !important;*/
-      /*}*/
     }
 
     @include breakpoint($screen $navflip) {
@@ -521,15 +445,7 @@
 
   & .menu-item svg {
     fill: $white;
-
-    .omedscrolled & {
-      @include breakpoint($screen $navflip) {
-        /*fill: $font-color-lighter;*/
-      }
-    }
   }
-
-
 }
 
 .menu-item-highlight {
@@ -563,7 +479,6 @@
   
     @include breakpoint($screen $navflip) {
       height: 4rem;
-      /*height: 100%;*/
       transition: background-color $transitionduration ease;
       display: flex;
       flex-direction: row;
@@ -571,7 +486,6 @@
       align-items: center;
 
       &:hover {
-         /*background-color: $teal;*/
         color: $yellow;
       }
 
@@ -584,3 +498,5 @@
 
 }
 
+.menu-icon {
+}

@@ -438,7 +438,7 @@ function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $
 
 
     $slug = omed2016_format_menu_slug( $item->title );
-    $class = omed2016_get_icon_class_name( $slug );
+    $class = omed2016_get_icon_class_name( $slug ) . ' menu-icon';
 
     return preg_replace( 
       '/(<a.*?>[^>]*?)</',
