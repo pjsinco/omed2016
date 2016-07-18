@@ -262,11 +262,9 @@ class Omed2016_Highlightable extends WP_Widget {
       />
     </p>
      <?php
-
   }
 
   public function widget( $args, $instance ) {
-
     echo $args['before_widget'];
 
     $args = array(
@@ -292,7 +290,7 @@ class Omed2016_Highlightable extends WP_Widget {
           <div class="highlightable__text">
             <h5 class="highlightable__kicker"><?php echo $highlightable['omed_highlightable_kicker'] ?></h5>
             <h4 class="highlightable__header"><?php echo $highlightable['omed_highlightable_body'] ?></h4>
-            <button class="btn btn--sm <?php echo ( isset( $instance['pinned'] ) ? 'btn--primary' : 'btn--reverse' ); ?>">Lorem ipsum</button>
+            <button class="btn btn--sm <?php echo ( isset( $instance['pinned'] ) ? 'btn--primary' : 'btn--reverse' ); ?>">Learn more</button>
           </div> <!-- .highlightable__text -->
         </div> <!-- .highlightable__body -->
       </div> <!-- .highlightable__block -->
