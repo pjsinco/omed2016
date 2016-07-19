@@ -7,10 +7,6 @@
  * @package omed2016
  */
 
-@ini_set( 'upload_max_size', '8M' );
-@ini_set( 'post_max_size', '8M' );
-@ini_set( 'max_execution_time', '300' );
-
   /**
    * Sets up theme defaults and registers support for various WordPress features.
    *
