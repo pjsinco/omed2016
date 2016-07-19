@@ -1,3 +1,50 @@
+%align-base {
+  float: none;
+  margin: 0 auto 2rem;
+}
+
 .wp-caption {
+
+  position: relative;
+  top: .375rem;
+  max-width: 100%; 
+  margin-bottom: 2rem;
+  
+  &-text {
+    font-size: .875rem;
+    color: $font-color-lighter;
+    line-height: 1.4;
+  }
+
+  & img[class*='wp-image-'] {
+    margin-bottom: .5rem;
+  }
+}
+
+.alignleft {
+  @extend %align-base;
+
+  @include breakpoint($screen $medium-start) {
+    float: left;
+    margin: 0 2rem 2rem 0;
+  }
+}
+
+.aligncenter {
+  display: block;
+  clear: both;
+  margin: 0 auto 2rem;
+}
+
+.alignright {
+  @extend %align-base;
+
+  @include breakpoint($screen $medium-start) {
+    float: right;
+    margin: 0 0 2rem 2rem;
+  }
+}
+
+.alignnone {
 
 }

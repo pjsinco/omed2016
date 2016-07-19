@@ -41,6 +41,8 @@ function omed2016_setup() {
     ) 
   );
 
+  add_image_size( 'omed-medium-square', 200, 200, true );
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -568,3 +570,14 @@ function omed_add_ninja_form_styles( $form_id ) {
 }
 add_action( 'ninja_forms_display_css' , 'omed_add_ninja_form_styles' );
 
+function omed_adjust_caption_shortcode_width( $width, $atts, $content ) {
+
+  // TODO fix magic number
+  // Right now, 500 is the width of size of our 'large' image setting
+  if ( $width >= 500 ) { 
+    return '';
+  }
+
+  return $width;
+}
+add_filter ( 'img_caption_shortcode_width', 'omed_adjust_caption_shortcode_width', 10, 3 );
