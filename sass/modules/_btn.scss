@@ -33,7 +33,7 @@
     @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
   }
 
-  .breakout btn--primary, .breakout .btn--teal {
+  .breakout .btn--primary, .breakout .btn--teal {
     @include button-variant($btn-primary-color, $btn-primary-bg, rgba(0, 176, 185, 0.37));
   }
 
