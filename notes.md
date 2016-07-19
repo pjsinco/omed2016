@@ -129,3 +129,6 @@
 
 #####Fri Jul  8 16:08:49 2016 CDT
 * Blog: [Simple CSS3 Transitions, Transforms, & Animations Compilation - Call Me Nick](http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation)
+
+#####Tue Jul 19 10:36:34 2016 CDT
+* Blog: [Is The WordPress Upload Limit Giving You Trouble? Here’s How To Change It | Elegant Themes Blog](https://www.elegantthemes.com/blog/tips-tricks/is-the-wordpress-upload-limit-giving-you-trouble-heres-how-to-change-it)
