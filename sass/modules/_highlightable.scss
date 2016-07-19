@@ -88,6 +88,7 @@ $highlightablebreak: $large-start;
     @include breakpoint($screen $highlightablebreak) {
       margin-left: 3rem;
       align-self: center;
+      flex-basis: 71%;
 
       .highlightable--flipped & {
         order: -1;
@@ -105,8 +106,8 @@ $highlightablebreak: $large-start;
       bottom: -1.2rem;
 
       @include breakpoint($screen $highlightablebreak) {
-        position: initial;
-        width: initial;
+        position: static;
+        width: auto;
         margin: initial;
       }
     }

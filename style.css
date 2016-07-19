@@ -2042,7 +2042,10 @@ table th[class*="col-"] {
         margin-left: 3rem;
         -webkit-align-self: center;
             -ms-flex-item-align: center;
-                align-self: center; }
+                align-self: center;
+        -webkit-flex-basis: 71%;
+            -ms-flex-preferred-size: 71%;
+                flex-basis: 71%; }
         .highlightable--flipped .highlightable__text {
           -webkit-box-ordinal-group: 0;
           -webkit-order: -1;
@@ -2059,8 +2062,8 @@ table th[class*="col-"] {
       bottom: -1.2rem; }
       @media screen and (min-width: 48rem) {
         .highlightable__text button {
-          position: initial;
-          width: initial;
+          position: static;
+          width: auto;
           margin: initial; } }
   .highlightable__imagecontainer {
     /*flex-basis: 100%;*/
