@@ -46,6 +46,10 @@ p {
   @extend %p-base;
 }
 
+.entry-content li {
+  @extend %p-base;
+}
+
 li strong, p strong {
   font-family: $font-medium;
   font-weight: normal;
@@ -111,6 +115,11 @@ ul {
 
 li {
   list-style: none;
+
+  .entry-content & {
+    list-style: disc;
+    list-style-position: inside;
+  }
 }
 
 a {

@@ -616,7 +616,7 @@ i {
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal; }
-p, .chart__subhead, .video__caption {
+p, .chart__subhead, .entry-content li, .video__caption {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: .875rem;
@@ -624,10 +624,10 @@ p, .chart__subhead, .video__caption {
   /*letter-spacing: -.5px;*/
   color: #666666; }
   @media screen and (min-width: 48rem) {
-    p, .chart__subhead, .video__caption {
+    p, .chart__subhead, .entry-content li, .video__caption {
       /*line-height: $bodylineheight;*/
       font-size: 1rem; } }
-  p:last-child, .chart__subhead:last-child, .video__caption:last-child {
+  p:last-child, .chart__subhead:last-child, .entry-content li:last-child, .video__caption:last-child {
     margin-bottom: 0; }
 
 * {
@@ -702,6 +702,9 @@ ul {
 
 li {
   list-style: none; }
+  .entry-content li {
+    list-style: disc;
+    list-style-position: inside; }
 
 a {
   text-decoration: none;
