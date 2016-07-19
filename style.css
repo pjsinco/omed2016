@@ -1481,9 +1481,6 @@ table th[class*="col-"] {
   @media screen and (min-width: 56rem) {
     .current-menu-item {
       font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
-  .current-menu-item a {
-    pointer-events: none;
-    cursor: none; }
 
 .current-page-ancestor {
   color: #fcef06; }
@@ -2211,6 +2208,9 @@ table th[class*="col-"] {
       left: 0;
       width: 100%;
       border-bottom: 1px solid #fcef06; } }
+.pagenav__item.current-menu-item > a {
+  pointer-events: none;
+  cursor: none; }
 
 .content {
   display: -webkit-box;

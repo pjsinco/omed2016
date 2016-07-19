@@ -47,4 +47,13 @@
  
   }
 
+  &__item {
+
+    &.current-menu-item > a {
+      pointer-events: none;
+      cursor: none;
+    }
+  }
+  
+
 }
