@@ -2375,6 +2375,9 @@ table th[class*="col-"] {
     font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: inherit;
     color: #00b0b9; }
+  .breakout h6 {
+    line-height: 1.65;
+    font-family: "gotham-medium"; }
   .breakout p, .breakout .chart__subhead {
     font-size: inherit; }
     .breakout p:last-child, .breakout .chart__subhead:last-child {
