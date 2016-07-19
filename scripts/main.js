@@ -47,15 +47,6 @@
   	$this.toggleClass('active');
   });
 
-  $('#fsCarousel').owlCarousel({
-    'items': 3,
-    'itemsDesktop': [1199, 3],
-  });
-
-  $('#qlCarousel').owlCarousel({
-    'items': 3,
-    'itemsDesktop': [1199, 3],
-  });
 
 })(jQuery);
 

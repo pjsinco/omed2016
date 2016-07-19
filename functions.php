@@ -205,6 +205,7 @@ function omed2016_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'omed2016_scripts' );
 
+
 /**
  * Custom template tags for this theme.
  */
@@ -508,6 +509,27 @@ function omed_add_fitvids_script() {
   </script>
   <?php
 }
+
+function add_owl_carousel_script() {
+  if ( !is_front_page() ) {
+    return;
+  }
+?>
+  <script>
+    jQuery('#fsCarousel').owlCarousel({
+      'items': 3,
+      'itemsDesktop': [1199, 3],
+    });
+
+    jQuery('#qlCarousel').owlCarousel({
+      'items': 3,
+      'itemsDesktop': [1199, 3],
+    });
+  </script>
+
+<?php
+}
+add_action( 'wp_footer' , 'add_owl_carousel_script', 50 );
 
 function omed_add_custom_ninja_form_class ( $form_class, $form_id ) 
 {
