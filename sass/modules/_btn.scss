@@ -33,10 +33,6 @@
     @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
   }
 
-  .breakout .btn--primary, .breakout .btn--teal {
-    @include button-variant($btn-primary-color, $btn-primary-bg, rgba(0, 176, 185, 0.37));
-  }
-
   &--reverse {
     @include button-variant($btn-reverse-color, $btn-primary-bg, $btn-reverse-border);
     &:hover {
