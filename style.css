@@ -1293,7 +1293,7 @@ table th[class*="col-"] {
     .menu li.menu-item-has-children > a {
       /*padding-right: 2em;*/ } }
   .menu.active, .menu > ul ul.active {
-    max-height: 55em;
+    max-height: 60rem;
     padding-bottom: 1rem;
     z-index: 1;
     color: #fff; }
