@@ -36,14 +36,14 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
          setup_postdata( $session );
      ?>        
        <li class="fs__item">
-           <div class="fs__imagecontainer">
-             <img class="fs__image" src="<?php echo get_field( 'session_speaker_photo_url', $session->ID ); ?>">
-           </div>
-           <h5 class="fs__name"><?php echo get_field( 'session_speaker_name', $session->ID ); ?></h5>
-           <h6 class="fs__kicker"><?php echo get_field( 'session_sponsor', $session->ID ); ?></h6>
-           <h3 class="fs__header"><?php echo get_field( 'session_title', $session->ID ) ?></h3>
-           <div class="fs__header--minor"><?php echo get_field( 'session_date_and_time', $session->ID ); ?></div>
-           <a href="<?php echo get_field( 'session_more_info_link', $session->ID ); ?>" class="btn btn--primary btn--sm">Read more</a>
+         <div class="fs__imagecontainer">
+           <img class="fs__image" src="<?php echo get_field( 'session_speaker_photo_url', $session->ID ); ?>">
+         </div>
+         <h5 class="fs__name"><?php echo get_field( 'session_speaker_name', $session->ID ); ?></h5>
+         <h6 class="fs__kicker"><?php echo get_field( 'session_sponsor', $session->ID ); ?></h6>
+         <h3 class="fs__header"><?php echo get_field( 'session_title', $session->ID ) ?></h3>
+         <div class="fs__header--minor"><?php echo get_field( 'session_date_and_time', $session->ID ); ?></div>
+         <a href="<?php echo get_field( 'session_more_info_link', $session->ID ); ?>" class="btn btn--primary btn--sm" <?php echo ( get_field( 'session_open_link_in_new_window', $session->ID ) ? 'target="_blank"' : '' ); ?>>Read more</a>
        </li> <!-- .fs__item -->
      <?php
        endforeach;
