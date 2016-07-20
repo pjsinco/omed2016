@@ -545,7 +545,7 @@ i {
 
 .icon-ctrl-down:before {
   content: "";
-  display: inline-block; }
+  display: inline; }
 
 /* font converted using font-converter.net. thank you! */
 @font-face {
