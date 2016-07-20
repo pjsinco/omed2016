@@ -259,7 +259,19 @@
 
   &:after {
     content: "Menu";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 1.3125rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     text-decoration: none;
+
+    @include breakpoint($screen $medium-start) {
+      padding-right: 2rem;
+    }
+    
 
     @include breakpoint($screen $navflip) {
       content: none;

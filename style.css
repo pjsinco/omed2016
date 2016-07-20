@@ -1456,7 +1456,17 @@ table th[class*="col-"] {
       display: none; } }
   .menu-link:after {
     content: "Menu";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 1.3125rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     text-decoration: none; }
+    @media screen and (min-width: 30rem) {
+      .menu-link:after {
+        padding-right: 2rem; } }
     @media screen and (min-width: 56rem) {
       .menu-link:after {
         content: none; } }
