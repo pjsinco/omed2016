@@ -544,6 +544,26 @@ function add_owl_carousel_script() {
 }
 add_action( 'wp_footer' , 'add_owl_carousel_script', 50 );
 
+function omed_add_google_analytics_code() {
+  if (OMED_DEV_ENVIRONMENT) {
+    return;
+  }
+?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-2910609-39', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+<?php
+}
+add_action( 'wp_head', 'omed_add_google_analytics_code' );
+
+
 function omed_add_custom_ninja_form_class ( $form_class, $form_id ) 
 {
   if ( $form_id == 1 ) {
