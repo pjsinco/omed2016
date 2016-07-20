@@ -1450,6 +1450,8 @@ table th[class*="col-"] {
                 flex-basis: 100%;
         line-height: 1.4;
         letter-spacing: .25px;
+        font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: normal;
         font-size: .875rem; } }
 
 /* End .menu */
