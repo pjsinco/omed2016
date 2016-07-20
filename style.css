@@ -1623,7 +1623,7 @@ table th[class*="col-"] {
         padding-bottom: 3px;
         font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: .6875rem;
-        font-weight: bold;
+        font-weight: normal;
         -webkit-transition: color 0.3s linear;
                 transition: color 0.3s linear; } }
     .menu-minor li a:hover {
