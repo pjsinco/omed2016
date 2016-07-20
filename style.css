@@ -2432,6 +2432,7 @@ table th[class*="col-"] {
     float: right; } }
 .footer .icon-aoa {
   width: 280px;
+  height: 80px;
   margin: 0 auto;
   fill: #fff; }
 
