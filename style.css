@@ -1294,7 +1294,8 @@ table th[class*="col-"] {
       display: none; }
       @media screen and (min-width: 56rem) {
         .menu li a > i {
-          display: inline-block; } }
+          display: inline-block;
+          height: .5rem; } }
     .menu-major .menu li a {
       border-bottom: 1px solid #fff; }
       @media screen and (min-width: 56rem) {

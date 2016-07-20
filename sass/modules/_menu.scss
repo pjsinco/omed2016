@@ -45,6 +45,7 @@
   
       @include breakpoint($screen $navflip) {
         display: inline-block;
+        height: .5rem;
       }
     }
   
