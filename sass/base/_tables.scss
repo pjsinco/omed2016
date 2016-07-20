@@ -26,6 +26,10 @@ th {
 
       > th {
         font-family: $font-medium;
+      
+        &:first-child {
+          width: 50%;
+        }
       }
     }
   }
@@ -72,8 +76,12 @@ th {
   .table {
     background-color: $body-bg;
   }
+
 }
 
+.table__soft {
+  color: $font-color-lighter;
+}
 
 // Condensed table w/ half padding
 

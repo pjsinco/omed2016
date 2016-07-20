@@ -1,14 +1,18 @@
 .chart {
 
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   /*border-top: 1px solid $lightgray;*/
-  border-bottom: 1px solid $lightgray;
+  /*border-bottom: 1px solid $lightgray;*/
 
+  &:first-child {
+    margin-bottom: 3rem;
+  }
 
   &__title {
-    margin-top: .5em;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
     font-weight: 200;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.25;
     
   }
@@ -19,9 +23,9 @@
   }
 
   &__source {
-    color: $font-color-lighter;
+    padding-left: .5rem;
     font-size: .875em;
-    text-align: right;
+    color: $font-color-lighter;
   }
 
 
