@@ -14,7 +14,12 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
 
+%body-with-top-padding {
+  @include breakpoint($screen $navflip) {
+    padding-top: 8rem;
+  }
 }
 
 * {
@@ -35,10 +40,10 @@ body {
   background-color: $white;
   height: 100%;
 
-  &.page-child, &.page-template-page-standalone {
-    @include breakpoint($screen $navflip) {
-      padding-top: 8rem;
-    }
+  &.page-child, 
+  &.page-template-page-standalone,
+  &.error404 {
+    @extend %body-with-top-padding;
   }
 }
 

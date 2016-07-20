@@ -21,7 +21,7 @@
       opacity: 1;
     }
 
-    .page-child &, .page-template-page-standalone & {
+    .page-child &, .page-template-page-standalone &, .error404 & {
       display: none;
     }
   }

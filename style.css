@@ -630,6 +630,10 @@ p, .chart__subhead, .entry-content li, .video__caption {
   p:last-child, .chart__subhead:last-child, .entry-content li:last-child, .video__caption:last-child {
     margin-bottom: 0; }
 
+@media screen and (min-width: 56rem) {
+  body.page-child, body.page-template-page-standalone, body.error404 {
+    padding-top: 8rem; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -647,9 +651,6 @@ body {
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fff;
   height: 100%; }
-  @media screen and (min-width: 56rem) {
-    body.page-child, body.page-template-page-standalone {
-      padding-top: 8rem; } }
 
 li strong, p strong, .chart__subhead strong {
   font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1701,7 +1702,7 @@ table th[class*="col-"] {
       .branding:hover {
         cursor: pointer;
         opacity: 1; }
-      .page-child .branding, .page-template-page-standalone .branding {
+      .page-child .branding, .page-template-page-standalone .branding, .error404 .branding {
         display: none; } }
   .branding__body--footer {
     max-width: 600px;
@@ -2230,6 +2231,10 @@ table th[class*="col-"] {
           flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 2rem; }
+  .error404 .content {
+    display: block;
+    /*margin-top: 2rem;*/
+    margin-bottom: 4rem; }
   @media screen and (min-width: 56rem) {
     .content {
       -webkit-box-orient: horizontal;
@@ -2450,6 +2455,8 @@ table th[class*="col-"] {
 
 .entry__header {
   margin-bottom: 3rem; }
+.entry__title--error {
+  text-align: center; }
 
 .leadin {
   color: #b3b3b3;
