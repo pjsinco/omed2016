@@ -142,6 +142,7 @@
 
     @include breakpoint($screen $navflip) {
       display: flex;
+      flex-basis: 500px;
       border: 0;
     }
   }
@@ -358,6 +359,9 @@
 
     .omedscrolled & {
       transition: background-color 0.4s ease;
+      @include breakpoint($screen $navflip) {
+        width: 10rem;
+      }
 
       &:hover {
         background-color: lighten($teal, 5%);
@@ -406,6 +410,13 @@
 
     .omedscrolled & {
       display: flex !important;
+    }
+  }
+
+  &.level-1 {
+    @include breakpoint($screen $navflip) {
+      justify-content: flex-end;
+      flex-basis: 17.2rem;
     }
   }
 

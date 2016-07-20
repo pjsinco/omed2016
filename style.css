@@ -633,7 +633,7 @@ p, .chart__subhead, .entry-content li, .video__caption {
   p:last-child, .chart__subhead:last-child, .entry-content li:last-child, .video__caption:last-child {
     margin-bottom: 0; }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   body.page-child, body.page-template-page-standalone, body.error404 {
     padding-top: 8rem; } }
 
@@ -683,7 +683,7 @@ h1 {
   letter-spacing: -.5px;
   border-bottom: 3px solid #fcef06;
   padding-bottom: 2rem; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     h1 {
       padding-bottom: initial;
       font-size: 2.625rem;
@@ -909,7 +909,7 @@ table th[class*="col-"] {
   @media screen and (min-width: 30rem) {
     .splash--home, .splash--connection, .splash--education, .splash--inspiration {
       background-size: cover; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .splash--home, .splash--connection, .splash--education, .splash--inspiration {
       height: 650px;
       /*top: -$navbarheight;*/ } }
@@ -969,7 +969,7 @@ table th[class*="col-"] {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .splash {
     /*top: $navbarheight;*/
     margin-bottom: 4.5rem; } }
@@ -1029,7 +1029,7 @@ table th[class*="col-"] {
   @media screen and (min-width: 30rem) {
     .splash__header {
       font-size: 3rem; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .splash__header {
       margin-bottom: 1rem;
       font-size: 4.375em;
@@ -1041,7 +1041,7 @@ table th[class*="col-"] {
           animation-delay: 1.4s;
   line-height: 1.4;
   opacity: .95; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .splash__body {
       max-width: 31.3rem;
       font-size: 1.3125em;
@@ -1169,7 +1169,7 @@ table th[class*="col-"] {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .omedscrolled .header, .header--fixed {
     position: fixed;
     top: 0;
@@ -1179,7 +1179,7 @@ table th[class*="col-"] {
 .header {
   height: 3.75rem;
   background: #00b0b9; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .header {
       background: none;
       padding-left: 1rem;
@@ -1217,15 +1217,15 @@ table th[class*="col-"] {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .omedscrolled .header {
     -webkit-animation: mainnavreveal .3s ease-out;
             animation: mainnavreveal .3s ease-out;
     box-shadow: inset 0px -1px rgba(255, 255, 255, 0.1); } }
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .omedscrolled .admin-bar .header, .omedscrolled.admin-bar .header {
     top: 32px; } }
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .header {
     position: absolute;
     top: 1rem;
@@ -1235,10 +1235,10 @@ table th[class*="col-"] {
       top: 3rem; } }
 .header__block {
   /*@extend %container-fluid-base;*/ }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .header__block {
       /*width: 50%;*/ } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .header__block:last-child {
       /*float: right;*/ } }
 
@@ -1255,7 +1255,7 @@ table th[class*="col-"] {
     opacity: 1; } }
 .menu {
   /* End .menu li a */ }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu {
       height: 100%;
       display: -webkit-box;
@@ -1279,7 +1279,7 @@ table th[class*="col-"] {
     display: block;
     padding: 1rem 0;
     color: inherit; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu li a {
         padding: 1.5rem 0;
         font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1292,16 +1292,16 @@ table th[class*="col-"] {
       color: inherit; }
     .menu li a > i {
       display: none; }
-      @media screen and (min-width: 56rem) {
+      @media screen and (min-width: 61.25rem) {
         .menu li a > i {
           display: inline-block;
           height: .5rem; } }
     .menu-major .menu li a {
       border-bottom: 1px solid #fff; }
-      @media screen and (min-width: 56rem) {
+      @media screen and (min-width: 61.25rem) {
         .menu-major .menu li a {
           border-bottom: none; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu li.menu-item-has-children > a {
       /*padding-right: 2em;*/ } }
   .menu.active, .menu > ul ul.active {
@@ -1309,7 +1309,7 @@ table th[class*="col-"] {
     padding-bottom: 1rem;
     z-index: 1;
     color: #fff; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu.active, .menu > ul ul.active {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1328,12 +1328,12 @@ table th[class*="col-"] {
     overflow: hidden;
     max-height: 0;
     background: #00b0b9; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu, .menu > ul ul {
         max-height: none;
         overflow: visible;
         background: none; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu > ul ul {
       visibility: hidden;
       opacity: 0;
@@ -1350,30 +1350,33 @@ table th[class*="col-"] {
     .menu > ul ul {
       padding-left: 1rem;
       padding-right: 1rem; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu > ul ul li {
       position: relative; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu > ul li:hover > ul {
       /*display: block;*/
       visibility: visible;
       opacity: 1; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu > ul ul.sub-menu {
       top: 3em;
       left: 0; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu ul {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-flex-basis: 500px;
+          -ms-flex-preferred-size: 500px;
+              flex-basis: 500px;
       border: 0; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu > ul li {
       height: 100%;
       margin: 0; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu > ul > li {
       display: inline-block;
       position: relative; } }
@@ -1391,7 +1394,7 @@ table th[class*="col-"] {
         -ms-flex-align: center;
             align-items: center;
     height: 100%; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu__block {
         max-width: 63rem;
         -webkit-box-pack: start;
@@ -1408,7 +1411,7 @@ table th[class*="col-"] {
           -webkit-justify-content: space-between;
               -ms-flex-pack: justify;
                   justify-content: space-between; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu__nav {
       height: 100%;
       margin-left: 2rem; }
@@ -1422,10 +1425,10 @@ table th[class*="col-"] {
     top: 3.75rem;
     height: 100%;
     color: #fff; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu__items {
         position: static; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu__logo {
       height: 3.75rem; }
       .menu__logo a svg {
@@ -1441,7 +1444,7 @@ table th[class*="col-"] {
     text-transform: none;
     letter-spacing: .5px;
     font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu .level-2 > li a {
         padding: 1rem 1rem;
         height: auto;
@@ -1461,10 +1464,10 @@ table th[class*="col-"] {
   color: #fff; }
   .menu-link.active:after {
     content: "Close"; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-link.active:after {
         content: none; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu-link {
       display: none; } }
   .menu-link:after {
@@ -1480,24 +1483,24 @@ table th[class*="col-"] {
     @media screen and (min-width: 30rem) {
       .menu-link:after {
         padding-right: 2rem; } }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-link:after {
         content: none; } }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .sub-menu > li > a {
     font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
 .menu-major .sub-menu a {
   opacity: .8;
   font-size: .875em;
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu-major .sub-menu a {
       opacity: 1;
       font-size: inherit; } }
 .menu-major .sub-menu li {
   border-top: 1px solid rgba(255, 255, 255, 0.17); }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu-major .sub-menu li {
       border-top: none; } }
 
@@ -1505,7 +1508,7 @@ table th[class*="col-"] {
   color: #fcef06 !important; }
   .current-menu-item [class^='icon-'] {
     fill: #fcef06; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .current-menu-item {
       font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
 
@@ -1517,7 +1520,7 @@ table th[class*="col-"] {
   @media screen and (min-width: 67.75rem) {
     .menu-major {
       margin-right: 1rem; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu-major {
       -webkit-box-align: center;
       -webkit-align-items: center;
@@ -1527,13 +1530,16 @@ table th[class*="col-"] {
   .menu-major > li {
     -webkit-transition: background-color 0.3s ease;
             transition: background-color 0.3s ease; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-major > li:hover {
         background-color: rgba(0, 200, 211, 0.4);
         color: #fcef06; } }
     .omedscrolled .menu-major > li {
       -webkit-transition: background-color 0.4s ease;
               transition: background-color 0.4s ease; }
+      @media screen and (min-width: 61.25rem) {
+        .omedscrolled .menu-major > li {
+          width: 10rem; } }
       .omedscrolled .menu-major > li:hover {
         background-color: #00c8d3;
         cursor: pointer; }
@@ -1548,7 +1554,7 @@ table th[class*="col-"] {
   .menu-major li a {
     letter-spacing: 1px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.17); }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-major li a {
         border-bottom: none;
         font-family: "gotham-bold", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
@@ -1575,7 +1581,7 @@ table th[class*="col-"] {
   margin: 0 auto;
   font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .menu-minor {
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
@@ -1587,6 +1593,15 @@ table th[class*="col-"] {
         display: -webkit-flex !important;
         display: -ms-flexbox !important;
         display: flex !important; } }
+  @media screen and (min-width: 61.25rem) {
+    .menu-minor.level-1 {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-flex-basis: 17.2rem;
+          -ms-flex-preferred-size: 17.2rem;
+              flex-basis: 17.2rem; } }
   .menu-minor li {
     position: relative;
     -webkit-flex-basis: 33%;
@@ -1595,7 +1610,7 @@ table th[class*="col-"] {
     height: 100%;
     margin-top: 1rem;
     line-height: 1.4; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-minor li {
         height: initial;
         -webkit-flex-basis: 85px;
@@ -1605,11 +1620,11 @@ table th[class*="col-"] {
     .menu-minor li [class^='icon-'] {
       /*background-position: 20px 20px;*/
       /*background-size: 50px;*/ }
-      @media screen and (min-width: 56rem) {
+      @media screen and (min-width: 61.25rem) {
         .menu-minor li [class^='icon-'] {
           -webkit-transition: fill 0.3s linear;
                   transition: fill 0.3s linear; } }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-minor li:hover [class^='icon-'] {
         fill: #fcef06; } }
   .menu-minor li a {
@@ -1620,7 +1635,7 @@ table th[class*="col-"] {
     text-transform: none;
     /*letter-spacing: .5px;*/
     color: inherit; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-minor li a {
         padding-top: 41px;
         padding-bottom: 3px;
@@ -1637,7 +1652,7 @@ table th[class*="col-"] {
     width: 25px;
     height: 32px;
     margin: 0 auto; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-minor .menu-item > div {
         position: absolute;
         top: .6875rem;
@@ -1649,7 +1664,7 @@ table th[class*="col-"] {
             flex-basis: 80% !important; }
     .menu-minor .menu-item-branding svg {
       width: 160px; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .menu-minor .menu-item-branding {
         display: none; } }
   .menu-minor .menu-item-branding > div {
@@ -1658,7 +1673,7 @@ table th[class*="col-"] {
   .menu-minor .menu-item svg {
     fill: #fff; }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .menu-item-highlight {
     background: #fcef06;
     color: #00b0b9;
@@ -1672,14 +1687,14 @@ table th[class*="col-"] {
       /*background-color: rgba($teal, .96) !important;*/
       background-color: #0AB3BB; } }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .level-2 {
     padding-left: 0 !important;
     padding-right: 0 !important;
     display: block !important; } }
 .level-2 .menu-item {
   background-color: transparent; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .level-2 .menu-item {
       height: 4rem;
       -webkit-transition: background-color 0.3s ease;
@@ -1708,7 +1723,7 @@ table th[class*="col-"] {
 
 .branding {
   display: none; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .branding {
       display: block;
       position: relative;
@@ -1741,7 +1756,7 @@ table th[class*="col-"] {
     width: 100%;
     margin-bottom: 1rem;
     max-width: 420px; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .branding__block--footer {
         width: 100%; } }
   header .branding--omed.icon-omed-logo-alone {
@@ -1749,7 +1764,7 @@ table th[class*="col-"] {
     height: 100%;
     fill: #fff;
     border-radius: 5px; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       header .branding--omed.icon-omed-logo-alone {
         position: relative;
         left: -1rem;
@@ -2132,7 +2147,7 @@ table th[class*="col-"] {
     .fs__item {
       margin-left: .75rem;
       margin-right: .75rem; } }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .fs__item {
       margin-left: 1rem;
       margin-right: 1rem;
@@ -2208,7 +2223,7 @@ table th[class*="col-"] {
       .section__header:after {
         width: 8%; } }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .pagenav__items {
     font-size: .875rem;
     width: 75%; }
@@ -2224,13 +2239,13 @@ table th[class*="col-"] {
       padding: 1.5rem 1.5rem 1.5rem 0; }
     .pagenav__item:not(:last-child) {
       /*border-bottom: 1px solid $yellow;*/ } }
-  @media screen and (min-width: 56rem) and (min-width: 61.25rem) {
+  @media screen and (min-width: 61.25rem) and (min-width: 61.25rem) {
     .pagenav__item {
       /*margin-right: 31%;*/ } }
-  @media screen and (min-width: 56rem) and (min-width: 67.75rem) {
+  @media screen and (min-width: 61.25rem) and (min-width: 67.75rem) {
     .pagenav__item {
       /*margin-right: 27%;*/ } }
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
     .pagenav__item:not(:last-child):after {
       content: "";
       position: absolute;
@@ -2258,7 +2273,7 @@ table th[class*="col-"] {
     display: block;
     /*margin-top: 2rem;*/
     margin-bottom: 4rem; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .content {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -2273,7 +2288,7 @@ table th[class*="col-"] {
       margin-top: 0; } }
   .content__left {
     display: none; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .content__left {
         display: block;
         -webkit-flex-basis: 16.66666667%;
@@ -2282,7 +2297,7 @@ table th[class*="col-"] {
   .content__main {
     position: relative;
     margin-bottom: 2rem; }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .content__main {
         -webkit-flex-basis: 79%;
             -ms-flex-preferred-size: 79%;
@@ -2295,7 +2310,7 @@ table th[class*="col-"] {
           top: 0;
           bottom: 0;
           border-right: 1px solid #fcef06; } }
-    @media screen and (min-width: 56rem) {
+    @media screen and (min-width: 61.25rem) {
       .content__main--full {
         -webkit-flex-basis: 100%;
             -ms-flex-preferred-size: 100%;
@@ -2414,7 +2429,7 @@ table th[class*="col-"] {
     .breakout p:last-child, .breakout .chart__subhead:last-child {
       margin-bottom: 0; }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .branding .icon-aoa-vert {
     width: 120px;
     padding: 1rem;
@@ -2425,7 +2440,7 @@ table th[class*="col-"] {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .branding .icon-aoa {
     width: 180px;
     height: 50.5px;
@@ -2439,7 +2454,7 @@ table th[class*="col-"] {
 .menu-minor .icon-registration {
   width: 35px !important; }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 61.25rem) {
   .menu-minor .icon-program {
     width: 21px !important; } }
 
@@ -2488,7 +2503,7 @@ table th[class*="col-"] {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.7; }
-  @media screen and (min-width: 56rem) {
+  @media screen and (min-width: 61.25rem) {
     .leadin {
       font-size: 1.3125rem; } }
 
