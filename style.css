@@ -1432,8 +1432,7 @@ table th[class*="col-"] {
     .menu__logo {
       height: 3.75rem; }
       .menu__logo a svg {
-        -webkit-transition: fill .15s linear;
-                transition: fill .15s linear; }
+        /*transition: fill .15s linear;*/ }
       .menu__logo a:hover svg {
         fill: #fcef06; } }
   .menu .level-2 > li a {
