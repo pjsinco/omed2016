@@ -2454,8 +2454,11 @@ table th[class*="col-"] {
   width: 35px !important; }
 
 @media screen and (min-width: 61.25rem) {
-  .menu-minor .icon-program {
+  .menu-minor .icon-program, .menu-minor .icon-program-teal {
     width: 21px !important; } }
+.icon-program.quicklinks__icon, .icon-program-teal.quicklinks__icon {
+  margin-bottom: 15px;
+  height: 75px; }
 
 .splinkle {
   margin-top: 0;

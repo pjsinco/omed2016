@@ -42,12 +42,17 @@
   }
 }
 
-.icon-program {
+.icon-program, .icon-program-teal {
 
   .menu-minor & {
     @include breakpoint($screen $navflip) {
       width: 21px !important;
     }
+  }
+
+  &.quicklinks__icon {
+    margin-bottom: 15px;
+    height: 75px;
   }
 
 }
