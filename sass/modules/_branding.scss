@@ -70,8 +70,8 @@
         position: relative;
         left: -1rem;
         padding: 1rem;
-        background-color: $yellow;
-        fill: $teal;
+        background-color: $secondarycolor;
+        fill: $primarycolor;
         transition: background-color .15s linear, fill .15s linear;
 
         .omedscrolled & {
