@@ -1,12 +1,20 @@
+.icon-Artboard 1 { background-image: url('images/png/Artboard 1.png'); background-repeat: no-repeat; }
+
 .icon-aoa-vert { background-image: url('images/png/aoa-vert.png'); background-repeat: no-repeat; }
 
 .icon-aoa { background-image: url('images/png/aoa.png'); background-repeat: no-repeat; }
 
 .icon-contact-blue { background-image: url('images/png/contact-blue.png'); background-repeat: no-repeat; }
 
+.icon-contact-lightblue { background-image: url('images/png/contact-lightblue.png'); background-repeat: no-repeat; }
+
 .icon-contact { background-image: url('images/png/contact.png'); background-repeat: no-repeat; }
 
+.icon-faq-lightblue { background-image: url('images/png/faq-lightblue.png'); background-repeat: no-repeat; }
+
 .icon-faq-old { background-image: url('images/png/faq-old.png'); background-repeat: no-repeat; }
+
+.icon-faq-red { background-image: url('images/png/faq-red.png'); background-repeat: no-repeat; }
 
 .icon-faq { background-image: url('images/png/faq.png'); background-repeat: no-repeat; }
 
@@ -26,25 +34,45 @@
 
 .icon-omed-logo-alone { background-image: url('images/png/omed-logo-alone.png'); background-repeat: no-repeat; }
 
+.icon-omed-logo-stack-2016 { background-image: url('images/png/omed-logo-stack-2016.png'); background-repeat: no-repeat; }
+
+.icon-omed-logo-stack-lightblue { background-image: url('images/png/omed-logo-stack-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-omed-logo-stack-red { background-image: url('images/png/omed-logo-stack-red.png'); background-repeat: no-repeat; }
+
 .icon-omed-logo-stack { background-image: url('images/png/omed-logo-stack.png'); background-repeat: no-repeat; }
 
 .icon-omed-logo { background-image: url('images/png/omed-logo.png'); background-repeat: no-repeat; }
 
 .icon-operator-blue { background-image: url('images/png/operator-blue.png'); background-repeat: no-repeat; }
 
+.icon-operator-lightblue { background-image: url('images/png/operator-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-operator-red { background-image: url('images/png/operator-red.png'); background-repeat: no-repeat; }
+
 .icon-operator-teal { background-image: url('images/png/operator-teal.png'); background-repeat: no-repeat; }
 
 .icon-operator { background-image: url('images/png/operator.png'); background-repeat: no-repeat; }
 
+.icon-palmtree-lightblue { background-image: url('images/png/palmtree-lightblue.png'); background-repeat: no-repeat; }
+
 .icon-palmtree-purple { background-image: url('images/png/palmtree-purple.png'); background-repeat: no-repeat; }
+
+.icon-palmtree-red { background-image: url('images/png/palmtree-red.png'); background-repeat: no-repeat; }
 
 .icon-palmtree-teal { background-image: url('images/png/palmtree-teal.png'); background-repeat: no-repeat; }
 
 .icon-palmtree { background-image: url('images/png/palmtree.png'); background-repeat: no-repeat; }
 
+.icon-program-lightblue { background-image: url('images/png/program-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-program-red { background-image: url('images/png/program-red.png'); background-repeat: no-repeat; }
+
 .icon-program-teal { background-image: url('images/png/program-teal.png'); background-repeat: no-repeat; }
 
 .icon-program { background-image: url('images/png/program.png'); background-repeat: no-repeat; }
+
+.icon-registration-lightblue { background-image: url('images/png/registration-lightblue.png'); background-repeat: no-repeat; }
 
 .icon-registration-red { background-image: url('images/png/registration-red.png'); background-repeat: no-repeat; }
 
@@ -52,9 +80,15 @@
 
 .icon-registration { background-image: url('images/png/registration.png'); background-repeat: no-repeat; }
 
+.icon-suitcase-lightblue { background-image: url('images/png/suitcase-lightblue.png'); background-repeat: no-repeat; }
+
 .icon-suitcase-purple { background-image: url('images/png/suitcase-purple.png'); background-repeat: no-repeat; }
 
+.icon-suitcase-red { background-image: url('images/png/suitcase-red.png'); background-repeat: no-repeat; }
+
 .icon-suitcase { background-image: url('images/png/suitcase.png'); background-repeat: no-repeat; }
+
+.icon-tote-lightblue { background-image: url('images/png/tote-lightblue.png'); background-repeat: no-repeat; }
 
 .icon-tote-red { background-image: url('images/png/tote-red.png'); background-repeat: no-repeat; }
 
