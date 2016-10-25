@@ -97,7 +97,7 @@ class Omed2016_Intro_Block extends WP_Widget {
     echo $args['before_widget'];
 
     ?>
-    <div class="container-fluid relative">
+    <div class="container-fluid relative pageblock">
       <section class="intro__block">
         <div class="intro__imagecontainer">
           <div class="icon-omed-logo-stack"></div>
@@ -290,7 +290,7 @@ class Omed2016_Highlightable extends WP_Widget {
           <div class="highlightable__text">
             <h5 class="highlightable__kicker"><?php echo $highlightable['omed_highlightable_kicker'] ?></h5>
             <h4 class="highlightable__header"><?php echo $highlightable['omed_highlightable_body'] ?></h4>
-            <a href="<?php echo $highlightable['omed_highlightable_link']; ?>" class="btn btn--sm <?php echo ( isset( $instance['pinned'] ) ? 'btn--primary' : 'btn--reverse' ); ?>">Learn more</a>
+            <a href="<?php echo $highlightable['omed_highlightable_link']; ?>" class="btn btn--sm <?php echo ( isset( $instance['pinned'] ) ? 'btn--solid' : 'btn--reverse' ); ?>">Learn more</a>
           </div> <!-- .highlightable__text -->
         </div> <!-- .highlightable__body -->
       </div> <!-- .highlightable__block -->

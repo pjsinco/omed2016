@@ -2,7 +2,7 @@
   @include breakpoint($screen $navflip) {
     position: fixed;  
     top: 0;
-    z-index: 100;
+    z-index: 10;
     background-color: rgba($teal, .96);
 
   }

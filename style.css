@@ -1173,7 +1173,7 @@ table th[class*="col-"] {
   .omedscrolled .header, .header--fixed {
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 10;
     background-color: rgba(0, 176, 185, 0.96); } }
 
 .header {
