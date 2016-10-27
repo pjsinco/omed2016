@@ -491,7 +491,9 @@ function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $
       $item_output 
     );
 
-  } else if ( $args->menu == 'header-menu-major' && $item->menu_item_parent == "0") {
+  } else if ( $args->menu == 'header-menu-major' && 
+              $item->menu_item_parent == "0" &&
+              $args->walker->has_children ) {
     return preg_replace(
       "/(<a.+?>)(\\w*)/u", 
       "$1$2 <i class=\"icon-ctrl-down\"></i>", 
@@ -652,7 +654,7 @@ function omed_add_ninja_form_styles( $form_id ) {
     </style>';
   }
 }
-add_action( 'ninja_forms_display_css' , 'omed_add_ninja_form_styles' );
+//add_action( 'ninja_forms_display_css' , 'omed_add_ninja_form_styles' );
 
 function omed_adjust_caption_shortcode_width( $width, $atts, $content ) {
 
