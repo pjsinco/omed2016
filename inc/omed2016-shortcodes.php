@@ -6,13 +6,19 @@ function omed_block_shortcode( $atts ) {
       array(
       'type' => '',
       'title' => '',
+      'animation' => '',
+      'delay' => '',
+      'offset' => '',
       ), $atts
     )
   );
+  
+  $attr  = ( !empty( $delay ) && !empty( $animation ) ? " data-wow-delay=\"$delay\"" : '' );
+  $attr .= ( !empty( $offset ) && !empty( $animation ) ? " data-wow-offset=\"$offset\"" : '' );
 
   $args = array(
-    'before_widget' => '',
-    'after_widget' => '',
+    'before_widget' => !empty( $animation ) ? '<div class="wow '. $animation . '" ' . $attr . '>' : '',
+    'after_widget' => !empty( $animation ) ? '</div><!-- .wow -->' : '',
     'before_title' => '',
     'after_title' => '',
   );

@@ -48,5 +48,7 @@
   });
 
 
+  new WOW().init();
+
 })(jQuery);
 

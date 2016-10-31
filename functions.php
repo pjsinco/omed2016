@@ -148,6 +148,20 @@ function omed2016_scripts() {
   );
 
   /**
+   * WOW.js
+   *
+   */
+  wp_register_script(
+    'wowjs',
+    get_template_directory_uri() . '/scripts/wow.min.js'
+  );
+
+  wp_register_style(
+    'animate-css',
+    get_template_directory_uri() . '/styles/animate.min.css'
+  );
+
+  /**
    * Owl Carousel for Featured Sessions slider
    *
    */
@@ -193,7 +207,7 @@ function omed2016_scripts() {
    *
    */  
   wp_deregister_script( 'jquery' );
-  wp_deregister_script( 'jquery' );
+  //wp_deregister_script( 'jquery' );
   wp_register_script(
     'jquery',
     includes_url( 'js/jquery/jquery.js' ),
@@ -211,10 +225,12 @@ function omed2016_scripts() {
 
 
 	wp_enqueue_style( 'omed2016-style' );
-  wp_enqueue_script( 'main' );
+	wp_enqueue_style( 'animate-css' );
   wp_enqueue_script( 'grunticon-loader' );
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'jquery-migrate' );
+  wp_enqueue_script( 'wowjs' );
+  wp_enqueue_script( 'main' );
 }
 add_action( 'wp_enqueue_scripts', 'omed2016_scripts' );
 

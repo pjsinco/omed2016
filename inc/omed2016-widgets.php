@@ -109,7 +109,7 @@ class Omed2016_Intro_Block extends WP_Widget {
 
       <?php 
         $ids = $instance['quicklink_ids'];
-        echo do_shortcode( "[block type='Omed2016_Quicklinks_Block' ids=$ids]" ); ?>
+        echo do_shortcode( "[block type='Omed2016_Quicklinks_Block' ids=$ids animation='fadeIn' offset='100']" ); ?>
 
     </div><!-- .intro__dropclothcontainer -->
 
@@ -267,12 +267,12 @@ class Omed2016_Highlightable extends WP_Widget {
   public function widget( $args, $instance ) {
     echo $args['before_widget'];
 
-    $args = array(
+    $post_args = array(
       'post_type' => 'omed_highlightable',
       'p' => (int) $instance['id'],
     );
 
-    $highlightable_array = get_posts( $args );
+    $highlightable_array = get_posts( $post_args );
     if ( !empty( $highlightable_array ) ):
       $highlightable = get_fields($highlightable_array[0]->ID);
     else:
@@ -284,7 +284,7 @@ class Omed2016_Highlightable extends WP_Widget {
       class="highlightable <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'highlightable--flipped' : '' ); ?> <?php echo ( isset( $instance['pinned'] ) ? 'highlightable--pinned' : '' ); ?> container-fluid pageblock relative"  >
       <div class="highlightable__block wrap">
         <div class="highlightable__body">
-          <div class="highlightable__imagecontainer">
+          <div class="highlightable__imagecontainer wow <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'fadeInRight' : 'fadeInLeft' ); ?>">
             <img class="highlightable__image" src="<?php echo $highlightable['omed_highlightable_image']['url']; ?>" alt="<?php echo $highlightable['omed_highlightable_image']['alt'] ?>">
           </div> <!-- .highlightable__imagecontainer -->
           <div class="highlightable__text">
@@ -297,6 +297,7 @@ class Omed2016_Highlightable extends WP_Widget {
     </section>
 
     <?php
+
     echo $args['after_widget'];
   }
 
