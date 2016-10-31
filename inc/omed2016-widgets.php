@@ -284,7 +284,7 @@ class Omed2016_Highlightable extends WP_Widget {
       class="highlightable <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'highlightable--flipped' : '' ); ?> <?php echo ( isset( $instance['pinned'] ) ? 'highlightable--pinned' : '' ); ?> container-fluid pageblock relative"  >
       <div class="highlightable__block wrap">
         <div class="highlightable__body">
-          <div class="highlightable__imagecontainer wow <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'fadeInRight' : 'fadeInLeft' ); ?>">
+          <div class="highlightable__imagecontainer wow <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'fadeInRight' : 'fadeInLeft' ); ?>" data-wow-offset="200">
             <img class="highlightable__image" src="<?php echo $highlightable['omed_highlightable_image']['url']; ?>" alt="<?php echo $highlightable['omed_highlightable_image']['alt'] ?>">
           </div> <!-- .highlightable__imagecontainer -->
           <div class="highlightable__text">
