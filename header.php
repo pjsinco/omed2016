@@ -32,7 +32,7 @@
   <body <?php if ( is_page_template( 'page-standalone.php' ) || is_page_template( 'page-sublevel.php' ) || is_404() ): body_class('omedscrolled'); else: body_class(); endif; ?>>
     <header class="header">
 <!--       <div class="wrap relative"> -->
-      <div class="menu__block container-fluid--alt relative">
+      <div class="menu__block container-fluid--alt relative wow fadeInDown" style="visibility: hidden;">
         <div class="menu__logo">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="OMED 2016">
             <div class="branding--omed icon-omed-logo-alone" data-grunticon-embed></div>
