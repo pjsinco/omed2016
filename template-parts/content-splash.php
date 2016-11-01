@@ -12,7 +12,7 @@ $splash_body = get_field( 'omed_splash_body', $post->ID );
 ?>
 <section class="splash splash--<?php if ( is_page()): global $post; if ( isset( $post ) ): echo $post->post_name; endif; endif; ?> <?php if ( is_front_page() ): echo 'splash--nomargin'; endif; ?>">
   <div class="wrap">
-    <div class="splash__block container-fluid fade-in--left">
+    <div class="splash__block container-fluid wow fadeInLeft" style="visibility: hidden;">
       <div class="splash__header">
         <?php if ($splash_header): echo $splash_header; endif; ?>
       </div>

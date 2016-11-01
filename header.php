@@ -30,7 +30,7 @@
   </head>
 
   <body <?php if ( is_page_template( 'page-standalone.php' ) || is_page_template( 'page-sublevel.php' ) || is_404() ): body_class('omedscrolled'); else: body_class(); endif; ?>>
-    <header class="header">
+    <header class="header ">
 <!--       <div class="wrap relative"> -->
       <div class="menu__block container-fluid--alt relative wow fadeInDown" style="visibility: hidden;">
         <div class="menu__logo">
@@ -75,7 +75,7 @@
 
     <div class="branding wrap container-fluid">
       <a  href="http://www.osteopathic.org" title="American Osteopathic Association">
-        <div class="icon-aoa" data-grunticon-embed></div>
+        <div class="icon-aoa  wow fadeInDown" style="visibility: hidden;" data-grunticon-embed></div>
       </a>
     </div> <!-- .branding -->
 
