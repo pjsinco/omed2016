@@ -583,8 +583,13 @@ function add_owl_carousel_script() {
     });
 
     jQuery('#qlCarousel').owlCarousel({
-      'items': 3,
-      'itemsDesktop': [1199, 3],
+      items: 3,
+      itemsDesktop: [1199, 3],
+      navigation: true,
+      navigationText: [
+        '<i class="icon-chevron-left"></i>',
+        '<i class="icon-chevron-right"></i>',
+      ],
     });
   </script>
 
