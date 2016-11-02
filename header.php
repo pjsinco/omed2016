@@ -51,7 +51,7 @@
                   'depth' => 0,
                   'walker' => new Omed2016_Major_Nav_Walker_Class(),
                 );
-                wp_nav_menu( $major_menu_args );
+//                wp_nav_menu( $major_menu_args );
               ?>
 
               <!-- .menu__list-minor  goes here -->
