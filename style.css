@@ -2652,25 +2652,28 @@ table th[class*="col-"] {
             -ms-flex-direction: row-reverse;
                 flex-direction: row-reverse; } }
 .tiles__body {
-  padding: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%; }
+  padding: 1.5rem; }
+  @media screen and (min-width: 48rem) {
+    .tiles__body {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      height: 100%; } }
   .tiles__body h5 {
     color: #fff;
     font-size: 2rem;
@@ -2701,6 +2704,7 @@ table th[class*="col-"] {
             flex-direction: column;
     -webkit-flex-basis: 50%;
         -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; } }
+            flex-basis: 50%;
+    position: relative; } }
 
 /*@import 'icons/index';*/

@@ -132,3 +132,7 @@
 
 #####Tue Jul 19 10:36:34 2016 CDT
 * Blog: [Is The WordPress Upload Limit Giving You Trouble? Here’s How To Change It | Elegant Themes Blog](https://www.elegantthemes.com/blog/tips-tricks/is-the-wordpress-upload-limit-giving-you-trouble-heres-how-to-change-it)
+
+#####Wed Nov  2 09:44:25 2016 CDT
+* [css - Chrome / Safari not filling 100% height of flex parent - Stack Overflow](http://stackoverflow.com/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent)
+    * This solved a flexbox problem with .tiles in Safari
