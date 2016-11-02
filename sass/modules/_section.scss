@@ -2,11 +2,15 @@
 
   &__header {
     position: relative;
-    margin-bottom: 3em;
-    font-family: $font-light;
-    font-size: 1.125em;
+    margin-bottom: 3rem;
+    font-family: $font-book;
+    font-size: 1.25rem;
     text-align: center;
     color: $font-color;
+    
+    @include breakpoint($screen $large-start) {
+      font-size: 2rem;
+    }
 
     &:after {
       content: '';

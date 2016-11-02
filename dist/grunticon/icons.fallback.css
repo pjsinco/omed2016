@@ -4,6 +4,16 @@
 
 .icon-aoa { background-image: url('images/png/aoa.png'); background-repeat: no-repeat; }
 
+.icon-checkmark-lightblue { background-image: url('images/png/checkmark-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-checkmark-red { background-image: url('images/png/checkmark-red.png'); background-repeat: no-repeat; }
+
+.icon-checkmark { background-image: url('images/png/checkmark.png'); background-repeat: no-repeat; }
+
+.icon-chevron-left { background-image: url('images/png/chevron-left.png'); background-repeat: no-repeat; }
+
+.icon-chevron-right { background-image: url('images/png/chevron-right.png'); background-repeat: no-repeat; }
+
 .icon-contact-blue { background-image: url('images/png/contact-blue.png'); background-repeat: no-repeat; }
 
 .icon-contact-lightblue { background-image: url('images/png/contact-lightblue.png'); background-repeat: no-repeat; }
@@ -18,9 +28,21 @@
 
 .icon-faq { background-image: url('images/png/faq.png'); background-repeat: no-repeat; }
 
+.icon-for-exhibitors-lightblue { background-image: url('images/png/for-exhibitors-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-for-exhibitors-red { background-image: url('images/png/for-exhibitors-red.png'); background-repeat: no-repeat; }
+
+.icon-for-exhibitors-white { background-image: url('images/png/for-exhibitors-white.png'); background-repeat: no-repeat; }
+
 .icon-for-exhibitors { background-image: url('images/png/for-exhibitors.png'); background-repeat: no-repeat; }
 
 .icon-hotel { background-image: url('images/png/hotel.png'); background-repeat: no-repeat; }
+
+.icon-laptop-checkmark-lightblue { background-image: url('images/png/laptop-checkmark-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-laptop-checkmark-red { background-image: url('images/png/laptop-checkmark-red.png'); background-repeat: no-repeat; }
+
+.icon-laptop-checkmark { background-image: url('images/png/laptop-checkmark.png'); background-repeat: no-repeat; }
 
 .icon-magazine-teal { background-image: url('images/png/magazine-teal.png'); background-repeat: no-repeat; }
 
@@ -71,6 +93,12 @@
 .icon-program-teal { background-image: url('images/png/program-teal.png'); background-repeat: no-repeat; }
 
 .icon-program { background-image: url('images/png/program.png'); background-repeat: no-repeat; }
+
+.icon-questionmark-lightblue { background-image: url('images/png/questionmark-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-questionmark-red { background-image: url('images/png/questionmark-red.png'); background-repeat: no-repeat; }
+
+.icon-questionmark { background-image: url('images/png/questionmark.png'); background-repeat: no-repeat; }
 
 .icon-registration-lightblue { background-image: url('images/png/registration-lightblue.png'); background-repeat: no-repeat; }
 

@@ -619,7 +619,7 @@ i {
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal; }
-p, .chart__subhead, .entry-content li, .video__caption {
+p, li, .chart__subhead, .entry-content li, .video__caption {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: .875rem;
@@ -627,10 +627,10 @@ p, .chart__subhead, .entry-content li, .video__caption {
   /*letter-spacing: -.5px;*/
   color: #666666; }
   @media screen and (min-width: 48rem) {
-    p, .chart__subhead, .entry-content li, .video__caption {
+    p, li, .chart__subhead, .entry-content li, .video__caption {
       /*line-height: $bodylineheight;*/
       font-size: 1rem; } }
-  p:last-child, .chart__subhead:last-child, .entry-content li:last-child, .video__caption:last-child {
+  p:last-child, li:last-child, .chart__subhead:last-child, .video__caption:last-child {
     margin-bottom: 0; }
 
 @media screen and (min-width: 61.25rem) {
@@ -655,7 +655,7 @@ body {
   background-color: #fff;
   height: 100%; }
 
-li strong, p strong, .chart__subhead strong {
+li strong, p strong, li strong, .chart__subhead strong {
   font-family: "gotham-medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal; }
 
@@ -1745,7 +1745,7 @@ table th[class*="col-"] {
     max-width: 600px;
     text-align: center;
     color: #fff; }
-    .branding__body--footer p, .branding__body--footer .chart__subhead {
+    .branding__body--footer p, .branding__body--footer li, .branding__body--footer .chart__subhead {
       color: inherit; }
     .branding__body--footer a {
       color: inherit;
@@ -1797,6 +1797,9 @@ table th[class*="col-"] {
 
 .pageblock {
   margin-bottom: 3em; }
+  @media screen and (min-width: 48rem) {
+    .pageblock {
+      margin-bottom: 8em; } }
 
 .intro__block {
   /*padding-bottom: 1rem;*/
@@ -2198,11 +2201,14 @@ table th[class*="col-"] {
 
 .section__header {
   position: relative;
-  margin-bottom: 3em;
-  font-family: "gotham-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.125em;
+  margin-bottom: 3rem;
+  font-family: "gotham-book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
   text-align: center;
   color: #666666; }
+  @media screen and (min-width: 48rem) {
+    .section__header {
+      font-size: 2rem; } }
   .section__header:after {
     content: '';
     position: absolute;
@@ -2423,9 +2429,9 @@ table th[class*="col-"] {
   .breakout h6 {
     line-height: 1.65;
     font-family: "gotham-medium"; }
-  .breakout p, .breakout .chart__subhead {
+  .breakout p, .breakout li, .breakout .chart__subhead {
     font-size: inherit; }
-    .breakout p:last-child, .breakout .chart__subhead:last-child {
+    .breakout p:last-child, .breakout li:last-child, .breakout .chart__subhead:last-child {
       margin-bottom: 0; }
 
 @media screen and (min-width: 61.25rem) {
@@ -2620,22 +2626,34 @@ table th[class*="col-"] {
     float: right;
     margin: 0 0 2rem 2rem; } }
 
+.tiles__body-header {
+  margin-bottom: 1rem; }
 .tiles__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   color: #fff;
   overflow-x: hidden; }
   .tiles__row:nth-of-type(odd) {
     background-color: #00b0b9; }
-    @media screen and (min-width: 48rem) {
+    @media screen and (min-width: 67.75rem) {
       .tiles__row:nth-of-type(odd) h5, .tiles__row:nth-of-type(odd) h3, .tiles__row:nth-of-type(odd) ul {
-        text-align: right; } }
+        text-align: right; }
+      .tiles__row:nth-of-type(odd) .tiles__body {
+        padding-left: 3rem; } }
   .tiles__row:nth-of-type(even) {
     background-color: #00e1ec; }
-  @media screen and (min-width: 48rem) {
+    @media screen and (min-width: 67.75rem) {
+      .tiles__row:nth-of-type(even) .tiles__body {
+        padding-right: 3rem; } }
+  @media screen and (min-width: 67.75rem) {
     .tiles__row {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -webkit-flex-direction: row;
@@ -2653,7 +2671,7 @@ table th[class*="col-"] {
                 flex-direction: row-reverse; } }
 .tiles__body {
   padding: 1.5rem; }
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width: 67.75rem) {
     .tiles__body {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2676,9 +2694,12 @@ table th[class*="col-"] {
       height: 100%; } }
   .tiles__body h5 {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.3;
     font-family: "gotham-light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    @media screen and (min-width: 48rem) {
+      .tiles__body h5 {
+        font-size: 2rem; } }
   .tiles__body h3 {
     color: #fff;
     opacity: .5;
@@ -2690,8 +2711,14 @@ table th[class*="col-"] {
     /*list-style: disc;*/
     margin-bottom: 1rem;
     line-height: 1.2;
-    font-size: 16px; }
-@media screen and (min-width: 48rem) {
+    font-size: 16px;
+    color: #fff; }
+    @media screen and (min-width: 36rem) {
+      .tiles__body li {
+        line-height: 1.5; } }
+.tiles__tile img {
+  float: left; }
+@media screen and (min-width: 67.75rem) {
   .tiles__tile {
     display: -webkit-box;
     display: -webkit-flex;
