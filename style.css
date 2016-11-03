@@ -1372,10 +1372,13 @@ table th[class*="col-"] {
           -ms-flex-preferred-size: 500px;
               flex-basis: 500px;
       border: 0; } }
-  @media screen and (min-width: 61.25rem) {
-    .menu > ul li {
-      height: 100%;
-      margin: 0; } }
+  .menu > ul li {
+    line-height: 1;
+    color: #fff; }
+    @media screen and (min-width: 61.25rem) {
+      .menu > ul li {
+        height: 100%;
+        margin: 0; } }
   @media screen and (min-width: 61.25rem) {
     .menu > ul > li {
       display: inline-block;
@@ -2406,7 +2409,8 @@ table th[class*="col-"] {
     padding-top: 1rem; }
     .footer__links li {
       margin-bottom: 1rem;
-      text-align: center; }
+      text-align: center;
+      color: #fff; }
       @media screen and (min-width: 36rem) {
         .footer__links li {
           -webkit-flex-basis: 200px;

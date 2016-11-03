@@ -33,7 +33,7 @@
     <header class="header ">
 <!--       <div class="wrap relative"> -->
       <div class="menu__block container-fluid--alt relative wow fadeInDown" style="visibility: hidden;">
-        <div class="menu__logo">
+        <div class="menu__logo--banner">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="OMED 2016">
             <div class="branding--omed icon-omed-logo-alone" data-grunticon-embed></div>
           </a>
@@ -51,7 +51,7 @@
                   'depth' => 0,
                   'walker' => new Omed2016_Major_Nav_Walker_Class(),
                 );
-//                wp_nav_menu( $major_menu_args );
+                wp_nav_menu( $major_menu_args );
               ?>
 
               <!-- .menu__list-minor  goes here -->
@@ -64,7 +64,7 @@
                   'depth' => 0,
                   //'walker' => new Omed2016_Minor_Nav_Walker_Class(),
                 );
-//                wp_nav_menu( $minor_menu_args );
+                wp_nav_menu( $minor_menu_args );
               ?>
             </nav>
           </div> <!-- .navmenu -->

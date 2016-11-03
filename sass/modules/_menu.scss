@@ -148,6 +148,9 @@
   }
 
   & > ul li {
+    line-height: 1;
+    color: $white;
+
     @include breakpoint($screen $navflip) {
       height: 100%;
       margin: 0;
@@ -205,6 +208,10 @@
   }
 
   &__logo {
+
+    &--banner {
+  
+    }
     
     @include breakpoint($screen $navflip) {
       height: $navbarheight;
