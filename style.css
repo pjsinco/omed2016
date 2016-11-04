@@ -1176,11 +1176,11 @@ table th[class*="col-"] {
     z-index: 10;
     background-color: rgba(0, 176, 185, 0.96); } }
 
-.header {
+.header, .header--nonav {
   height: 3.75rem;
   background: #00b0b9; }
   @media screen and (min-width: 61.25rem) {
-    .header {
+    .header, .header--nonav {
       background: none;
       padding-left: 1rem;
       padding-right: 1rem;
@@ -1195,7 +1195,7 @@ table th[class*="col-"] {
               transition-duration: .3s;
       -webkit-transition-timing-function: ease-in;
               transition-timing-function: ease-in; }
-      .omedscrolled .header {
+      .omedscrolled .header, .omedscrolled .header--nonav {
         opacity: 1; } }
 
 @-webkit-keyframes mainnavreveal {
@@ -1231,8 +1231,14 @@ table th[class*="col-"] {
     top: 1rem;
     left: 0;
     right: 0; }
-    .admin-bar .header {
+    .admin-bar .header, .admin-bar .header--nonav {
       top: 3rem; } }
+.header--nonav {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%; }
 .header__block {
   /*@extend %container-fluid-base;*/ }
   @media screen and (min-width: 61.25rem) {
@@ -1397,6 +1403,27 @@ table th[class*="col-"] {
         -ms-flex-align: center;
             align-items: center;
     height: 100%; }
+    .header--nonav .menu__block {
+      /*padding-top: 0;*/
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      /*background: $primarycolor;*/ }
+      @media screen and (min-width: 30rem) {
+        .header--nonav .menu__block {
+          -webkit-box-pack: start;
+          -webkit-justify-content: flex-start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start; } }
+      @media screen and (min-width: 61.25rem) {
+        .header--nonav .menu__block {
+          padding-top: 0;
+          /*justify-content: flex-start;*/ } }
     @media screen and (min-width: 61.25rem) {
       .menu__block {
         max-width: 63rem;
@@ -1431,6 +1458,28 @@ table th[class*="col-"] {
     @media screen and (min-width: 61.25rem) {
       .menu__items {
         position: static; } }
+  .menu__logo--banner {
+    width: 75%;
+    background: #00b0b9;
+    /*margin: 0 auto;*/
+    max-width: 12rem;
+    padding: 1rem .5rem .5rem; }
+    @media screen and (min-width: 61.25rem) {
+      .menu__logo--banner {
+        padding: 1rem;
+        /*width: 270px;*/
+        max-width: 14rem;
+        background: #00b0b9; } }
+    .menu__logo--banner .tagline {
+      display: none; }
+      @media screen and (min-width: 61.25rem) {
+        .menu__logo--banner .tagline {
+          display: block;
+          padding-top: .5rem;
+          text-align: center;
+          line-height: 1.4;
+          font-family: "gotham-light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          color: white; } }
   @media screen and (min-width: 61.25rem) {
     .menu__logo {
       height: 3.75rem; }
@@ -1723,10 +1772,10 @@ table th[class*="col-"] {
       .level-2 .menu-item:not(:last-child) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.25); } }
 
-.branding {
+.branding, .branding--nonav {
   display: none; }
   @media screen and (min-width: 61.25rem) {
-    .branding {
+    .branding, .branding--nonav {
       display: block;
       position: relative;
       top: .875rem;
@@ -1737,13 +1786,15 @@ table th[class*="col-"] {
               transition: opacity;
       -webkit-transition-duration: 0.3s;
               transition-duration: 0.3s; }
-      .branding svg {
+      .branding svg, .branding--nonav svg {
         fill: #fff; }
-      .branding:hover {
+      .branding:hover, .branding--nonav:hover {
         cursor: pointer;
         opacity: 1; }
-      .page-child .branding, .page-template-page-standalone .branding, .error404 .branding {
+      .page-child .branding, .page-child .branding--nonav, .page-template-page-standalone .branding, .page-template-page-standalone .branding--nonav, .error404 .branding, .error404 .branding--nonav {
         display: none; } }
+  .branding--nonav {
+    top: 2.25rem; }
   .branding__body--footer {
     max-width: 600px;
     text-align: center;
@@ -2439,7 +2490,7 @@ table th[class*="col-"] {
       margin-bottom: 0; }
 
 @media screen and (min-width: 61.25rem) {
-  .branding .icon-aoa-vert {
+  .branding .icon-aoa-vert, .branding--nonav .icon-aoa-vert {
     width: 120px;
     padding: 1rem;
     float: right;
@@ -2450,7 +2501,7 @@ table th[class*="col-"] {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
 
 @media screen and (min-width: 61.25rem) {
-  .branding .icon-aoa {
+  .branding .icon-aoa, .branding--nonav .icon-aoa {
     width: 180px;
     height: 50.5px;
     float: right; } }

@@ -71,10 +71,20 @@
     left: 0;
     right: 0;
 
-    .admin-bar & {
+    .admin-bar &,
+    .admin-bar &--nonav {
       top: 1rem + 2rem;
     }
 
+  }
+
+  &--nonav {
+    @extend %header-base;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
   }
 
   &--fixed {

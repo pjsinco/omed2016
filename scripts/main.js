@@ -20,16 +20,23 @@
   //adjustHighlightableHeight();
 
   $(document).on('scroll', function(evt) {
-    //if (!($html).hasClass('revealable')) {
-      //return;
-    //}
     var y = $(this).scrollTop();
     if (y > actionableScrollTop) {
-      $('html').addClass('omedscrolled');
+
+
+      // TODO Sticky nav is temporarily disabled
+
+      //$('html').addClass('omedscrolled');
+      
+
     } else {
-      $('html').removeClass('omedscrolled');
+
+
+      // TODO Sticky nav is temporarily disabled
+
+      //$('html').removeClass('omedscrolled');
+
     }
-    //console.log('scrolltop: ' + $(this).scrollTop());
   });
 
   var $menu = $('#menu'),

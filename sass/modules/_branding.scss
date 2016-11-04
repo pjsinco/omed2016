@@ -26,6 +26,11 @@
     }
   }
 
+  &--nonav {
+    @extend .branding;
+    top: 2.25rem;
+  }
+
   &__body {
 
     &--footer {
