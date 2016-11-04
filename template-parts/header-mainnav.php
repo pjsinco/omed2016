@@ -5,8 +5,8 @@
 
 
 <header class="header ">
-  <div class="menu__block container-fluid--alt relative wow fadeInDown" style="visibility: hidden;">
-    <div class="menu__logo--banner">
+  <div class="menu__block container-fluid--alt relative " style="visibility: visible;">
+    <div class="menu__logo">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="OMED 2016">
         <div class="branding--omed icon-omed-logo-alone" data-grunticon-embed></div>
       </a>
