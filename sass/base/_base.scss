@@ -120,6 +120,7 @@ ul {
 
 li {
   list-style: none;
+  @extend p;
 
   .entry-content & {
     list-style: disc;

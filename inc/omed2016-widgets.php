@@ -97,7 +97,7 @@ class Omed2016_Intro_Block extends WP_Widget {
     echo $args['before_widget'];
 
     ?>
-    <div class="container-fluid relative">
+    <div class="container-fluid relative pageblock">
       <section class="intro__block">
         <div class="intro__imagecontainer">
           <div class="icon-omed-logo-stack"></div>
@@ -109,7 +109,7 @@ class Omed2016_Intro_Block extends WP_Widget {
 
       <?php 
         $ids = $instance['quicklink_ids'];
-        echo do_shortcode( "[block type='Omed2016_Quicklinks_Block' ids=$ids]" ); ?>
+        echo do_shortcode( "[block type='Omed2016_Quicklinks_Block' ids=$ids animation='fadeIn' offset='100']" ); ?>
 
     </div><!-- .intro__dropclothcontainer -->
 
@@ -267,12 +267,12 @@ class Omed2016_Highlightable extends WP_Widget {
   public function widget( $args, $instance ) {
     echo $args['before_widget'];
 
-    $args = array(
+    $post_args = array(
       'post_type' => 'omed_highlightable',
       'p' => (int) $instance['id'],
     );
 
-    $highlightable_array = get_posts( $args );
+    $highlightable_array = get_posts( $post_args );
     if ( !empty( $highlightable_array ) ):
       $highlightable = get_fields($highlightable_array[0]->ID);
     else:
@@ -284,19 +284,20 @@ class Omed2016_Highlightable extends WP_Widget {
       class="highlightable <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'highlightable--flipped' : '' ); ?> <?php echo ( isset( $instance['pinned'] ) ? 'highlightable--pinned' : '' ); ?> container-fluid pageblock relative"  >
       <div class="highlightable__block wrap">
         <div class="highlightable__body">
-          <div class="highlightable__imagecontainer">
+          <div class="highlightable__imagecontainer wow <?php echo ( !empty( $highlightable['omed_highlightable_flipped'] ) ? 'fadeInRight' : 'fadeInLeft' ); ?>" data-wow-offset="200">
             <img class="highlightable__image" src="<?php echo $highlightable['omed_highlightable_image']['url']; ?>" alt="<?php echo $highlightable['omed_highlightable_image']['alt'] ?>">
           </div> <!-- .highlightable__imagecontainer -->
           <div class="highlightable__text">
             <h5 class="highlightable__kicker"><?php echo $highlightable['omed_highlightable_kicker'] ?></h5>
             <h4 class="highlightable__header"><?php echo $highlightable['omed_highlightable_body'] ?></h4>
-            <a href="<?php echo $highlightable['omed_highlightable_link']; ?>" class="btn btn--sm <?php echo ( isset( $instance['pinned'] ) ? 'btn--primary' : 'btn--reverse' ); ?>">Learn more</a>
+            <a href="<?php echo $highlightable['omed_highlightable_link']; ?>" class="btn btn--sm <?php echo ( isset( $instance['pinned'] ) ? 'btn--solid' : 'btn--reverse' ); ?>">Learn more</a>
           </div> <!-- .highlightable__text -->
         </div> <!-- .highlightable__body -->
       </div> <!-- .highlightable__block -->
     </section>
 
     <?php
+
     echo $args['after_widget'];
   }
 

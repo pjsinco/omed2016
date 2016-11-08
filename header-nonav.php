@@ -11,6 +11,7 @@
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +32,7 @@
 
   <body <?php if ( is_page_template( 'page-standalone.php' ) || is_page_template( 'page-sublevel.php' ) || is_404() ): body_class('omedscrolled'); else: body_class(); endif; ?>>
 
-    <?php include_once( 'template-parts/header-mainnav.php' ); ?>
+    <?php include_once( 'template-parts/header-nonav.php' ); ?>
 
     <?php $skip_nav = true; ?>
 

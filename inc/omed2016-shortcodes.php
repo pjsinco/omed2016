@@ -6,13 +6,19 @@ function omed_block_shortcode( $atts ) {
       array(
       'type' => '',
       'title' => '',
+      'animation' => '',
+      'delay' => '',
+      'offset' => '',
       ), $atts
     )
   );
+  
+  $attr  = ( !empty( $delay ) && !empty( $animation ) ? " data-wow-delay=\"$delay\"" : '' );
+  $attr .= ( !empty( $offset ) && !empty( $animation ) ? " data-wow-offset=\"$offset\"" : '' );
 
   $args = array(
-    'before_widget' => '',
-    'after_widget' => '',
+    'before_widget' => !empty( $animation ) ? '<div class="wow '. $animation . '" ' . $attr . '>' : '',
+    'after_widget' => !empty( $animation ) ? '</div><!-- .wow -->' : '',
     'before_title' => '',
     'after_title' => '',
   );
@@ -74,7 +80,7 @@ function omed_section_title_shortcode( $atts, $content = null ) {
     ), $atts
   );
   
-  $output  = '<div class="container-fluid pageblock wrap">' . PHP_EOL;
+  $output  = '<div class="container-fluid wrap">' . PHP_EOL;
   $output .= '<h3 class="section__header">' . PHP_EOL;
   $output .= $a['title'] . '</h3>' . PHP_EOL;
   $output .= '</div>' . PHP_EOL;

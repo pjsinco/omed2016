@@ -8,7 +8,19 @@
  * package: omed2016 
  */
 ?>
-<?php get_header(); ?>
+<?php 
+
+
+  /** 
+   * TODO
+   * This is a temp switch to the 'nonav' header.
+   * Call the normal header when we have menus.
+   *
+   */
+
+ ?>
+
+<?php get_header( 'nonav' ); ?>
 
 <?php get_template_part( 'template-parts/content', 'splash' ); ?>
 

@@ -148,6 +148,20 @@ function omed2016_scripts() {
   );
 
   /**
+   * WOW.js
+   *
+   */
+  wp_register_script(
+    'wowjs',
+    get_template_directory_uri() . '/scripts/wow.min.js'
+  );
+
+  wp_register_style(
+    'animate-css',
+    get_template_directory_uri() . '/styles/animate.min.css'
+  );
+
+  /**
    * Owl Carousel for Featured Sessions slider
    *
    */
@@ -193,7 +207,7 @@ function omed2016_scripts() {
    *
    */  
   wp_deregister_script( 'jquery' );
-  wp_deregister_script( 'jquery' );
+  //wp_deregister_script( 'jquery' );
   wp_register_script(
     'jquery',
     includes_url( 'js/jquery/jquery.js' ),
@@ -211,10 +225,12 @@ function omed2016_scripts() {
 
 
 	wp_enqueue_style( 'omed2016-style' );
-  wp_enqueue_script( 'main' );
+	wp_enqueue_style( 'animate-css' );
   wp_enqueue_script( 'grunticon-loader' );
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'jquery-migrate' );
+  wp_enqueue_script( 'wowjs' );
+  wp_enqueue_script( 'main' );
 }
 add_action( 'wp_enqueue_scripts', 'omed2016_scripts' );
 
@@ -491,7 +507,9 @@ function omed2016_add_class_to_menu_minor_anchor_element( $item_output, $item, $
       $item_output 
     );
 
-  } else if ( $args->menu == 'header-menu-major' && $item->menu_item_parent == "0") {
+  } else if ( $args->menu == 'header-menu-major' && 
+              $item->menu_item_parent == "0" &&
+              $args->walker->has_children ) {
     return preg_replace(
       "/(<a.+?>)(\\w*)/u", 
       "$1$2 <i class=\"icon-ctrl-down\"></i>", 
@@ -565,8 +583,13 @@ function add_owl_carousel_script() {
     });
 
     jQuery('#qlCarousel').owlCarousel({
-      'items': 3,
-      'itemsDesktop': [1199, 3],
+      items: 3,
+      itemsDesktop: [1199, 3],
+      navigation: true,
+      navigationText: [
+        '<i class="icon-chevron-left"></i>',
+        '<i class="icon-chevron-right"></i>',
+      ],
     });
   </script>
 
@@ -652,7 +675,7 @@ function omed_add_ninja_form_styles( $form_id ) {
     </style>';
   }
 }
-add_action( 'ninja_forms_display_css' , 'omed_add_ninja_form_styles' );
+//add_action( 'ninja_forms_display_css' , 'omed_add_ninja_form_styles' );
 
 function omed_adjust_caption_shortcode_width( $width, $atts, $content ) {
 

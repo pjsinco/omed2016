@@ -148,6 +148,9 @@
   }
 
   & > ul li {
+    line-height: 1;
+    color: $white;
+
     @include breakpoint($screen $navflip) {
       height: 100%;
       margin: 0;
@@ -166,6 +169,22 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    .header--nonav & {
+      /*padding-top: 0;*/
+      align-items: flex-start;
+      justify-content: center;
+      /*background: $primarycolor;*/
+
+      @include breakpoint($screen $medium-start) {
+        justify-content: flex-start;
+      }
+
+      @include breakpoint($screen $navflip) {
+        padding-top: 0;
+        /*justify-content: flex-start;*/
+      }
+    }
 
     @include breakpoint($screen $navflip) {
       max-width: $contentwidth;
@@ -204,7 +223,40 @@
     }
   }
 
+
   &__logo {
+
+    &--banner {
+      width: 75%;
+      background: $primarycolor;
+      /*margin: 0 auto;*/
+      max-width: 12rem;
+      padding: 1rem .5rem .5rem;
+    
+      
+
+      @include breakpoint($screen $navflip) {
+        padding: 1rem;
+        /*width: 270px;*/
+        max-width: 14rem;
+        background: $primarycolor;
+      }
+
+      & .tagline {
+        display: none;
+    
+        @include breakpoint($screen $navflip) {
+          display: block;
+          padding-top: .5rem;
+          text-align: center;
+          line-height: 1.4;
+          font-family: $font-light;
+          color: white;
+          
+        }
+      }
+    }
+
     
     @include breakpoint($screen $navflip) {
       height: $navbarheight;
