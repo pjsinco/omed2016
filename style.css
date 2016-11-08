@@ -1514,7 +1514,7 @@ table th[class*="col-"] {
   text-align: right;
   color: #fff; }
   .menu-link.active:after {
-    content: "Close"; }
+    /*content: "Close";*/ }
     @media screen and (min-width: 61.25rem) {
       .menu-link.active:after {
         content: none; } }
@@ -1522,7 +1522,7 @@ table th[class*="col-"] {
     .menu-link {
       display: none; } }
   .menu-link:after {
-    content: "Menu";
+    /*content: "Menu";*/
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2092,9 +2092,10 @@ table th[class*="col-"] {
       .highlightable__block {
         top: 0; } }
   .highlightable__kicker {
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1.4;
     color: rgba(255, 255, 255, 0.9); }
     .highlightable--pinned .highlightable__kicker {
       color: rgba(0, 176, 185, 0.7); }
@@ -2485,7 +2486,16 @@ table th[class*="col-"] {
     line-height: 1.65;
     font-family: "gotham-medium"; }
   .breakout p, .breakout li, .breakout .chart__subhead {
-    font-size: inherit; }
+    font-size: inherit;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto; }
     .breakout p:last-child, .breakout li:last-child, .breakout .chart__subhead:last-child {
       margin-bottom: 0; }
 

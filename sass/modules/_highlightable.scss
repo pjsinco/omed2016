@@ -40,9 +40,10 @@ $highlightablebreak: $large-start;
   }
 
   &__kicker {
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1.4;
     color: rgba($white, .9);
 
     .highlightable--pinned & {

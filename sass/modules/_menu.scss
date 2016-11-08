@@ -301,7 +301,16 @@
 
   &.active {
     &:after {
-      content: "Close";
+
+
+
+
+// TODO Uncomment this!
+      /*content: "Close";*/
+
+
+
+
 
       @include breakpoint($screen $navflip) {
         content: none;
@@ -314,7 +323,16 @@
   }
 
   &:after {
-    content: "Menu";
+
+
+
+
+
+// TODO Uncomment this!
+    /*content: "Menu";*/
+
+
+
     position: absolute;
     top: 0;
     bottom: 0;
