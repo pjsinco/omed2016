@@ -2782,7 +2782,8 @@ table th[class*="col-"] {
       .tiles__body li {
         line-height: 1.5; } }
 .tiles__tile img {
-  float: left; }
+  float: left;
+  min-height: 1px; }
 @media screen and (min-width: 67.75rem) {
   .tiles__tile {
     display: -webkit-box;
