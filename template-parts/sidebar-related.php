@@ -13,7 +13,7 @@ $links = get_field('omed_splinkle', $link_group->ID);
 if ( !empty( $links ) ):
 ?>
   <aside class="splinkle">
-    <h3 class="splinkle__header">Related Pages</h3>
+    <h3 class="splinkle__header">More Info</h3>
     <ul class="splinkle__items">
     <?php foreach( $links as $link ): ?>
 
