@@ -136,3 +136,6 @@
 #####Wed Nov  2 09:44:25 2016 CDT
 * [css - Chrome / Safari not filling 100% height of flex parent - Stack Overflow](http://stackoverflow.com/questions/33636796/chrome-safari-not-filling-100-height-of-flex-parent)
     * This solved a flexbox problem with .tiles in Safari
+
+#####Wed Feb  1 16:19:52 2017 CST 
+* [Waypoints](http://imakewebthings.com/waypoints/)
