@@ -22,7 +22,7 @@ class Omed2016_Featured_Sessions_Block extends WP_Widget {
   ?>
 
    <section class="fs__block container-fluid pageblock wrap">
-     <ul class="fs__items" id="fsCarousel" >
+     <ul class="fs__items owl-carousel" id="fsCarousel" >
        
      <?php 
        $post_args = array(
@@ -158,7 +158,7 @@ class Omed2016_Quicklinks_Block extends WP_Widget {
     ?>
 
     <section class="quicklinks__block  wrap">
-      <ul class="quicklinks__list" id="qlCarousel">
+      <ul class="quicklinks__list owl-carousel owl-theme" id="qlCarousel">
 
     <?php
     $args = array(
