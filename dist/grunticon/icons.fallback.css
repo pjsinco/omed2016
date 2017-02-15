@@ -4,6 +4,12 @@
 
 .icon-aoa { background-image: url('images/png/aoa.png'); background-repeat: no-repeat; }
 
+.icon-calendar-lightblue { background-image: url('images/png/calendar-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-calendar-red { background-image: url('images/png/calendar-red.png'); background-repeat: no-repeat; }
+
+.icon-calendar { background-image: url('images/png/calendar.png'); background-repeat: no-repeat; }
+
 .icon-checklist-lightblue { background-image: url('images/png/checklist-lightblue.png'); background-repeat: no-repeat; }
 
 .icon-checklist-red { background-image: url('images/png/checklist-red.png'); background-repeat: no-repeat; }
@@ -61,6 +67,10 @@
 .icon-laptop-checkmark-red { background-image: url('images/png/laptop-checkmark-red.png'); background-repeat: no-repeat; }
 
 .icon-laptop-checkmark { background-image: url('images/png/laptop-checkmark.png'); background-repeat: no-repeat; }
+
+.icon-magazine-lightblue { background-image: url('images/png/magazine-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-magazine-red { background-image: url('images/png/magazine-red.png'); background-repeat: no-repeat; }
 
 .icon-magazine-teal { background-image: url('images/png/magazine-teal.png'); background-repeat: no-repeat; }
 
