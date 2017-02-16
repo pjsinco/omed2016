@@ -13,6 +13,11 @@
 .quicklinks {
 
   &__block {
+    margin-bottom: 3rem;
+
+    @include breakpoint($screen $large-start) {
+      margin-bottom: 6rem;
+    }
 
   }
 
@@ -44,7 +49,7 @@
 
   &__item {
     position: relative;
-    top: -1rem;
+    /*top: -1rem;*/
     max-width: 33rem;
     padding: 1rem 2rem;
     margin-left: .5rem;

@@ -4,6 +4,12 @@
 
 .icon-aoa { background-image: url('images/png/aoa.png'); background-repeat: no-repeat; }
 
+.icon-calendar-lightblue { background-image: url('images/png/calendar-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-calendar-red { background-image: url('images/png/calendar-red.png'); background-repeat: no-repeat; }
+
+.icon-calendar { background-image: url('images/png/calendar.png'); background-repeat: no-repeat; }
+
 .icon-checklist-lightblue { background-image: url('images/png/checklist-lightblue.png'); background-repeat: no-repeat; }
 
 .icon-checklist-red { background-image: url('images/png/checklist-red.png'); background-repeat: no-repeat; }
@@ -62,6 +68,10 @@
 
 .icon-laptop-checkmark { background-image: url('images/png/laptop-checkmark.png'); background-repeat: no-repeat; }
 
+.icon-magazine-lightblue { background-image: url('images/png/magazine-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-magazine-red { background-image: url('images/png/magazine-red.png'); background-repeat: no-repeat; }
+
 .icon-magazine-teal { background-image: url('images/png/magazine-teal.png'); background-repeat: no-repeat; }
 
 .icon-magazine { background-image: url('images/png/magazine.png'); background-repeat: no-repeat; }
@@ -83,6 +93,12 @@
 .icon-omed-logo-stack { background-image: url('images/png/omed-logo-stack.png'); background-repeat: no-repeat; }
 
 .icon-omed-logo { background-image: url('images/png/omed-logo.png'); background-repeat: no-repeat; }
+
+.icon-omed-program-lightblue { background-image: url('images/png/omed-program-lightblue.png'); background-repeat: no-repeat; }
+
+.icon-omed-program-red { background-image: url('images/png/omed-program-red.png'); background-repeat: no-repeat; }
+
+.icon-omed-program { background-image: url('images/png/omed-program.png'); background-repeat: no-repeat; }
 
 .icon-operator-blue { background-image: url('images/png/operator-blue.png'); background-repeat: no-repeat; }
 

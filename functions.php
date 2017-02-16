@@ -126,9 +126,9 @@ function omed2016_scripts() {
   wp_register_style(  
     'omed2016-style',
     get_stylesheet_uri(),
-    array(),
+    array('owl-carousel-css'),
     filemtime( get_template_directory() . '/style.css' ), 
-    'screen'
+    'all'
   );
 
   wp_register_script( 
@@ -577,19 +577,35 @@ function add_owl_carousel_script() {
   }
 ?>
   <script>
-    jQuery('#fsCarousel').owlCarousel({
-      'items': 3,
-      'itemsDesktop': [1199, 3],
-    });
+    jQuery(document).ready(function() {
 
-    jQuery('#qlCarousel').owlCarousel({
-      items: 3,
-      itemsDesktop: [1199, 3],
-      navigation: true,
-      navigationText: [
-        '<i class="icon-chevron-left"></i>',
-        '<i class="icon-chevron-right"></i>',
-      ],
+      //jQuery('#fsCarousel').owlCarousel({
+        //'items': 3,
+        //'itemsDesktop': [1199, 3],
+      //});
+
+      jQuery('#qlCarousel').owlCarousel({
+        items: 3,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          480: {
+            items: 2,
+          },
+          768: {
+            items: 3,
+          },
+        },
+        slideBy: 'page',
+        nav: true,
+        navText: [
+          '<i class="icon-chevron-left"></i>',
+          '<i class="icon-chevron-right"></i>'
+        ],
+        itemElement: 'li',
+        stageElement: 'ul'
+      });
     });
   </script>
 
