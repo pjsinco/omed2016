@@ -38,7 +38,7 @@
 
     <div class="branding<?php if ( $skip_nav ): echo '--nonav'; endif; ?> wrap container-fluid">
       <a  href="http://www.osteopathic.org" title="American Osteopathic Association">
-        <div class="icon-aoa  wow fadeInDown" style="visibility: hidden;" data-grunticon-embed></div>
+        <div class="icon-aoa  wow fadeInDown" style="visibility: hidden;" data-grunticon-embed data-wow-delay=".5s"></div>
       </a>
     </div> <!-- .branding -->
 
