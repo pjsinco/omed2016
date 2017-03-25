@@ -5,7 +5,7 @@ Theme URI: https://github.com/pjsinco/omed2016
 Author: PJS
 Author URI: http://github.com/pjsinco
 Description: OMED 2016 theme
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,17 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 .nowrap {
   white-space: nowrap; }
+
+.break-words {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; }
 
 /*@import 'vendor/flexboxgrid';*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -2472,16 +2483,7 @@ table th[class*="col-"] {
     line-height: 1.65;
     font-family: "gotham-medium"; }
   .breakout p, .breakout li, .breakout .chart__subhead {
-    font-size: inherit;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -ms-word-break: break-all;
-    word-break: break-all;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto; }
+    font-size: inherit; }
     .breakout p:last-child, .breakout li:last-child, .breakout .chart__subhead:last-child {
       margin-bottom: 0; }
 
