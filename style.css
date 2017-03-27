@@ -5,7 +5,7 @@ Theme URI: https://github.com/pjsinco/omed2016
 Author: PJS
 Author URI: http://github.com/pjsinco
 Description: OMED 2016 theme
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -160,6 +160,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
      -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto; }
+
+.bordered {
+  border: 1px solid #ddd; }
 
 /*@import 'vendor/flexboxgrid';*/
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
