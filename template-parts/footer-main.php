@@ -13,7 +13,7 @@
     </a>
   </div> <!-- .branding__block-footer -->
   <div class="branding__body--footer">
-    <p>Serving as the professional family for more than 123,000 osteopathic physicians (DOs) and osteopathic medical students, the American Osteopathic Association (AOA) promotes public health and encourages scientific research.</p>
+    <p>Serving as the professional family for more than 129,000 osteopathic physicians (DOs) and osteopathic medical students, the American Osteopathic Association (AOA) promotes public health and encourages scientific research.</p>
     <a href=" http://www.doctorsthatdo.org/american-osteopathic-association" target="_blank">Learn more</a>
   </div> <!-- .branding__body-footer -->
 </div> <!-- .footer__block -->
